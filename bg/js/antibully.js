@@ -124,7 +124,7 @@ jQuery(document).ready(function($) {
 			});
 		}
 
-		//bpc.inlineVideo1 = videojs('inline-player-1');
+		bpc.inlineVideo1 = videojs('inline-player-1');
 		/*bpc.inlineVideo2 = videojs('inline-player-2');
 		bpc.inlineVideo3 = videojs('inline-player-3');
 		bpc.inlineVideo4 = videojs('inline-player-4');*/
@@ -138,7 +138,7 @@ jQuery(document).ready(function($) {
 		bpc.initWhatCanIDo();
 		bpc.initWatchVideo();
 
-		//bpc.initCelebVids();
+		bpc.initCelebVids();
 
 		$(document).scroll(bpc.scrollLogic);
 	};
@@ -236,7 +236,7 @@ jQuery(document).ready(function($) {
 			/*$('.pages .page').hide(0);
 			$('.pages .page').eq(pg).show(0);*/
 
-			//if (!bpc.inlineVideo1.paused()) bpc.inlineVideo1.pause();
+			if (!bpc.inlineVideo1.paused()) bpc.inlineVideo1.pause();
 			/*if (!bpc.inlineVideo2.paused()) bpc.inlineVideo2.pause();
 			if (!bpc.inlineVideo3.paused()) bpc.inlineVideo3.pause();
 			if (!bpc.inlineVideo4.paused()) bpc.inlineVideo4.pause();*/
@@ -501,7 +501,7 @@ jQuery(document).ready(function($) {
 		var back = $('.meet-celeb').find('.background'),
 			h1 = $('.meet-celeb').find('h1'),
 			//h2 = $('.meet-celeb').find('h2'),
-			body = $('.meet-celeb').find('p');
+			body = $('.meet-celeb').find('.double-video');
 		TweenMax.killTweensOf(back);
 		TweenMax.killTweensOf(h1);
 		//TweenMax.killTweensOf(h2);
@@ -532,7 +532,7 @@ jQuery(document).ready(function($) {
 		var back = $('.meet-celeb').find('.background'),
 			h1 = $('.meet-celeb').find('h1'),
 			//h2 = $('.meet-celeb').find('h2'),
-			body = $('.meet-celeb').find('p');
+			body = $('.meet-celeb').find('.double-video');
 		TweenMax.killTweensOf(back);
 		TweenMax.killTweensOf(h1);
 		//TweenMax.killTweensOf(h2);
@@ -771,7 +771,7 @@ jQuery(document).ready(function($) {
 			}
 
 			bpc.mute = !bpc.mute;
-			//bpc.inlineVideo1.muted(bpc.mute);
+			bpc.inlineVideo1.muted(bpc.mute);
 			//bpc.inlineVideo2.muted(bpc.mute);
 		});
 	};
@@ -809,21 +809,21 @@ jQuery(document).ready(function($) {
 	};
 
 	bpc.initCelebVids = function() {
-		/*$('.arrows.right').click(function() {
+		$('.arrows.right').click(function() {
 			$(this).hide();
 			if (!bpc.inlineVideo1.paused()) bpc.inlineVideo1.pause();
-			if (!bpc.inlineVideo2.paused()) bpc.inlineVideo2.pause();
-			if (!bpc.inlineVideo3.paused()) bpc.inlineVideo3.pause();
-			if (!bpc.inlineVideo4.paused()) bpc.inlineVideo4.pause();
+			//if (!bpc.inlineVideo2.paused()) bpc.inlineVideo2.pause();
+			//if (!bpc.inlineVideo3.paused()) bpc.inlineVideo3.pause();
+			//if (!bpc.inlineVideo4.paused()) bpc.inlineVideo4.pause();
 			$(this).parent().find('.left').show(0);
 			TweenMax.to($(this).parent().parent().find('.double-video'), 0.6, {css: {marginLeft: '-100%'}, ease: Quart.easeOut});
 		});
 		$('.arrows.left').click(function() {
 			$(this).hide();
 			if (!bpc.inlineVideo1.paused()) bpc.inlineVideo1.pause();
-			if (!bpc.inlineVideo2.paused()) bpc.inlineVideo2.pause();
-			if (!bpc.inlineVideo3.paused()) bpc.inlineVideo3.pause();
-			if (!bpc.inlineVideo4.paused()) bpc.inlineVideo4.pause();
+			//if (!bpc.inlineVideo2.paused()) bpc.inlineVideo2.pause();
+			//if (!bpc.inlineVideo3.paused()) bpc.inlineVideo3.pause();
+			//if (!bpc.inlineVideo4.paused()) bpc.inlineVideo4.pause();
 			$(this).parent().find('.right').show(0);
 			TweenMax.to($(this).parent().parent().find('.double-video'), 0.6, {css: {marginLeft: 0}, ease: Quart.easeOut});
 		});
@@ -843,7 +843,7 @@ jQuery(document).ready(function($) {
 		$('.meet-anna').on('swiperight', function(){
 			if ($('.meet-anna .arrows.left').is(':visible'))
 				$('.meet-anna .arrows.left').click();
-		});*/
+		});
 	};
 
 	bpc.initFooter = function() {

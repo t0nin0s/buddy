@@ -8,7 +8,7 @@
 
 	if (!isset($_server)) $_server = $_SERVER['HTTP_HOST'];
 
-	$_version = '1.0.8';
+	$_version = '1.0.10';
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -163,8 +163,24 @@
 				<div class="background" data-preload="img/celebrity.jpg" data-type="background"></div>
 				<div class="inner">
 					<h1>ЗАПОЗНАЙ<br/>СЕ С VENZY</h1>
-					<p>VenZy е един от най-известните и разпознаваеми лица на музикалната сцена в момента, заради вродения му талант на певец и автор, естествената му музикалност и позитивното му отношение. Още от дебютното си парче „Опасно близки" с Михаела Филева, талантливият певец печели многобройни фенове и последователи. Кариерата му продължава със самостоятелните „Под открито небе", „Щом ти си до мен", „Мога да ти вярвам", както и тоталните хитове „А, дано, ама надали" с Графа и Михаела Филева и „Въпрос на време" с Дивна.</p>
+					<ul class="double-video">
+						<li>
+							<div class="wide-responsive">
+								<div class="inline-player">
+									<video id="inline-player-1" class="video-js vjs-default-skin" controls preload="auto" width="auto" height="auto" poster="" data-setup="{}">
+										<source src="http://ht.cdn.turner.com/tbseurope/big/CN_BG/videos/buddy/CN%20-%20VENZI%201024x568.mp4.mp4" type="video/mp4">
+										<source src="http://ht.cdn.turner.com/tbseurope/big/CN_BG/videos/buddy/CN%20-%20VENZI%201024x568.webmhd.webm" type="video/webm">
+									</video>
+								</div>
+							</div>
+						</li><!--
+						--><li>
+							<p>VenZy е един от най-известните и разпознаваеми лица на музикалната сцена в момента, заради вродения му талант на певец и автор, естествената му музикалност и позитивното му отношение. Още от дебютното си парче „Опасно близки" с Михаела Филева, талантливият певец печели многобройни фенове и последователи. Кариерата му продължава със самостоятелните „Под открито небе", „Щом ти си до мен", „Мога да ти вярвам", както и тоталните хитове „А, дано, ама надали" с Графа и Михаела Филева и „Въпрос на време" с Дивна.</p>
 					<p>VenZy споделя: "Радвам се да подкрепя Cartoon Network и да вдъхна кураж на децата да се изправят срещу тормоза.Важно е децата да разберат, че това не е приемливо и че е ОК да се открият и да говорят за преживяванията. Всички ние можем да помогнем, просто като сме приятели, мили и внимателни към другите."</p>
+						</li>
+					</ul>
+					<div class="arrows right"><i class="fa fa-angle-right"></i></div>
+					<div class="arrows left"><i class="fa fa-angle-left"></i></div>
 				</div>
 			</div>
 
