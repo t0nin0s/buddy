@@ -124,9 +124,9 @@ jQuery(document).ready(function($) {
 			});
 		}
 
-		/*bpc.inlineVideo1 = videojs('inline-player-1');
+		bpc.inlineVideo1 = videojs('inline-player-1');
 		bpc.inlineVideo2 = videojs('inline-player-2');
-		bpc.inlineVideo3 = videojs('inline-player-3');
+		/*bpc.inlineVideo3 = videojs('inline-player-3');
 		bpc.inlineVideo4 = videojs('inline-player-4');*/
 
 		bpc.resize();
@@ -138,7 +138,7 @@ jQuery(document).ready(function($) {
 		bpc.initWhatCanIDo();
 		bpc.initWatchVideo();
 
-		//bpc.initCelebVids();
+		bpc.initCelebVids();
 
 		$(document).scroll(bpc.scrollLogic);
 	};
@@ -216,11 +216,11 @@ jQuery(document).ready(function($) {
 			if (bpc.page === 1) bpc.page1out();
 			if (bpc.page === 2) bpc.page2out();
 			if (bpc.page === 3) bpc.page3out();
-			 if (bpc.page === 4) bpc.page4out();
-			// if (bpc.page === 5) bpc.page5out();
-			if (bpc.page === 5) bpc.page6out();
-			if (bpc.page === 6) bpc.page7out();
-			if (bpc.page === 7) bpc.page8out();
+			if (bpc.page === 4) bpc.page4out();
+			if (bpc.page === 5) bpc.page5out();
+			if (bpc.page === 6) bpc.page6out();
+			if (bpc.page === 7) bpc.page7out();
+			if (bpc.page === 8) bpc.page8out();
 
 			// in animations
 			if (pg === 0) $('.pages .intro').show(0);
@@ -228,17 +228,17 @@ jQuery(document).ready(function($) {
 			if (pg === 2) bpc.page2in();
 			if (pg === 3) bpc.page3in();
 			if (pg === 4) bpc.page4in();
-			//if (pg === 5) bpc.page5in();
-			if (pg === 5) bpc.page6in();
-			if (pg === 6) bpc.page7in();
-			if (pg === 7) bpc.page8in();
+			if (pg === 5) bpc.page5in();
+			if (pg === 6) bpc.page6in();
+			if (pg === 7) bpc.page7in();
+			if (pg === 8) bpc.page8in();
 			
 			/*$('.pages .page').hide(0);
 			$('.pages .page').eq(pg).show(0);*/
 
-			/*if (!bpc.inlineVideo1.paused()) bpc.inlineVideo1.pause();
+			if (!bpc.inlineVideo1.paused()) bpc.inlineVideo1.pause();
 			if (!bpc.inlineVideo2.paused()) bpc.inlineVideo2.pause();
-			if (!bpc.inlineVideo3.paused()) bpc.inlineVideo3.pause();
+			/*if (!bpc.inlineVideo3.paused()) bpc.inlineVideo3.pause();
 			if (!bpc.inlineVideo4.paused()) bpc.inlineVideo4.pause();*/
 
 			$('.header .main-nav a').removeClass('active');
@@ -423,73 +423,73 @@ jQuery(document).ready(function($) {
 		}
 	};
 
-	/*bpc.page5in = function() {
+	bpc.page5in = function() {
 		try {
-			lypn_trackPageView('meet-anna');
+			lypn_trackPageView('about-friendship');
 		} catch(err) {
 			console.log(err);
 		}
-		$('.meet-anna').css('display', 'table');//show(0);
-		var back = $('.meet-anna').find('.background'),
-			h1 = $('.meet-anna').find('h1'),
-			h2 = $('.meet-anna').find('h2'),
-			body = $('.meet-anna').find('.inline-player');
+		$('.about-friendship').css('display', 'table');//show(0);
+		var back = $('.about-friendship').find('.background'),
+			h1 = $('.about-friendship').find('h1'),
+			//h2 = $('.about-friendship').find('h2'),
+			body = $('.about-friendship').find('.inline-player');
 		TweenMax.killTweensOf(back);
 		TweenMax.killTweensOf(h1);
-		TweenMax.killTweensOf(h2);
+		//TweenMax.killTweensOf(h2);
 		TweenMax.killTweensOf(body);
 
 		if (bpc.scrollDirection === 'up') {
-			TweenMax.to(back, 0.5, {css: {top: 0, bottom: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0});
+			TweenMax.to(back, 0.5, {css: {top: -100, bottom: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0});
 			TweenMax.to(h1, 0.5, {css: {top: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0.4});
-			TweenMax.to(h2, 0.5, {css: {top: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0.3});
+			//TweenMax.to(h2, 0.5, {css: {top: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0.3});
 			TweenMax.to(body, 0.5, {css: {top: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0.2});
 
 			TweenMax.to(h1, 0.5, {alpha: 1, ease: Quart.easeOut, delay: bpc.showDelay + 0.4});
-			TweenMax.to(h2, 0.5, {alpha: 1, ease: Quart.easeOut, delay: bpc.showDelay + 0.3});
+			//TweenMax.to(h2, 0.5, {alpha: 1, ease: Quart.easeOut, delay: bpc.showDelay + 0.3});
 			TweenMax.to(body, 0.5, {alpha: 1, ease: Quart.easeOut, delay: bpc.showDelay + 0.2});
 		} else if (bpc.scrollDirection === 'down') {
-			TweenMax.to(back, 0.5, {css: {top: 0, bottom: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0.2});
+			TweenMax.to(back, 0.5, {css: {top: -100, bottom: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0.2});
 			TweenMax.to(h1, 0.5, {css: {top: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0});
-			TweenMax.to(h2, 0.5, {css: {top: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0.3});
+			//TweenMax.to(h2, 0.5, {css: {top: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0.3});
 			TweenMax.to(body, 0.5, {css: {top: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0.4});
 			
 			TweenMax.to(h1, 0.5, {alpha: 1, ease: Quart.easeOut, delay: bpc.showDelay + 0});
-			TweenMax.to(h2, 0.5, {alpha: 1, ease: Quart.easeOut, delay: bpc.showDelay + 0.3});
+			//TweenMax.to(h2, 0.5, {alpha: 1, ease: Quart.easeOut, delay: bpc.showDelay + 0.3});
 			TweenMax.to(body, 0.5, {alpha: 1, ease: Quart.easeOut, delay: bpc.showDelay + 0.4});
 		}
 	};
 
 	bpc.page5out = function() {
-		var back = $('.meet-anna').find('.background'),
-			h1 = $('.meet-anna').find('h1'),
-			h2 = $('.meet-anna').find('h2'),
-			body = $('.meet-anna').find('.inline-player');
+		var back = $('.about-friendship').find('.background'),
+			h1 = $('.about-friendship').find('h1'),
+			//h2 = $('.about-friendship').find('h2'),
+			body = $('.about-friendship').find('.inline-player');
 		TweenMax.killTweensOf(back);
 		TweenMax.killTweensOf(h1);
-		TweenMax.killTweensOf(h2);
+		//TweenMax.killTweensOf(h2);
 		TweenMax.killTweensOf(body);
 
 		if (bpc.scrollDirection === 'up') {
-			TweenMax.to(back, 0.5, {css: {top: '100%'}, ease: Quart.easeOut, delay: 0.4, onComplete: function() { $('.meet-anna').hide(0); }});
+			TweenMax.to(back, 0.5, {css: {top: '100%'}, ease: Quart.easeOut, delay: 0.4, onComplete: function() { $('.about-friendship').hide(0); }});
 			TweenMax.to(h1, 0.5, {css: {top: 120}, ease: Quart.easeOut, delay: 0.3});
-			TweenMax.to(h2, 0.5, {css: {top: 120}, ease: Quart.easeOut, delay: 0.2});
+			//TweenMax.to(h2, 0.5, {css: {top: 120}, ease: Quart.easeOut, delay: 0.2});
 			TweenMax.to(body, 0.5, {css: {top: 120}, ease: Quart.easeOut, delay: 0});
 
 			TweenMax.to(h1, 0.5, {alpha: 0, ease: Quart.easeOut, delay: 0.3});
-			TweenMax.to(h2, 0.5, {alpha: 0, ease: Quart.easeOut, delay: 0.2});
+			//TweenMax.to(h2, 0.5, {alpha: 0, ease: Quart.easeOut, delay: 0.2});
 			TweenMax.to(body, 0.5, {alpha: 0, ease: Quart.easeOut, delay: 0});
 		} else {
-			TweenMax.to(back, 0.5, {css: {bottom: '100%'}, ease: Quart.easeOut, delay: 0.4, onComplete: function() { $('.meet-anna').hide(0); }});
+			TweenMax.to(back, 0.5, {css: {bottom: '100%'}, ease: Quart.easeOut, delay: 0.4, onComplete: function() { $('.about-friendship').hide(0); }});
 			TweenMax.to(h1, 0.5, {css: {top: -120}, ease: Quart.easeOut, delay: 0});
-			TweenMax.to(h2, 0.5, {css: {top: -120}, ease: Quart.easeOut, delay: 0.1});
+			//TweenMax.to(h2, 0.5, {css: {top: -120}, ease: Quart.easeOut, delay: 0.1});
 			TweenMax.to(body, 0.5, {css: {top: -120}, ease: Quart.easeOut, delay: 0.2});
 
 			TweenMax.to(h1, 0.5, {alpha: 0, ease: Quart.easeOut, delay: 0});
-			TweenMax.to(h2, 0.5, {alpha: 0, ease: Quart.easeOut, delay: 0.1});
+			//TweenMax.to(h2, 0.5, {alpha: 0, ease: Quart.easeOut, delay: 0.1});
 			TweenMax.to(body, 0.5, {alpha: 0, ease: Quart.easeOut, delay: 0.2});
 		}
-	};*/
+	};
 
 	bpc.page4in = function() {
 		try {
@@ -771,8 +771,8 @@ jQuery(document).ready(function($) {
 			}
 
 			bpc.mute = !bpc.mute;
-			//bpc.inlineVideo1.muted(bpc.mute);
-			//bpc.inlineVideo2.muted(bpc.mute);
+			bpc.inlineVideo1.muted(bpc.mute);
+			bpc.inlineVideo2.muted(bpc.mute);
 		});
 	};
 
@@ -808,13 +808,13 @@ jQuery(document).ready(function($) {
 		});
 	};
 
-	/*bpc.initCelebVids = function() {
+	bpc.initCelebVids = function() {
 		$('.arrows.right').click(function() {
 			$(this).hide();
 			if (!bpc.inlineVideo1.paused()) bpc.inlineVideo1.pause();
 			if (!bpc.inlineVideo2.paused()) bpc.inlineVideo2.pause();
-			if (!bpc.inlineVideo3.paused()) bpc.inlineVideo3.pause();
-			if (!bpc.inlineVideo4.paused()) bpc.inlineVideo4.pause();
+			//if (!bpc.inlineVideo3.paused()) bpc.inlineVideo3.pause();
+			//if (!bpc.inlineVideo4.paused()) bpc.inlineVideo4.pause();
 			$(this).parent().find('.left').show(0);
 			TweenMax.to($(this).parent().parent().find('.double-video'), 0.6, {css: {marginLeft: '-100%'}, ease: Quart.easeOut});
 		});
@@ -822,29 +822,29 @@ jQuery(document).ready(function($) {
 			$(this).hide();
 			if (!bpc.inlineVideo1.paused()) bpc.inlineVideo1.pause();
 			if (!bpc.inlineVideo2.paused()) bpc.inlineVideo2.pause();
-			if (!bpc.inlineVideo3.paused()) bpc.inlineVideo3.pause();
-			if (!bpc.inlineVideo4.paused()) bpc.inlineVideo4.pause();
+			//if (!bpc.inlineVideo3.paused()) bpc.inlineVideo3.pause();
+			//if (!bpc.inlineVideo4.paused()) bpc.inlineVideo4.pause();
 			$(this).parent().find('.right').show(0);
 			TweenMax.to($(this).parent().parent().find('.double-video'), 0.6, {css: {marginLeft: 0}, ease: Quart.easeOut});
 		});
 
-		$('.meet-celeb').on('swipeleft', function(){
+		/*$('.meet-celeb').on('swipeleft', function(){
 			if ($('.meet-celeb .arrows.right').is(':visible'))
 				$('.meet-celeb .arrows.right').click();
 		});
 		$('.meet-celeb').on('swiperight', function(){
 			if ($('.meet-celeb .arrows.left').is(':visible'))
 				$('.meet-celeb .arrows.left').click();
+		});*/
+		$('.about-friendship').on('swipeleft', function(){
+			if ($('.about-friendship .arrows.right').is(':visible'))
+				$('.about-friendship .arrows.right').click();
 		});
-		$('.meet-anna').on('swipeleft', function(){
-			if ($('.meet-anna .arrows.right').is(':visible'))
-				$('.meet-anna .arrows.right').click();
+		$('.about-friendship').on('swiperight', function(){
+			if ($('.about-friendship .arrows.left').is(':visible'))
+				$('.about-friendship .arrows.left').click();
 		});
-		$('.meet-anna').on('swiperight', function(){
-			if ($('.meet-anna .arrows.left').is(':visible'))
-				$('.meet-anna .arrows.left').click();
-		});
-	};*/
+	};
 
 	bpc.initFooter = function() {
 		$('.footer .open').on(bpc.clickType, function() {

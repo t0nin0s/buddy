@@ -8,7 +8,7 @@
 
 	if (!isset($_server)) $_server = $_SERVER['HTTP_HOST'];
 
-	$_version = '1.0.4';
+	$_version = '1.0.7';
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -48,7 +48,7 @@
 				<a href="#/what-can-i-do">ЧТО ЖЕ<br/>ДЕЛАТЬ?</a>
 				<a href="#/watch-videos">СМОТРЕТЬ<br/>ВИДЕО</a>
 				<a href="#/meet-celeb">Галина<br/>Солдатова</a>
-				<?php //<a href="#/meet-anna">Meet<br/>Anna</a>*/ ?>
+				<a href="#/about-friendship" class="one">О дружбе!</a>
 				<a href="#/buddy-code">КОДЕКС<br/>ЧЕСТИ</a>
 				<a href="#/partners" class="one">ПАРТНЕРЫ</a>
 				<a href="#/get-help">ПОПРОСИТЬ<br/>О ПОМОЩИ</a>
@@ -170,18 +170,17 @@
 				</div>
 			</div>
 
-			<?php /*<div class="page meet-anna">
-				<div class="background" data-preload="img/anna.jpg" data-type="background"></div>
+			<div class="page about-friendship">
+				<div class="background" data-preload="img/page-background.png" data-type="background"></div>
 				<div class="inner">
-					<h1>Meet Anna Williamson</h1>
-					<h2>Childline Counsellor</h2>
+					<h1>О дружбе!</h1>
 					<ul class="double-video">
 						<li>
 							<div class="wide-responsive">
 								<div class="inline-player">
-									<video id="inline-player-2" class="video-js vjs-default-skin" controls preload="auto" width="auto" height="auto" poster="" data-setup="{}">
-										<source src="http://ht.cdn.turner.com/tbseurope/big/CN_UK/videos/anti-bullying/anna.mp4" type="video/mp4">
-										<source src="http://ht.cdn.turner.com/tbseurope/big/CN_UK/videos/anti-bullying/anna.webm" type="video/webm">
+									<video id="inline-player-1" class="video-js vjs-default-skin" controls preload="auto" width="auto" height="auto" poster="" data-setup="{}">
+										<source src="http://ht.cdn.turner.com/tbseurope/big/CN_RU/videos/buddy/rolick_1_1024x576_v2_25fps_new.mp4" type="video/mp4">
+										<source src="http://ht.cdn.turner.com/tbseurope/big/CN_RU/videos/buddy/rolick_1_1024x576_v2_25fps_new.webmhd.webm" type="video/webm">
 									</video>
 								</div>
 							</div>
@@ -189,9 +188,9 @@
 						--><li>
 							<div class="wide-responsive">
 								<div class="inline-player">
-									<video id="inline-player-4" class="video-js vjs-default-skin" controls preload="auto" width="auto" height="auto" poster="" data-setup="{}">
-										<source src="http://ht.cdn.turner.com/tbseurope/big/CN_UK/videos/anti-bullying/anna_qa.mp4" type="video/mp4">
-										<source src="http://ht.cdn.turner.com/tbseurope/big/CN_UK/videos/anti-bullying/anna_qa.webm" type="video/webm">
+									<video id="inline-player-2" class="video-js vjs-default-skin" controls preload="auto" width="auto" height="auto" poster="" data-setup="{}">
+										<source src="http://ht.cdn.turner.com/tbseurope/big/CN_RU/videos/buddy/rolick_2_1024x576_v2_25fps_new2.mp4" type="video/mp4">
+										<source src="http://ht.cdn.turner.com/tbseurope/big/CN_RU/videos/buddy/rolick_2_1024x576_v2_25fps_new2.webmhd.webm" type="video/webm">
 									</video>
 								</div>
 							</div>
@@ -200,7 +199,7 @@
 					<div class="arrows right"><i class="fa fa-angle-right"></i></div>
 					<div class="arrows left"><i class="fa fa-angle-left"></i></div>
 				</div>
-			</div>*/?>
+			</div>
 
 			<div class="page buddy-code">
 				<div class="background" data-preload="img/page-background-2.png" data-type="background"></div>
@@ -251,7 +250,7 @@
 			--><a href="#/what-can-i-do">ЧТО ЖЕ ДЕЛАТЬ?</a><!--
 			--><a href="#/watch-videos">СМОТРЕТЬ ВИДЕО</a><!--
 			--><a href="#/meet-celeb">Галина Солдатова</a><!--
-			<a href="#/meet-anna">Meet Anna</a>
+			--><a href="#/about-friendship">О дружбе!</a><!--
 			--><a href="#/buddy-code">КОДЕКС ЧЕСТИ</a><!--
 			--><a href="#/partners">ПАРТНЕРЫ</a><!--
 			--><a href="#/get-help">ПОПРОСИТЬ О ПОМОЩИ</a>
