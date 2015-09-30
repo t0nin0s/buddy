@@ -80,7 +80,7 @@
 				<div class="background" data-preload="img/page-background.png" data-type="background"></div>
 				<div class="inner">
 					<h1>ZORBALIK NEDİR?</h1>
-					<p>Zorbalık insanların birine karşı bilerek kaba davranması ya da ona zarar vermesidir. Zorbalık herkesin başına her yaşta gelebilir, okulda, oyun alanında, evde, internette. Birisi size itebilir, size vurabilir, sizinle dalga geçebilir, eşyalarınızı alabilir, size lakap takabilir, sizi bilerek görmezden gelip dışarıda bırakabilir ya da farklı olduğunuz için sizle dalga geçebilir.</p>
+					<p>Zorbalık insanların birine karşı bilerek kaba davranması ya da ona zarar vermesidir. Zorbalık herkesin başına her yaşta gelebilir, okulda, oyun alanında, evde, internette. Birisi sizi itebilir, size vurabilir, sizinle dalga geçebilir, eşyalarınızı alabilir, size lakap takabilir, sizi bilerek görmezden gelip dışarıda bırakabilir ya da farklı olduğunuz için sizle dalga geçebilir.</p>
 					<p>Zorbalık önemsiz değildir. Zorbalığa uğruyorsanız bu sizin hatanız değildir.</p>
 				</div>
 			</div>
@@ -164,17 +164,17 @@
 						<h4>01</h4>
 						<h3>ÖNCE KENDİNİN EN İYİ ARKADAŞI OL, DİĞERLERİNE KENDİNE DAVRANILMASINI İSTEDİĞİN GİBİ DAVRAN.</h3>
 						<h4>02</h4>
-						<h3>KİBAR VE DÜŞÜNCELİ OL, DİĞERLERİNİ YARGILAMA, HERKESİN BİR ARKADAŞA İHTİYACI VARDIR.</h3>
+						<h3>KİBAR VE DÜŞÜNCELİ OL, DİĞERLERİNİ YARGILAMA, HERKESİN ARKADAŞA İHTİYACI VARDIR.</h3>
 						<h4>03</h4>
 						<h3>DÜRÜST VE GÜVENİLİR OL.</h3>
 						<h4>04</h4>
 						<h3>SADIK OL VE İHTİYACI OLANLARI SAVUN.</h3>
 						<h4>05</h4>
-						<h3>BİR HATA YAPARSAN ÖZÜR DİLERİM DİYECEK KADAR CESUR OL.</h3>
+						<h3>BİR HATA YAPARSAN ÖZÜR DİLEYECEK KADAR CESUR OL.</h3>
 						<h4>06</h4>
 						<h3>KÖTÜ BİR GÜN GEÇİREN BİRİNE DESTEK OL.</h3>
 						<h4>07</h4>
-						<h3>ARKADAŞLARINLA EĞLEN VE DİĞERLERİNİ DE EĞLENMESİ İÇİN DAVET ET.</h3>
+						<h3>ARKADAŞLARINLA EĞLEN VE DİĞERLERİNİ DE BU EĞLENCEYE DAVET ET.</h3>
 					</div>
 				</div>
 			</div>
