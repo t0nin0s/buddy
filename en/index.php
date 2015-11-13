@@ -215,14 +215,14 @@
 						<a data-track="watch-tinie-tempah-psa" data-src="http://ht.cdn.turner.com/tbseurope/big/CN_UK/videos/anti-bullying/celebrity" style="background-image:url(img/ambassador-3.jpg)">
 							<div class="thumb">
 								<div class="table">
-									<div class="cell">Tinie Tempah Interview</div>
+									<div class="cell">Advice from Tinie Tempah</div>
 								</div>
 							</div>
 						</a>
 						<a data-track="watch-tinie-tempah-qa" data-src="http://ht.cdn.turner.com/tbseurope/big/CN_UK/videos/anti-bullying/tinie_qa" style="background-image:url(img/ambassador-4.jpg)">
 							<div class="thumb">
 								<div class="table">
-									<div class="cell">Advice from Tinie Tempah</div>
+									<div class="cell">Tinie Tempah Interview</div>
 								</div>
 							</div>
 						</a>
