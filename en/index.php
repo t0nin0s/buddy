@@ -201,14 +201,14 @@
 						<a data-track="watch-tom-daley-psa" data-src="http://ht.cdn.turner.com/tbseurope/big/Adops/psa-tom-daley" style="background-image:url(img/ambassador-1.jpg)">
 							<div class="thumb">
 								<div class="table">
-									<div class="cell">Tom Daly Interview</div>
+									<div class="cell">Advice from Tom Daly</div>
 								</div>
 							</div>
 						</a>
 						<a data-track="watch-tom-daley-qa" data-src="http://ht.cdn.turner.com/tbseurope/big/Adops/qa-tom-daley" style="background-image:url(img/ambassador-2.jpg)">
 							<div class="thumb">
 								<div class="table">
-									<div class="cell">Advice From Tom Daly</div>
+									<div class="cell">Tom Daly Interview</div>
 								</div>
 							</div>
 						</a>
