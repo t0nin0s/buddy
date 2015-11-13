@@ -8,7 +8,7 @@
 
 	if (!isset($_server)) $_server = $_SERVER['HTTP_HOST'];
 
-	$_version = '1.0.10';
+	$_version = '1.0.12';
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -47,8 +47,8 @@
 				<a href="#/what-is-bullying">What is<br/>Bullying</a>
 				<a href="#/what-can-i-do">What can<br/>I do</a>
 				<a href="#/watch-videos">Watch<br/>Videos</a>
-				<a href="#/meet-celeb">Meet Tinie<br/>Tempah</a>
-				<a href="#/meet-anna">Meet<br/>Anna</a>
+				<a href="#/meet-celeb">Meet the<br/>Ambassadors</a>
+				<a href="#/meet-anna">Advice From<br/>Childline</a>
 				<a href="#/buddy-code">Buddy<br/>Code</a>
 				<a href="#/uk-partners">UK<br/>Partners</a>
 				<a href="#/get-help">Get<br/>Help</a>
@@ -65,12 +65,13 @@
 		<div class="backgrounds">
 			<div class="background">
 <?php
-	$videos = array('bully', 'bullied', 'observer');
+	//$videos = array('bully', 'bullied', 'observer');
+	$videos = array('beabuddy_season2');
 	$vid = $videos[array_rand($videos)];
 ?>
-				<video loop poster="http://ht.cdn.turner.com/tbseurope/big/CN_UK/videos/anti-bullying/<?php echo $vid; ?>.jpg" id="background-video">
-					<source src="http://ht.cdn.turner.com/tbseurope/big/CN_UK/videos/anti-bullying/<?php echo $vid; ?>.webm" type="video/webm">
-					<source src="http://ht.cdn.turner.com/tbseurope/big/CN_UK/videos/anti-bullying/<?php echo $vid; ?>.mp4" type="video/mp4">
+				<video loop id="background-video">
+					<source src="http://ht.cdn.turner.com/tbseurope/big/Adops/<?php echo $vid; ?>.webm" type="video/webm">
+					<source src="http://ht.cdn.turner.com/tbseurope/big/Adops/<?php echo $vid; ?>.mp4" type="video/mp4">
 				</video>
 			</div>
 		</div>
@@ -128,6 +129,13 @@
 				<div class="inner">
 					<h1>Watch Videos</h1>
 					<div class="videos">
+						<a data-track="watch-animatic" data-src="http://ht.cdn.turner.com/tbseurope/big/Adops/beabuddy_season2">
+							<div class="thumb">
+								<div class="table">
+									<div class="cell">Watch Be a Buddy</div>
+								</div>
+							</div>
+						</a>
 						<a data-track="watch-bullied" data-src="http://ht.cdn.turner.com/tbseurope/big/CN_UK/videos/anti-bullying/bullied">
 							<div class="thumb">
 								<div class="table">
@@ -161,17 +169,17 @@
 			</div>
 
 			<div class="page meet-celeb">
-				<div class="background" data-preload="img/celebrity.jpg" data-type="background"></div>
+				<div class="background" data-preload="img/tom-daley.jpg" data-type="background"></div>
 				<div class="inner">
-					<h1>Meet Tinie Tempah</h1>
-					<h2>CN Buddy Network Ambassador</h2>
-					<ul class="double-video">
+					<h1>Meet the Ambassadors</h1>
+					<h2>CN Buddy Network Ambassadors</h2>
+					<?php /*<ul class="double-video">
 						<li>
 							<div class="wide-responsive">
 								<div class="inline-player">
 									<video id="inline-player-1" class="video-js vjs-default-skin" controls preload="auto" width="auto" height="auto" poster="" data-setup="{}">
-										<source src="http://ht.cdn.turner.com/tbseurope/big/CN_UK/videos/anti-bullying/celebrity.mp4" type="video/mp4">
-										<source src="http://ht.cdn.turner.com/tbseurope/big/CN_UK/videos/anti-bullying/celebrity.webm" type="video/webm">
+										<source src="http://ht.cdn.turner.com/tbseurope/big/Adops/psa-tom-daley.mp4" type="video/mp4">
+										<source src="http://ht.cdn.turner.com/tbseurope/big/Adops/psa-tom-daley.webm" type="video/webm">
 									</video>
 								</div>
 							</div>
@@ -180,22 +188,52 @@
 							<div class="wide-responsive">
 								<div class="inline-player">
 									<video id="inline-player-3" class="video-js vjs-default-skin" controls preload="auto" width="auto" height="auto" poster="" data-setup="{}">
-										<source src="http://ht.cdn.turner.com/tbseurope/big/CN_UK/videos/anti-bullying/tinie_qa.mp4" type="video/mp4">
-										<source src="http://ht.cdn.turner.com/tbseurope/big/CN_UK/videos/anti-bullying/tinie_qa.webm" type="video/webm">
+										<source src="http://ht.cdn.turner.com/tbseurope/big/Adops/qa-tom-daley.mp4" type="video/mp4">
+										<source src="http://ht.cdn.turner.com/tbseurope/big/Adops/qa-tom-daley.webm" type="video/webm">
 									</video>
 								</div>
 							</div>
 						</li>
 					</ul>
 					<div class="arrows right"><i class="fa fa-angle-right"></i></div>
-					<div class="arrows left"><i class="fa fa-angle-left"></i></div>
+					<div class="arrows left"><i class="fa fa-angle-left"></i></div>*/ ?>
+					<div class="videos">
+						<a data-track="watch-tom-daley-psa" data-src="http://ht.cdn.turner.com/tbseurope/big/Adops/psa-tom-daley" style="background-image:url(img/ambassador-1.jpg)">
+							<div class="thumb">
+								<div class="table">
+									<div class="cell">Tom Daly Interview</div>
+								</div>
+							</div>
+						</a>
+						<a data-track="watch-tom-daley-qa" data-src="http://ht.cdn.turner.com/tbseurope/big/Adops/qa-tom-daley" style="background-image:url(img/ambassador-2.jpg)">
+							<div class="thumb">
+								<div class="table">
+									<div class="cell">Advice From Tom Daly</div>
+								</div>
+							</div>
+						</a>
+						<a data-track="watch-tinie-tempah-psa" data-src="http://ht.cdn.turner.com/tbseurope/big/CN_UK/videos/anti-bullying/celebrity" style="background-image:url(img/ambassador-3.jpg)">
+							<div class="thumb">
+								<div class="table">
+									<div class="cell">Tinie Tempah Interview</div>
+								</div>
+							</div>
+						</a>
+						<a data-track="watch-tinie-tempah-qa" data-src="http://ht.cdn.turner.com/tbseurope/big/CN_UK/videos/anti-bullying/tinie_qa" style="background-image:url(img/ambassador-4.jpg)">
+							<div class="thumb">
+								<div class="table">
+									<div class="cell">Advice from Tinie Tempah</div>
+								</div>
+							</div>
+						</a>
+					</div>
 				</div>
 			</div>
 
 			<div class="page meet-anna">
 				<div class="background" data-preload="img/anna.jpg" data-type="background"></div>
 				<div class="inner">
-					<h1>Meet Anna Williamson</h1>
+					<h1>Advice From Childline</h1>
 					<h2>Childline Counsellor</h2>
 					<ul class="double-video">
 						<li>
@@ -252,10 +290,7 @@
 				<div class="inner">
 					<h1>Partners</h1>
 					<div class="body">
-						<a href="http://www.childline.org.uk/cartoon-network-anti-bullying" target="_blank"><img src="img/blank.gif" data-type="src" data-preload="img/logo-childline.png" alt="Childline" /></a><br/>
-						<?php /*<a href="" target="_blank"><img src="img/blank.gif" data-type="src" data-preload="img/logo-beatbullying.png" alt="Beat Bullying" /></a>
-						*/ ?><a href="http://www.bullying.co.uk" target="_blank"><img src="img/blank.gif" data-type="src" data-preload="img/logo-bullying.png" alt="Bullying" /></a>
-						<a href="http://www.funkidslive.com/" target="_blank"><img src="img/blank.gif" data-type="src" data-preload="img/logo-funkids-sm.png" alt="Fun Kids" /></a>
+						<a href="http://www.childline.org.uk/cartoon-network-anti-bullying" target="_blank"><img src="img/blank.gif" data-type="src" data-preload="img/logo-childline.png" alt="Childline" /></a>
 					</div>
 				</div>
 			</div>
@@ -274,8 +309,8 @@
 			--><a href="#/what-is-bullying">What is Bullying</a><!--
 			--><a href="#/what-can-i-do">What can I do</a><!--
 			--><a href="#/watch-videos">Watch Videos</a><!--
-			--><a href="#/meet-celeb">Meet Tinie Tempah</a><!--
-			--><a href="#/meet-anna">Meet Anna</a><!--
+			--><a href="#/meet-celeb">Meet the Ambassadors</a><!--
+			--><a href="#/meet-anna">Advice From Childline</a><!--
 			--><a href="#/buddy-code">Buddy Code</a><!--
 			--><a href="#/uk-partners">UK Partners</a><!--
 			--><a href="#/get-help">Get Help</a>
