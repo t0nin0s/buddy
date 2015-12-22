@@ -47,6 +47,8 @@
 				<a href="#/zorbalik-nedir">ZORBALIK<br/>NEDİR?</a>
 				<a href="#/ne-yapabilirim">NE<br/>YAPABİLİRİM?</a>
 				<a href="#/videolari-izle">VİDEOLARI<br/>İZLE</a>
+				<a href="#/gonullu-destekciler">GÖNÜLLÜ<br/>DESTEKÇİLER</a>
+				<a href="#/uzman-tavsiyesi">UZMAN<br/>TAVSİYESİ</a>
 				<a href="#/arkadaslik-kanunu">CARTOON NETWORK<br/>ARKADAŞLIK KANUNU</a>
 			</nav>
 		</div>
@@ -155,6 +157,46 @@
 					</div>
 				</div>
 			</div>
+			
+			<div class="page gonullu-destekciler">
+				<div class="background" data-preload="img/page-background.png" data-type="background"></div>
+				<div class="inner">
+					<h1>GÖNÜLLÜ DESTEKÇİLER</h1>
+					<h2>3 ADAM’IN ÖNERİLERİ</h2>
+					<ul class="single-video">
+						<li>
+							<div class="wide-responsive">
+								<div class="inline-player">
+									<video id="inline-player-1" class="video-js vjs-default-skin" controls preload="auto" width="auto" height="auto" poster="" data-setup="{}">
+										<source src="http://ht.cdn.turner.com/tbseurope/big/Adops/zk.mp4.mp4" type="video/mp4">
+										<source src="http://ht.cdn.turner.com/tbseurope/big/Adops/zk.webmsd.webm" type="video/webm">
+									</video>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="page uzman-tavsiyesi">
+				<div class="background" data-preload="img/page-background.png" data-type="background"></div>
+				<div class="inner">
+					<h1>UZMAN TAVSİYESİ</h1>
+					<h2>UZMAN GELİŞİM PSİKOLOĞU</h2>
+					<ul class="single-video">
+						<li>
+							<div class="wide-responsive">
+								<div class="inline-player">
+									<video id="inline-player-2" class="video-js vjs-default-skin" controls preload="auto" width="auto" height="auto" poster="" data-setup="{}">
+										<source src="http://ht.cdn.turner.com/tbseurope/big/Adops/ps3.mp4.mp4" type="video/mp4">
+										<source src="http://ht.cdn.turner.com/tbseurope/big/Adops/ps3.webmsd.webm" type="video/webm">
+									</video>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
 
 			<div class="page arkadaslik-kanunu">
 				<div class="background" data-preload="img/page-background-2.png" data-type="background"></div>
@@ -185,6 +227,8 @@
 			--><a href="#/zorbalik-nedir">ZORBALIK NEDİR?</a><!--
 			--><a href="#/ne-yapabilirim">NE YAPABİLİRİM?</a><!--
 			--><a href="#/videolari-izle">VİDEOLARI İZLE</a><!--
+			--><a href="#/gonullu-destekciler">GÖNÜLLÜ DESTEKÇİLER</a><!--
+			--><a href="#/uzman-tavsiyesi">UZMAN TAVSİYESİ</a><!--
 			--><a href="#/arkadaslik-kanunu">CARTOON NETWORK ARKADAŞLIK KANUNU</a>
 
 			<div class="close"><i class="fa fa-times"></i></div>

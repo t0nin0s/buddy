@@ -124,8 +124,8 @@ jQuery(document).ready(function($) {
 			});
 		}
 
-		//bpc.inlineVideo1 = videojs('inline-player-1');
-		//bpc.inlineVideo2 = videojs('inline-player-2');
+		bpc.inlineVideo1 = videojs('inline-player-1');
+		bpc.inlineVideo2 = videojs('inline-player-2');
 		//bpc.inlineVideo3 = videojs('inline-player-3');
 		//bpc.inlineVideo4 = videojs('inline-player-4');
 
@@ -217,8 +217,8 @@ jQuery(document).ready(function($) {
 			if (bpc.page === 2) bpc.page2out();
 			if (bpc.page === 3) bpc.page3out();
 			if (bpc.page === 4) bpc.page4out();
-			//if (bpc.page === 5) bpc.page5out();
-			//if (bpc.page === 6) bpc.page6out();
+			if (bpc.page === 5) bpc.page5out();
+			if (bpc.page === 6) bpc.page6out();
 			//if (bpc.page === 7) bpc.page7out();
 			//if (bpc.page === 8) bpc.page8out();
 
@@ -228,16 +228,16 @@ jQuery(document).ready(function($) {
 			if (pg === 2) bpc.page2in();
 			if (pg === 3) bpc.page3in();
 			if (pg === 4) bpc.page4in();
-			//if (pg === 5) bpc.page5in();
-			//if (pg === 6) bpc.page6in();
+			if (pg === 5) bpc.page5in();
+			if (pg === 6) bpc.page6in();
 			//if (pg === 7) bpc.page7in();
 			//if (pg === 8) bpc.page8in();
 			
 			/*$('.pages .page').hide(0);
 			$('.pages .page').eq(pg).show(0);*/
 
-			//if (!bpc.inlineVideo1.paused()) bpc.inlineVideo1.pause();
-			//if (!bpc.inlineVideo2.paused()) bpc.inlineVideo2.pause();
+			if (!bpc.inlineVideo1.paused()) bpc.inlineVideo1.pause();
+			if (!bpc.inlineVideo2.paused()) bpc.inlineVideo2.pause();
 			//if (!bpc.inlineVideo3.paused()) bpc.inlineVideo3.pause();
 			//if (!bpc.inlineVideo4.paused()) bpc.inlineVideo4.pause();
 
@@ -422,104 +422,39 @@ jQuery(document).ready(function($) {
 			TweenMax.to(body, 0.5, {alpha: 0, ease: Quart.easeOut, delay: 0.2});
 		}
 	};
-
-	/*bpc.page5in = function() {
-		try {
-			lypn_trackPageView('meet-anna');
-		} catch(err) {
-			console.log(err);
-		}
-		$('.meet-anna').css('display', 'table');//show(0);
-		var back = $('.meet-anna').find('.background'),
-			h1 = $('.meet-anna').find('h1'),
-			h2 = $('.meet-anna').find('h2'),
-			body = $('.meet-anna').find('.inline-player');
-		TweenMax.killTweensOf(back);
-		TweenMax.killTweensOf(h1);
-		TweenMax.killTweensOf(h2);
-		TweenMax.killTweensOf(body);
-
-		if (bpc.scrollDirection === 'up') {
-			TweenMax.to(back, 0.5, {css: {top: 0, bottom: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0});
-			TweenMax.to(h1, 0.5, {css: {top: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0.4});
-			TweenMax.to(h2, 0.5, {css: {top: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0.3});
-			TweenMax.to(body, 0.5, {css: {top: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0.2});
-
-			TweenMax.to(h1, 0.5, {alpha: 1, ease: Quart.easeOut, delay: bpc.showDelay + 0.4});
-			TweenMax.to(h2, 0.5, {alpha: 1, ease: Quart.easeOut, delay: bpc.showDelay + 0.3});
-			TweenMax.to(body, 0.5, {alpha: 1, ease: Quart.easeOut, delay: bpc.showDelay + 0.2});
-		} else if (bpc.scrollDirection === 'down') {
-			TweenMax.to(back, 0.5, {css: {top: 0, bottom: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0.2});
-			TweenMax.to(h1, 0.5, {css: {top: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0});
-			TweenMax.to(h2, 0.5, {css: {top: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0.3});
-			TweenMax.to(body, 0.5, {css: {top: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0.4});
-			
-			TweenMax.to(h1, 0.5, {alpha: 1, ease: Quart.easeOut, delay: bpc.showDelay + 0});
-			TweenMax.to(h2, 0.5, {alpha: 1, ease: Quart.easeOut, delay: bpc.showDelay + 0.3});
-			TweenMax.to(body, 0.5, {alpha: 1, ease: Quart.easeOut, delay: bpc.showDelay + 0.4});
-		}
-	};
-
-	bpc.page5out = function() {
-		var back = $('.meet-anna').find('.background'),
-			h1 = $('.meet-anna').find('h1'),
-			h2 = $('.meet-anna').find('h2'),
-			body = $('.meet-anna').find('.inline-player');
-		TweenMax.killTweensOf(back);
-		TweenMax.killTweensOf(h1);
-		TweenMax.killTweensOf(h2);
-		TweenMax.killTweensOf(body);
-
-		if (bpc.scrollDirection === 'up') {
-			TweenMax.to(back, 0.5, {css: {top: '100%'}, ease: Quart.easeOut, delay: 0.4, onComplete: function() { $('.meet-anna').hide(0); }});
-			TweenMax.to(h1, 0.5, {css: {top: 120}, ease: Quart.easeOut, delay: 0.3});
-			TweenMax.to(h2, 0.5, {css: {top: 120}, ease: Quart.easeOut, delay: 0.2});
-			TweenMax.to(body, 0.5, {css: {top: 120}, ease: Quart.easeOut, delay: 0});
-
-			TweenMax.to(h1, 0.5, {alpha: 0, ease: Quart.easeOut, delay: 0.3});
-			TweenMax.to(h2, 0.5, {alpha: 0, ease: Quart.easeOut, delay: 0.2});
-			TweenMax.to(body, 0.5, {alpha: 0, ease: Quart.easeOut, delay: 0});
-		} else {
-			TweenMax.to(back, 0.5, {css: {bottom: '100%'}, ease: Quart.easeOut, delay: 0.4, onComplete: function() { $('.meet-anna').hide(0); }});
-			TweenMax.to(h1, 0.5, {css: {top: -120}, ease: Quart.easeOut, delay: 0});
-			TweenMax.to(h2, 0.5, {css: {top: -120}, ease: Quart.easeOut, delay: 0.1});
-			TweenMax.to(body, 0.5, {css: {top: -120}, ease: Quart.easeOut, delay: 0.2});
-
-			TweenMax.to(h1, 0.5, {alpha: 0, ease: Quart.easeOut, delay: 0});
-			TweenMax.to(h2, 0.5, {alpha: 0, ease: Quart.easeOut, delay: 0.1});
-			TweenMax.to(body, 0.5, {alpha: 0, ease: Quart.easeOut, delay: 0.2});
-		}
-	};
+	
 
 	bpc.page4in = function() {
 		try {
-			lypn_trackPageView('meet-celeb');
+			lypn_trackPageView('gonullu-destekciler');
 		} catch(err) {
 			console.log(err);
 		}
-		$('.meet-celeb').css('display', 'table');//show(0);
-		var back = $('.meet-celeb').find('.background'),
-			h1 = $('.meet-celeb').find('h1'),
-			h2 = $('.meet-celeb').find('h2'),
-			body = $('.meet-celeb').find('.inline-player');
+		$('.gonullu-destekciler').css('display', 'table');//show(0);
+		var back = $('.gonullu-destekciler').find('.background'),
+			h1 = $('.gonullu-destekciler').find('h1'),
+			h2 = $('.gonullu-destekciler').find('h2'),
+			body = $('.gonullu-destekciler').find('.inline-player');
 		TweenMax.killTweensOf(back);
 		TweenMax.killTweensOf(h1);
 		TweenMax.killTweensOf(h2);
 		TweenMax.killTweensOf(body);
 
 		if (bpc.scrollDirection === 'up') {
-			TweenMax.to(back, 0.5, {css: {top: 0, bottom: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0});
+			TweenMax.to(back, 0.5, {css: {top: -100, bottom: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0});
+			// TweenMax.to(back, 0.5, {css: {top: 0, bottom: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0});
 			TweenMax.to(h1, 0.5, {css: {top: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0.4});
-			TweenMax.to(h2, 0.5, {css: {top: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0.3});
+			TweenMax.to(h2, 0.5, {css: {top: 10}, ease: Quart.easeOut, delay: bpc.showDelay + 0.3});
 			TweenMax.to(body, 0.5, {css: {top: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0.2});
 
 			TweenMax.to(h1, 0.5, {alpha: 1, ease: Quart.easeOut, delay: bpc.showDelay + 0.4});
 			TweenMax.to(h2, 0.5, {alpha: 1, ease: Quart.easeOut, delay: bpc.showDelay + 0.3});
 			TweenMax.to(body, 0.5, {alpha: 1, ease: Quart.easeOut, delay: bpc.showDelay + 0.2});
 		} else if (bpc.scrollDirection === 'down') {
-			TweenMax.to(back, 0.5, {css: {top: 0, bottom: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0.2});
+			TweenMax.to(back, 0.5, {css: {top: -100, bottom: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0.2});
+			// TweenMax.to(back, 0.5, {css: {top: 0, bottom: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0.2});
 			TweenMax.to(h1, 0.5, {css: {top: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0});
-			TweenMax.to(h2, 0.5, {css: {top: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0.3});
+			TweenMax.to(h2, 0.5, {css: {top: 10}, ease: Quart.easeOut, delay: bpc.showDelay + 0.3});
 			TweenMax.to(body, 0.5, {css: {top: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0.4});
 			
 			TweenMax.to(h1, 0.5, {alpha: 1, ease: Quart.easeOut, delay: bpc.showDelay + 0});
@@ -529,17 +464,17 @@ jQuery(document).ready(function($) {
 	};
 
 	bpc.page4out = function() {
-		var back = $('.meet-celeb').find('.background'),
-			h1 = $('.meet-celeb').find('h1'),
-			h2 = $('.meet-celeb').find('h2'),
-			body = $('.meet-celeb').find('.inline-player');
+		var back = $('.gonullu-destekciler').find('.background'),
+			h1 = $('.gonullu-destekciler').find('h1'),
+			h2 = $('.gonullu-destekciler').find('h2'),
+			body = $('.gonullu-destekciler').find('.inline-player');
 		TweenMax.killTweensOf(back);
 		TweenMax.killTweensOf(h1);
 		TweenMax.killTweensOf(h2);
 		TweenMax.killTweensOf(body);
 
 		if (bpc.scrollDirection === 'up') {
-			TweenMax.to(back, 0.5, {css: {top: '100%'}, ease: Quart.easeOut, delay: 0.4, onComplete: function() { $('.meet-celeb').hide(0); }});
+			TweenMax.to(back, 0.5, {css: {top: '100%'}, ease: Quart.easeOut, delay: 0.4, onComplete: function() { $('.gonullu-destekciler').hide(0); }});
 			TweenMax.to(h1, 0.5, {css: {top: 120}, ease: Quart.easeOut, delay: 0.3});
 			TweenMax.to(h2, 0.5, {css: {top: 120}, ease: Quart.easeOut, delay: 0.2});
 			TweenMax.to(body, 0.5, {css: {top: 120}, ease: Quart.easeOut, delay: 0});
@@ -548,7 +483,7 @@ jQuery(document).ready(function($) {
 			TweenMax.to(h2, 0.5, {alpha: 0, ease: Quart.easeOut, delay: 0.2});
 			TweenMax.to(body, 0.5, {alpha: 0, ease: Quart.easeOut, delay: 0});
 		} else {
-			TweenMax.to(back, 0.5, {css: {bottom: '100%'}, ease: Quart.easeOut, delay: 0.4, onComplete: function() { $('.meet-celeb').hide(0); }});
+			TweenMax.to(back, 0.5, {css: {bottom: '100%'}, ease: Quart.easeOut, delay: 0.4, onComplete: function() { $('.gonullu-destekciler').hide(0); }});
 			TweenMax.to(h1, 0.5, {css: {top: -120}, ease: Quart.easeOut, delay: 0});
 			TweenMax.to(h2, 0.5, {css: {top: -120}, ease: Quart.easeOut, delay: 0.1});
 			TweenMax.to(body, 0.5, {css: {top: -120}, ease: Quart.easeOut, delay: 0.2});
@@ -557,9 +492,82 @@ jQuery(document).ready(function($) {
 			TweenMax.to(h2, 0.5, {alpha: 0, ease: Quart.easeOut, delay: 0.1});
 			TweenMax.to(body, 0.5, {alpha: 0, ease: Quart.easeOut, delay: 0.2});
 		}
-	};*/
+	};
 
-	bpc.page4in = function() {
+	bpc.page5in = function() {
+		try {
+			lypn_trackPageView('uzman-tavsiyesi');
+		} catch(err) {
+			console.log(err);
+		}
+		$('.uzman-tavsiyesi').css('display', 'table');//show(0);
+		var back = $('.uzman-tavsiyesi').find('.background'),
+			h1 = $('.uzman-tavsiyesi').find('h1'),
+			h2 = $('.uzman-tavsiyesi').find('h2'),
+			body = $('.uzman-tavsiyesi').find('.inline-player');
+		TweenMax.killTweensOf(back);
+		TweenMax.killTweensOf(h1);
+		TweenMax.killTweensOf(h2);
+		TweenMax.killTweensOf(body);
+
+		if (bpc.scrollDirection === 'up') {
+			TweenMax.to(back, 0.5, {css: {top: -100, bottom: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0});
+			// TweenMax.to(back, 0.5, {css: {top: 0, bottom: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0});
+			TweenMax.to(h1, 0.5, {css: {top: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0.4});
+			TweenMax.to(h2, 0.5, {css: {top: 10}, ease: Quart.easeOut, delay: bpc.showDelay + 0.3});
+			TweenMax.to(body, 0.5, {css: {top: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0.2});
+
+			TweenMax.to(h1, 0.5, {alpha: 1, ease: Quart.easeOut, delay: bpc.showDelay + 0.4});
+			TweenMax.to(h2, 0.5, {alpha: 1, ease: Quart.easeOut, delay: bpc.showDelay + 0.3});
+			TweenMax.to(body, 0.5, {alpha: 1, ease: Quart.easeOut, delay: bpc.showDelay + 0.2});
+		} else if (bpc.scrollDirection === 'down') {
+			TweenMax.to(back, 0.5, {css: {top: -100, bottom: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0.2});
+			// TweenMax.to(back, 0.5, {css: {top: 0, bottom: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0.2});
+			TweenMax.to(h1, 0.5, {css: {top: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0});
+			TweenMax.to(h2, 0.5, {css: {top: 10}, ease: Quart.easeOut, delay: bpc.showDelay + 0.3});
+			TweenMax.to(body, 0.5, {css: {top: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0.4});
+			
+			TweenMax.to(h1, 0.5, {alpha: 1, ease: Quart.easeOut, delay: bpc.showDelay + 0});
+			TweenMax.to(h2, 0.5, {alpha: 1, ease: Quart.easeOut, delay: bpc.showDelay + 0.3});
+			TweenMax.to(body, 0.5, {alpha: 1, ease: Quart.easeOut, delay: bpc.showDelay + 0.4});
+		}
+	};
+
+	bpc.page5out = function() {
+		var back = $('.uzman-tavsiyesi').find('.background'),
+			h1 = $('.uzman-tavsiyesi').find('h1'),
+			h2 = $('.uzman-tavsiyesi').find('h2'),
+			body = $('.uzman-tavsiyesi').find('.inline-player');
+		TweenMax.killTweensOf(back);
+		TweenMax.killTweensOf(h1);
+		TweenMax.killTweensOf(h2);
+		TweenMax.killTweensOf(body);
+
+		if (bpc.scrollDirection === 'up') {
+			TweenMax.to(back, 0.5, {css: {top: '100%'}, ease: Quart.easeOut, delay: 0.4, onComplete: function() { $('.uzman-tavsiyesi').hide(0); }});
+			TweenMax.to(h1, 0.5, {css: {top: 120}, ease: Quart.easeOut, delay: 0.3});
+			TweenMax.to(h2, 0.5, {css: {top: 120}, ease: Quart.easeOut, delay: 0.2});
+			TweenMax.to(body, 0.5, {css: {top: 120}, ease: Quart.easeOut, delay: 0});
+
+			TweenMax.to(h1, 0.5, {alpha: 0, ease: Quart.easeOut, delay: 0.3});
+			TweenMax.to(h2, 0.5, {alpha: 0, ease: Quart.easeOut, delay: 0.2});
+			TweenMax.to(body, 0.5, {alpha: 0, ease: Quart.easeOut, delay: 0});
+		} else {
+			TweenMax.to(back, 0.5, {css: {bottom: '100%'}, ease: Quart.easeOut, delay: 0.4, onComplete: function() { $('.uzman-tavsiyesi').hide(0); }});
+			TweenMax.to(h1, 0.5, {css: {top: -120}, ease: Quart.easeOut, delay: 0});
+			TweenMax.to(h2, 0.5, {css: {top: -120}, ease: Quart.easeOut, delay: 0.1});
+			TweenMax.to(body, 0.5, {css: {top: -120}, ease: Quart.easeOut, delay: 0.2});
+
+			TweenMax.to(h1, 0.5, {alpha: 0, ease: Quart.easeOut, delay: 0});
+			TweenMax.to(h2, 0.5, {alpha: 0, ease: Quart.easeOut, delay: 0.1});
+			TweenMax.to(body, 0.5, {alpha: 0, ease: Quart.easeOut, delay: 0.2});
+		}
+	};
+	
+	
+
+
+	bpc.page6in = function() {
 		try {
 			lypn_trackPageView('arkadaslik-kanunu');
 		} catch(err) {
@@ -590,7 +598,7 @@ jQuery(document).ready(function($) {
 		}
 	};
 
-	bpc.page4out = function() {
+	bpc.page6out = function() {
 		var back = $('.arkadaslik-kanunu').find('.background'),
 			h1 = $('.arkadaslik-kanunu').find('h1'),
 			body = $('.arkadaslik-kanunu').find('.body');
@@ -614,7 +622,7 @@ jQuery(document).ready(function($) {
 			TweenMax.to(body, 0.5, {alpha: 0, ease: Quart.easeOut, delay: 0.2});
 		}
 	};
-
+	/*
 	bpc.page5in = function() {
 		try {
 			lypn_trackPageView('partnerler');
@@ -670,7 +678,7 @@ jQuery(document).ready(function($) {
 			TweenMax.to(body, 0.5, {alpha: 0, ease: Quart.easeOut, delay: 0.2});
 		}
 	};
-
+	
 	bpc.page6in = function() {
 		try {
 			lypn_trackPageView('yardim-al');
@@ -726,7 +734,7 @@ jQuery(document).ready(function($) {
 			TweenMax.to(p, 0.5, {alpha: 0, ease: Quart.easeOut, delay: 0.2});
 		}
 	};
-
+	*/
 	// end animations
 
 	bpc.initNav = function() {
@@ -771,8 +779,8 @@ jQuery(document).ready(function($) {
 			}
 
 			bpc.mute = !bpc.mute;
-			//bpc.inlineVideo1.muted(bpc.mute);
-			//bpc.inlineVideo2.muted(bpc.mute);
+			bpc.inlineVideo1.muted(bpc.mute);
+			bpc.inlineVideo2.muted(bpc.mute);
 		});
 	};
 
@@ -828,21 +836,21 @@ jQuery(document).ready(function($) {
 			TweenMax.to($(this).parent().parent().find('.double-video'), 0.6, {css: {marginLeft: 0}, ease: Quart.easeOut});
 		});
 
-		$('.meet-celeb').on('swipeleft', function(){
-			if ($('.meet-celeb .arrows.right').is(':visible'))
-				$('.meet-celeb .arrows.right').click();
+		$('.gonullu-destekciler').on('swipeleft', function(){
+			if ($('.gonullu-destekciler .arrows.right').is(':visible'))
+				$('.gonullu-destekciler .arrows.right').click();
 		});
-		$('.meet-celeb').on('swiperight', function(){
-			if ($('.meet-celeb .arrows.left').is(':visible'))
-				$('.meet-celeb .arrows.left').click();
+		$('.gonullu-destekciler').on('swiperight', function(){
+			if ($('.gonullu-destekciler .arrows.left').is(':visible'))
+				$('.gonullu-destekciler .arrows.left').click();
 		});
-		$('.meet-anna').on('swipeleft', function(){
-			if ($('.meet-anna .arrows.right').is(':visible'))
-				$('.meet-anna .arrows.right').click();
+		$('.uzman-tavsiyesi').on('swipeleft', function(){
+			if ($('.uzman-tavsiyesi .arrows.right').is(':visible'))
+				$('.uzman-tavsiyesi .arrows.right').click();
 		});
-		$('.meet-anna').on('swiperight', function(){
-			if ($('.meet-anna .arrows.left').is(':visible'))
-				$('.meet-anna .arrows.left').click();
+		$('.uzman-tavsiyesi').on('swiperight', function(){
+			if ($('.uzman-tavsiyesi .arrows.left').is(':visible'))
+				$('.uzman-tavsiyesi .arrows.left').click();
 		});
 	};*/
 
