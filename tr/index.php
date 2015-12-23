@@ -17,7 +17,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 	<head>
 		<meta charset="utf-8">
-		<title>Cartoon Netwrok / Kanka ağı / Kanka ol.</title>
+		<title>Cartoon Network / Zorba Olma Kanka Ol</title>
 		<meta name="description" content="Be a buddy, not a bully.">
 		<meta name="format-detection" content="telephone-no">
 		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
