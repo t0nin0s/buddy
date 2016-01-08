@@ -800,7 +800,10 @@ jQuery(document).ready(function($) {
 			} catch(err) {
 				console.log(err);
 			}
-			$('.video-player').html('<video id="video-player" class="video-js vjs-default-skin" controls preload="auto" autoplay width="100%" height="100%" poster="" data-setup="{}"><source src="'+src+'.mp4.mp4" type="video/mp4"><source src="'+src+'.webmhd.webm" type="video/webm"></video><div class="close"><i class="fa fa-times"></i></div>');
+			var mp4 = typeof( $(this).attr('data-ext') ) !== 'undefined' ? '' : '.mp4';
+			var webmhd = typeof( $(this).attr('data-ext') ) !== 'undefined' ? '' : '.webmhd';
+
+			$('.video-player').html('<video id="video-player" class="video-js vjs-default-skin" controls preload="auto" autoplay width="100%" height="100%" poster="" data-setup="{}"><source src="'+src+mp4+'.mp4" type="video/mp4"><source src="'+src+webmhd+'.webm" type="video/webm"></video><div class="close"><i class="fa fa-times"></i></div>');
 			var player = videojs("video-player", {}, function(){
 				// Player (this) is initialized and ready.
 			});

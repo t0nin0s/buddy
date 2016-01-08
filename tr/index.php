@@ -8,7 +8,7 @@
 
 	if (!isset($_server)) $_server = $_SERVER['HTTP_HOST'];
 
-	$_version = '1.0.1';
+	$_version = '1.0.2';
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -17,7 +17,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 	<head>
 		<meta charset="utf-8">
-		<title>Cartoon Network / Zorba Olma Kanka Ol</title>
+		<title>Cartoon Network / Kanka ağı / Kanka ol.</title>
 		<meta name="description" content="Be a buddy, not a bully.">
 		<meta name="format-detection" content="telephone-no">
 		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
@@ -144,6 +144,13 @@
 							<div class="thumb">
 								<div class="table">
 									<div class="cell">SEYİRCİ</div>
+								</div>
+							</div>
+						</a>
+						<a data-track="watch-kankalik-videosu" data-src="http://ht.cdn.turner.com/tbseurope/big/Adops/kankavideosu" data-ext="no">
+							<div class="thumb">
+								<div class="table">
+									<div class="cell">KANKALIK VIDEOSU</div>
 								</div>
 							</div>
 						</a>
