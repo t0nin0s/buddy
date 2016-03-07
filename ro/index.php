@@ -8,7 +8,7 @@
 
 	if (!isset($_server)) $_server = $_SERVER['HTTP_HOST'];
 
-	$_version = '1.0.2';
+	$_version = '1.0.5';
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -47,7 +47,7 @@
 				<a href="#/ce-este-hartuirea">CE ESTE<br/>HĂRŢUIREA?</a>
 				<a href="#/ce-pot-face">CE POT<br/>FACE?</a>
 				<a href="#/urmareste-videoclipuri">URMĂREŞTE<br/>VIDEOCLIPURI</a>
-				<a href="#/alex-velea">ALEX<br/>VELEA</a>
+				<a href="#/inna" class="one">INNA</a>
 				<a href="#/telefonul-copilului">TELEFONUL<br/>COPILULUI</a>
 				<a href="#/codul-prieteniei">CODUL<br/>PRIETENIEI</a>
 				<a href="#/parteneri" class="one">PARTENERI</a>
@@ -156,19 +156,26 @@
 								</div>
 							</div>
 						</a>
+						<a data-track="watch-friendship" data-src="http://ht.cdn.turner.com/tbseurope/big/Adops/FRIENDSHIP_ROMANIAN_HD_STEREO" data-ext="0">
+							<div class="thumb">
+								<div class="table">
+									<div class="cell">URMĂREȘTE SPOTUL PRIETENIE</div>
+								</div>
+							</div>
+						</a>
 					</div>
 				</div>
 			</div>
 
-			<div class="page alex-velea">
-				<div class="background" data-preload="img/celebrity.jpg" data-type="background"></div>
+			<div class="page inna">
+				<div class="background" data-preload="img/inna-left.jpg?c=1" data-type="background" style="background-position: left bottom"></div>
 				<div class="inner">
-					<h1>FĂ CUNOȘTINȚĂ CU ALEX VELEA</h1>
+					<?php /*<h1 class="blue">FĂ CUNOȘTINȚĂ<br/>CU INNA</h1>*/ ?>
 					<div class="wide-responsive">
 						<div class="inline-player">
-							<video id="inline-player-1" class="video-js vjs-default-skin" controls preload="auto" width="auto" height="auto" poster="" data-setup="{}">
-								<source src="http://ht.cdn.turner.com/tbseurope/big/CN_RO/videos/buddy/Cartoon Network Alex Velea color.mp4.mp4" type="video/mp4">
-								<source src="http://ht.cdn.turner.com/tbseurope/big/CN_RO/videos/buddy/Cartoon Network Alex Velea color.webmhd.webm" type="video/webm">
+							<video id="inline-player-1" class="video-js vjs-default-skin" controls preload="auto" width="auto" height="auto" poster="img/inna-poster.jpg" data-setup="{}">
+								<source src="http://ht.cdn.turner.com/tbseurope/big/Adops/CN%20Inna%20CC%20footage%20final.mp4" type="video/mp4">
+								<source src="http://ht.cdn.turner.com/tbseurope/big/Adops/CN%20Inna%20CC%20footage%20final.webm" type="video/webm">
 							</video>
 						</div>
 					</div>
@@ -228,6 +235,7 @@
 					<h1>PARTENERI</h1>
 					<div class="body">
 						<a href="http://www.telefonulcopilului.ro" target="_blank"><img src="img/blank.gif" data-type="src" data-preload="img/logo-atc.png" alt="Asociația Telefonul Copilului" /></a>
+						<p>Mai multe informații despre Asociația Telefonul Copilului găsești <a href="http://www.telefonulcopilului.ro/ce-se-intampla-116111" target="_blank" class="pink" style="margin: 0px;">aici</a>!</p>
 					</div>
 				</div>
 			</div>
@@ -246,7 +254,7 @@
 			--><a href="#/ce-este-hartuirea">CE ESTE HĂRŢUIREA?</a><!--
 			--><a href="#/ce-pot-face">CE POT FACE?</a><!--
 			--><a href="#/urmareste-videoclipuri">URMĂREŞTE VIDEOCLIPURI</a><!--
-			--><a href="#/alex-velea">ALEX VELEA</a><!--
+			--><a href="#/inna">INNA</a><!--
 			--><a href="#/telefonul-copilului">TELEFONUL COPILULUI</a><!--
 			--><a href="#/codul-prieteniei">CODUL PRIETENIEI</a><!--
 			--><a href="#/parteneri">PARTENERI</a><!--

@@ -493,15 +493,15 @@ jQuery(document).ready(function($) {
 
 	bpc.page4in = function() {
 		try {
-			lypn_trackPageView('alex-velea');
+			lypn_trackPageView('inna');
 		} catch(err) {
 			console.log(err);
 		}
-		$('.alex-velea').css('display', 'table');//show(0);
-		var back = $('.alex-velea').find('.background'),
-			h1 = $('.alex-velea').find('h1'),
-			h2 = $('.alex-velea').find('h2'),
-			body = $('.alex-velea').find('.inline-player');
+		$('.inna').css('display', 'table');//show(0);
+		var back = $('.inna').find('.background'),
+			h1 = $('.inna').find('h1'),
+			h2 = $('.inna').find('h2'),
+			body = $('.inna').find('.inline-player');
 		TweenMax.killTweensOf(back);
 		TweenMax.killTweensOf(h1);
 		TweenMax.killTweensOf(h2);
@@ -529,17 +529,17 @@ jQuery(document).ready(function($) {
 	};
 
 	bpc.page4out = function() {
-		var back = $('.alex-velea').find('.background'),
-			h1 = $('.alex-velea').find('h1'),
-			h2 = $('.alex-velea').find('h2'),
-			body = $('.alex-velea').find('.inline-player');
+		var back = $('.inna').find('.background'),
+			h1 = $('.inna').find('h1'),
+			h2 = $('.inna').find('h2'),
+			body = $('.inna').find('.inline-player');
 		TweenMax.killTweensOf(back);
 		TweenMax.killTweensOf(h1);
 		TweenMax.killTweensOf(h2);
 		TweenMax.killTweensOf(body);
 
 		if (bpc.scrollDirection === 'up') {
-			TweenMax.to(back, 0.5, {css: {top: '100%'}, ease: Quart.easeOut, delay: 0.4, onComplete: function() { $('.alex-velea').hide(0); }});
+			TweenMax.to(back, 0.5, {css: {top: '100%'}, ease: Quart.easeOut, delay: 0.4, onComplete: function() { $('.inna').hide(0); }});
 			TweenMax.to(h1, 0.5, {css: {top: 120}, ease: Quart.easeOut, delay: 0.3});
 			TweenMax.to(h2, 0.5, {css: {top: 120}, ease: Quart.easeOut, delay: 0.2});
 			TweenMax.to(body, 0.5, {css: {top: 120}, ease: Quart.easeOut, delay: 0});
@@ -548,7 +548,7 @@ jQuery(document).ready(function($) {
 			TweenMax.to(h2, 0.5, {alpha: 0, ease: Quart.easeOut, delay: 0.2});
 			TweenMax.to(body, 0.5, {alpha: 0, ease: Quart.easeOut, delay: 0});
 		} else {
-			TweenMax.to(back, 0.5, {css: {bottom: '100%'}, ease: Quart.easeOut, delay: 0.4, onComplete: function() { $('.alex-velea').hide(0); }});
+			TweenMax.to(back, 0.5, {css: {bottom: '100%'}, ease: Quart.easeOut, delay: 0.4, onComplete: function() { $('.inna').hide(0); }});
 			TweenMax.to(h1, 0.5, {css: {top: -120}, ease: Quart.easeOut, delay: 0});
 			TweenMax.to(h2, 0.5, {css: {top: -120}, ease: Quart.easeOut, delay: 0.1});
 			TweenMax.to(body, 0.5, {css: {top: -120}, ease: Quart.easeOut, delay: 0.2});
@@ -787,12 +787,16 @@ jQuery(document).ready(function($) {
 	bpc.initWatchVideo = function() {
 		$('.videos a').click(function() {
 			var src = $(this).attr('data-src');
+
+			var webm = typeof $(this).attr('data-ext') === undefined ? src+'.webmhd.webm' : src+'.webm';
+			var mp4 = typeof $(this).attr('data-ext') === undefined ? src+'.mp4.mp4' : src+'.mp4';
+
 			try {
 				lypn_trackPageView('urmareste-videoclipuri/'+$(this).attr('data-track'));
 			} catch(err) {
 				console.log(err);
 			}
-			$('.video-player').html('<video id="video-player" class="video-js vjs-default-skin" controls preload="auto" autoplay width="100%" height="100%" poster="" data-setup="{}"><source src="'+src+'.mp4.mp4" type="video/mp4"><source src="'+src+'.webmhd.webm" type="video/webm"></video><div class="close"><i class="fa fa-times"></i></div>');
+			$('.video-player').html('<video id="video-player" class="video-js vjs-default-skin" controls preload="auto" autoplay width="100%" height="100%" poster="" data-setup="{}"><source src="'+mp4+'" type="video/mp4"><source src="'+webm+'" type="video/webm"></video><div class="close"><i class="fa fa-times"></i></div>');
 			var player = videojs("video-player", {}, function(){
 				// Player (this) is initialized and ready.
 			});
@@ -828,13 +832,13 @@ jQuery(document).ready(function($) {
 			TweenMax.to($(this).parent().parent().find('.double-video'), 0.6, {css: {marginLeft: 0}, ease: Quart.easeOut});
 		});
 
-		$('.alex-velea').on('swipeleft', function(){
-			if ($('.alex-velea .arrows.right').is(':visible'))
-				$('.alex-velea .arrows.right').click();
+		$('.inna').on('swipeleft', function(){
+			if ($('.inna .arrows.right').is(':visible'))
+				$('.inna .arrows.right').click();
 		});
-		$('.alex-velea').on('swiperight', function(){
-			if ($('.alex-velea .arrows.left').is(':visible'))
-				$('.alex-velea .arrows.left').click();
+		$('.inna').on('swiperight', function(){
+			if ($('.inna .arrows.left').is(':visible'))
+				$('.inna .arrows.left').click();
 		});
 		$('.telefonul-copilului').on('swipeleft', function(){
 			if ($('.telefonul-copilului .arrows.right').is(':visible'))
