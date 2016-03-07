@@ -1,0 +1,12 @@
+/* Webfont: Effra-Regular */@font-face {
+    font-family: 'Effra';
+    src: url('Effra-Regular.eot'); /* IE9 Compat Modes */
+    src: url('Effra-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('Effra-Regular.woff') format('woff'), /* Modern Browsers */
+         url('Effra-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('Effra-Regular.svg#Effra-Regular') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
