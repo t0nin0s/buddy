@@ -8,7 +8,7 @@
 
 	if (!isset($_server)) $_server = $_SERVER['HTTP_HOST'];
 
-	$_version = '1.0.14';
+	$_version = '1.1.7';
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -47,10 +47,11 @@
 				<a href="#/czym-jest-dokuczanie">CZYM JEST<br/>DOKUCZANIE?</a>
 				<a href="#/co-mozesz-zrobic">CO MOŻESZ<br/>ZROBIĆ?</a>
 				<a href="#/zobacz-filmy">ZOBACZ<br/>FILMY</a>
-				<a class="three" href="#/poznaj-marcina-gortata">POZNAJ<br/>MARCINA<br/>GORTATA</a>
+				<a class="three" href="#/poznaj-marcina-gortata">Poznaj<br/>Naszych<br/>Ambasadorów</a>
 				<a href="#/poznaj-malgosie">POZNAJ<br/>MAŁGOSIĘ</a>
 				<a href="#/kodeks-kumpla">KODEKS<br/>KUMPLA</a>
-				<a class="one" href="#/konkurs">KONKURS</a>
+				<a class="one" href="#/porady">PORADY</a>
+				<a class="one" href="#/partnerzy">PARTNERZY</a>
 				<a href="#/znajdz-pomoc">ZNAJDŹ<br/>POMOC</a>
 			</nav>
 		</div>
@@ -82,11 +83,13 @@
 
 			<div class="page czym-jest-dokuczanie">
 				<div class="background" data-preload="img/page-background.png" data-type="background"></div>
-				<div class="inner">
+				<?php /*<div class="inner">
 					<h1>CZYM JEST DOKUCZANIE?</h1>
 					<p>Dokuczanie to powtarzające się złe traktowanie innych lub celowe ich ranienie. Dokuczanie może zdarzyć się każdemu. Może mieć miejsce w szkole, na placu zabaw, w domu lub w internecie. Może polegać na szturchaniu, biciu, wyśmiewaniu, zabieraniu rzeczy, przezywaniu, celowym ignorowaniu lub pomijaniu, a także wytykaniu z powodu odmienności.</p>
 					<p>Dokuczanie nigdy nie jest w porządku. To nie Twoja wina, jeśli ktoś Cię krzywdzi.</p>
-				</div>
+					<p><a href="img/infographic_conclusions_of_the_study.png" target="_blank" class="yellow" data-scroller="czym-jest-dokuczanie">WNIOSKI Z BADAŃ</a></p>
+				</div>*/ ?>
+				<div class="img-scroller"><img src="img/blank.gif" data-type="src" data-preload="img/infographic_conclusions_of_the_study.png" alt="" /></div>
 			</div>
 
 			<div class="page co-mozesz-zrobic">
@@ -148,60 +151,52 @@
 									<div class="cell">KTOŚ OBSERWUJE</div>
 								</div>
 							</div>
+						</a><!--
+						--><a data-track="watch-przyjazn" data-src="http://ht.cdn.turner.com/tbseurope/big/Adops/Polish%20Anti%20Bullying%20Frienship">
+							<div class="thumb">
+								<div class="table">
+									<div class="cell">PRZYJAŹŃ</div>
+								</div>
+							</div>
 						</a>
 					</div>
 				</div>
 			</div>
 
 			<div class="page poznaj-marcina-gortata">
-				<div class="background" data-preload="img/gortata.jpg" data-type="background"></div>
+				<div class="background" data-preload="img/ambassadors.jpg" data-type="background"></div>
 				<div class="inner">
-					<h1>POZNAJ MARCINA GORTATA</h1>
-					<h2>AMBASADOR KAMPANII „BĄDŹ KUMPLEM, NIE DOKUCZAJ”</h2>
-					<ul class="double-video">
-						<?php /*<li>
-							<div class="wide-responsive">
-								<div class="inline-player">
-									<video id="inline-player-1" class="video-js vjs-default-skin" controls preload="auto" width="auto" height="auto" poster="http://ht.cdn.turner.com/tbseurope/big/CN_PL/videos/buddy/GORTAT_FILM2.jpg" data-setup="{}">
-										<source src="http://ht.cdn.turner.com/tbseurope/big/CN_PL/videos/buddy/APEL.mp4" type="video/mp4">
-										<source src="http://ht.cdn.turner.com/tbseurope/big/CN_PL/videos/buddy/GORTAT_FILM2.webm" type="video/webm">
-									</video>
+					<h1>Poznaj Naszych Ambasadorów</h1>
+					<div class="videos">
+						<a data-track="watch-spot-promocyjny" data-src="http://ht.cdn.turner.com/tbseurope/big/Adops/42417_CN_Anti-Bullying_POL_Promo_v3" style="background-image:url(img/ambassador-1.jpg)">
+							<div class="thumb">
+								<div class="table">
+									<div class="cell">Spot promocyjny</div>
 								</div>
 							</div>
-						</li><!--
-						--><li>
-							<div class="wide-responsive">
-								<div class="inline-player">
-									<video id="inline-player-3" class="video-js vjs-default-skin" controls preload="auto" width="auto" height="auto" poster="http://ht.cdn.turner.com/tbseurope/big/CN_PL/videos/buddy/GORTAT_FILM3.jpg" data-setup="{}">
-										<source src="http://ht.cdn.turner.com/tbseurope/big/CN_PL/videos/buddy/GORTAT_FILM3.mp4" type="video/mp4">
-										<source src="http://ht.cdn.turner.com/tbseurope/big/CN_PL/videos/buddy/GORTAT_FILM3.webm" type="video/webm">
-									</video>
+						</a>
+						<a data-track="watch-krotka-pilka" data-src="http://ht.cdn.turner.com/tbseurope/big/Adops/pol_qa_4" style="background-image:url(img/ambassador-2.jpg)">
+							<div class="thumb">
+								<div class="table">
+									<div class="cell">Krótka piłka</div>
 								</div>
 							</div>
-						</li>*/ ?>
-						<li>
-							<div class="wide-responsive">
-								<div class="inline-player">
-									<video id="inline-player-1" class="video-js vjs-default-skin" controls preload="auto" width="auto" height="auto" data-setup="{}">
-										<source src="http://ht.cdn.turner.com/tbseurope/big/CN_PL/videos/buddy/APEL.mp4" type="video/mp4">
-										<source src="http://ht.cdn.turner.com/tbseurope/big/CN_PL/videos/buddy/APEL.webmhd.webm" type="video/webm">
-									</video>
+						</a>
+						<a data-track="watch-making-of" data-src="http://ht.cdn.turner.com/tbseurope/big/Adops/42417_CN_Anti-Bullying_POL_%20MakingOf" style="background-image:url(img/ambassador-3.jpg)">
+							<div class="thumb">
+								<div class="table">
+									<div class="cell">Making-of</div>
 								</div>
 							</div>
-						</li><!--
-						--><li>
-							<div class="wide-responsive">
-								<div class="inline-player">
-									<video id="inline-player-3" class="video-js vjs-default-skin" controls preload="auto" width="auto" height="auto" data-setup="{}">
-										<source src="http://ht.cdn.turner.com/tbseurope/big/CN_PL/videos/buddy/GORTAT_FILM2.mp4" type="video/mp4">
-										<source src="http://ht.cdn.turner.com/tbseurope/big/CN_PL/videos/buddy/GORTAT_FILM2.webmhd.webm" type="video/webm">
-									</video>
+						</a>
+						<a data-track="watch-promo-marcin-gortat" data-src="http://ht.cdn.turner.com/tbseurope/big/CN_PL/videos/buddy/APEL" style="background-image:url(img/ambassador-4.jpg)">
+							<div class="thumb">
+								<div class="table">
+									<div class="cell">“Bądź kumplem, nie dokuczaj!” 2015</div>
 								</div>
 							</div>
-						</li>
-					</ul>
-					<div class="arrows right"><i class="fa fa-angle-right"></i></div>
-					<div class="arrows left"><i class="fa fa-angle-left"></i></div>
+						</a>
+					</div>
 				</div>
 			</div>
 
@@ -260,24 +255,77 @@
 				</div>
 			</div>
 
-			<div class="page konkurs">
+			<div class="page porady">
 				<div class="background" data-preload="img/page-background.png" data-type="background"></div>
 				<div class="inner">
 				<?php /*
 					<h1>ZAGRAJ W KOSZA Z MARCINEM GORTATEM!</h1>
-					<h2>Konkurs rusza już w najbliższą środę.</h2>
+					<h2>porady rusza już w najbliższą środę.</h2>
 					<div class="body">
 						<p>Odwiedź nas 11 lutego i zawalcz o niesamowite nagrody!</p>
 					</div>*/ ?>
-					<a href="http://klub-kumpli-konkurs.cartoonnetwork.pl​" target="_blank"><img src="img/blank.gif" data-type="src" data-preload="img/konkurs.jpg" alt="Konkurs" /></a>
+					<a href="porady_dla_dzieci.php" target="_blank" class="yellow" data-scroller="porady">
+						<img src="img/blank.gif" data-preload="img/for-kids.png" data-type="src" alt="Porady dla dzieci" />
+						<h4>Porady dla dzieci</h4>
+						<div class="button">kliknij tutaj</div>
+					</a>
+					
+					<a href="porady_dla_rodzicow.php" target="_blank" class="yellow" data-scroller="porady">
+						<img src="img/blank.gif" data-preload="img/for-parents.png" data-type="src" alt="Porady dla rodziców" />
+						<h4>Porady dla rodziców</h4>
+						<div class="button">kliknij tutaj</div>
+					</a>
+					
+					<div class="block">
+						<img src="img/blank.gif" data-preload="img/for-teachers.png" data-type="src" alt="Dla nauczycieli" />
+						<h4>PORADY DLA NAUCZYCIELI</h4>
+						<p>
+							<strong>WSKAZÓWKI DLA NAUCZYCIELI</strong> <a href="pdf/Wskazowki_dla_nauczycieli.pdf" target="_blank" class="pink">POBIERZ</a>
+						</p>
+						<p>
+							<strong>SCENARIUSZE LEKCJI</strong><br/>
+							Scenariusz dla klas I-III: <a href="pdf/Scenariusz_dla_klas_I-III.pdf" target="_blank" class="pink">POBIERZ</a><br/>
+							Scenariusz dla klas IV-VI: <a href="pdf/Scenariusz_dla_klas_IV-VI.pdf" target="_blank" class="pink">POBIERZ</a>
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="page partnerzy">
+				<div class="background" data-preload="img/white-90.png" data-type="background"></div>
+				<div class="inner">
+					<h1>Partnerzy</h1>
+					<div class="body">
+						<div class="logo-set">
+							<h3>Patronat honorowy</h3>
+							<a href="http://brpd.gov.pl/" target="_blank"><img src="img/logo-rzecznikprawdziecka.png" alt="" /></a>
+						</div>
+						<div class="logo-set">
+							<h3>Partnerzy</h3>
+							<a href="http://fdn.pl/" target="_blank"><img src="img/logo-fundacja.png" alt="" /></a>
+							<a href="http://www.ibe.edu.pl/pl/" target="_blank"><img src="img/logo-ibe.png" alt="" /></a>
+						</div>
+						<div class="logo-set-full">
+							<h3>Patroni medialni</h3>
+							<a href="http://dzieci.pl/" target="_blank"><img src="img/logo-wp.png" alt="" /></a>
+							<a href="http://parenting.pl/" target="_blank"><img src="img/logo-parenting.png" alt="" /></a>
+							<a href="http://czasdzieci.pl/" target="_blank"><img src="img/logo-czas.png" alt="" /></a>
+							<a href="http://edunews.pl/" target="_blank"><img src="img/logo-edu.png" alt="" /></a>
+							<a href="http://ohme.pl/" target="_blank"><img src="img/logo-ohme.png" alt="" /></a>
+						</div>
+					</div>
 				</div>
 			</div>
 
 			<div class="page znajdz-pomoc">
 				<div class="background" data-preload="img/page-background.png" data-type="background"></div>
 				<div class="inner">
-					<h1>DOWIEDZ SIĘ WIĘCEJ I ZNAJDŹ POMOC</h1>
-					<p>Chcesz dowiedzieć się więcej o dokuczaniu, potrzebujesz pomocy, wsparcia lub rady? Wejdź na stronę <a href="http://www.przeciwprzemocy.pl" target="_blank">www.przeciwprzemocy.pl</a>, dzwoń pod numer <span class="pink">88 555 22 22</span> lub napisz na adres: <a href="mailto:kumpel@przeciwprzemocy.pl">kumpel@przeciwprzemocy.pl</a>. Tu znajdziesz kogoś, kto Cię zrozumie, wysłucha i będzie mógł Ci pomóc.</p>
+					<h1>DOWIEDZ SIĘ WIĘCEJ <br />I ZNAJDŹ POMOC</h1>
+					<p>Chcesz dowiedzieć się więcej o dokuczaniu, potrzebujesz pomocy, wsparcia lub rady? Dzwoń pod numery:</p>
+					<p><strong class="yellow">116 111</strong> – telefon zaufania dla dzieci i młodzieży<br/>
+					<strong class="yellow">800 100 100</strong> - telefonu dla rodziców i nauczycieli<br/>
+					lub napisz na <a href="http://www.116111.pl/napisz" target="_blank">www.116111.pl/napisz</a><br/>
+					Tu znajdziesz kogoś, kto Cię zrozumie, wysłucha i będzie mógł Ci pomóc.</p>
 				</div>
 			</div>
 		</div>
@@ -287,10 +335,11 @@
 			--><a href="#/czym-jest-dokuczanie">CZYM JEST DOKUCZANIE?</a><!--
 			--><a href="#/co-mozesz-zrobic">CO MOŻESZ ZROBIĆ?</a><!--
 			--><a href="#/zobacz-filmy">ZOBACZ FILMY</a><!--
-			--><a href="#/poznaj-marcina-gortata">POZNAJ MARCINA GORTATA</a><!--
+			--><a href="#/poznaj-marcina-gortata">Poznaj Naszych Ambasadorów</a><!--
 			--><a href="#/poznaj-malgosie">POZNAJ MAŁGOSIĘ</a><!--
 			--><a href="#/kodeks-kumpla">KODEKS KUMPLA</a><!--
-			--><a href="#/konkurs">KONKURS</a><!--
+			--><a href="#/porady">PORADY</a><!--
+			--><a href="#/partnerzy">PARTNERZY</a><!--
 			--><a href="#/znajdz-pomoc">ZNAJDŹ POMOC</a>
 
 			<div class="close"><i class="fa fa-times"></i></div>
@@ -302,8 +351,8 @@
 			</div>
 			<span class="open">KWESTIE PRAWNE</span>
 			<span class="copy">Jeśli korzystasz z niniejszej strony, akceptujesz postanowienia Regulaminu. Znak towarowy i &copy; 2015 Cartoon Network. A Time Warner Company. Wszelkie prawa zastrzeżone. CartoonNetwork.pl jest częścią sieci cyfrowej Turner Sports and Entertainment Digital Network.</span>
-			<a href="http://www.przeciwprzemocy.pl/" target="_blank" class="childline"><img src="img/blank.gif" data-type="src" data-preload="img/footer-art.png" alt="" /></a>
-			<a href="http://www.przeciwprzemocy.pl/" target="_blank" class="childline-sml"><img src="img/blank.gif" data-type="src" data-preload="img/footer-art-sml.png" alt="" /></a>
+			<a href="#/partnerzy" class="childline"><img src="img/blank.gif" data-type="src" data-preload="img/footer-logos.gif?v=2" alt="" /></a>
+			<a href="#/partnerzy" class="childline-sml"><img src="img/blank.gif" data-type="src" data-preload="img/footer-logos-sml.gif?v=2" alt="" /></a>
 		</div>
 
 		<div class="video-player">

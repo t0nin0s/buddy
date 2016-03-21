@@ -68,8 +68,25 @@ jQuery(document).ready(function($) {
 
 	bpc.fileLoaded = function() {
 		bpc.scriptsLoaded++;
-		if (bpc.scriptsLoaded === bpc.scriptsToLoad.length)
+		if (bpc.scriptsLoaded === bpc.scriptsToLoad.length) {
 			bpc.preloadImages();//bpc.loadComplete();
+			bpc.inlinePages();
+		}
+	};
+
+	bpc.inlinePages = function() {
+		/*$('a[data-scroller]').on(bpc.clickType, function(e) {
+			e.preventDefault();
+			var target = '.page.'+$(this).attr('data-scroller'), src = $(this).attr('href');
+			$(target).append('<div class="img-scroller"><img src="'+src+'" alt="" /></div><i class="close fa fa-times"></i>');
+			return false;
+		});*/
+		$('.page').on(bpc.clickType, '.close', function(e) {
+			e.stopPropagation();
+			$(this).parent().find('.scroller').remove();
+			$(this).remove();
+			return false;
+		});
 	};
 
 	bpc.preloadImages = function() {
@@ -124,9 +141,9 @@ jQuery(document).ready(function($) {
 			});
 		}
 
-		bpc.inlineVideo1 = videojs('inline-player-1');
+		//bpc.inlineVideo1 = videojs('inline-player-1');
 		bpc.inlineVideo2 = videojs('inline-player-2');
-		bpc.inlineVideo3 = videojs('inline-player-3');
+		//bpc.inlineVideo3 = videojs('inline-player-3');
 		bpc.inlineVideo4 = videojs('inline-player-4');
 
 		bpc.resize();
@@ -173,8 +190,8 @@ jQuery(document).ready(function($) {
 			$('.header').css({top: -82 + (82*ipct)});
 		}
 		$('.scroll').css({bottom: 5 - (81*ipct)});
-		$('.footer .childline').css({right: 40 - (316 * ipct)});
-		if (!bpc.ismobile) $('.footer .childline-sml').css({right: -158 + (198 * ipct)});
+		$('.footer .childline').css({right: 40 - (320 * ipct)});
+		if (!bpc.ismobile) $('.footer .childline-sml').css({right: -162 + (198 * ipct)});
 
 		// page 1
 		/*var pg1_pct = pct - 0.5;
@@ -187,6 +204,7 @@ jQuery(document).ready(function($) {
 		var pg = Math.round(pct);
 		if (pg < 0) pg = 0;
 		if (pg > $('.pages .page').length-1) pg = $('.pages .page').length-1;
+
 
 		// for mobile
 		/*if (bpc.clickType === 'tap') {
@@ -221,6 +239,7 @@ jQuery(document).ready(function($) {
 			if (bpc.page === 6) bpc.page6out();
 			if (bpc.page === 7) bpc.page7out();
 			if (bpc.page === 8) bpc.page8out();
+			if (bpc.page === 9) bpc.page9out();
 
 			// in animations
 			if (pg === 0) $('.pages .intro').show(0);
@@ -232,13 +251,14 @@ jQuery(document).ready(function($) {
 			if (pg === 6) bpc.page6in();
 			if (pg === 7) bpc.page7in();
 			if (pg === 8) bpc.page8in();
+			if (pg === 9) bpc.page9in();
 			
 			/*$('.pages .page').hide(0);
 			$('.pages .page').eq(pg).show(0);*/
 
-			if (!bpc.inlineVideo1.paused()) bpc.inlineVideo1.pause();
+			//if (!bpc.inlineVideo1.paused()) bpc.inlineVideo1.pause();
 			if (!bpc.inlineVideo2.paused()) bpc.inlineVideo2.pause();
-			if (!bpc.inlineVideo3.paused()) bpc.inlineVideo3.pause();
+			//if (!bpc.inlineVideo3.paused()) bpc.inlineVideo3.pause();
 			if (!bpc.inlineVideo4.paused()) bpc.inlineVideo4.pause();
 
 			$('.header .main-nav a').removeClass('active');
@@ -258,7 +278,7 @@ jQuery(document).ready(function($) {
 		try {
 			lypn_trackPageView('czym-jest-dokuczanie');
 		} catch(e) {
-			console.log(e);
+			e = null;
 		}
 		$('.czym-jest-dokuczanie').css('display', 'table');//.show(0);
 		var back = $('.czym-jest-dokuczanie').find('.background'),
@@ -267,6 +287,8 @@ jQuery(document).ready(function($) {
 		TweenMax.killTweensOf(back);
 		TweenMax.killTweensOf(h1);
 		TweenMax.killTweensOf(p);
+
+		$('.czym-jest-dokuczanie .img-scroller').show(0);
 
 		if (bpc.scrollDirection === 'up') {
 			TweenMax.to(back, 0.5, {css: {top: -100, bottom: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0});
@@ -293,6 +315,13 @@ jQuery(document).ready(function($) {
 		TweenMax.killTweensOf(h1);
 		TweenMax.killTweensOf(p);
 
+		$('.czym-jest-dokuczanie .img-scroller').hide(0);
+
+		/*if ($('.czym-jest-dokuczanie .scroller').length > 0) {
+			$('.czym-jest-dokuczanie .scroller').remove();
+			$('.czym-jest-dokuczanie .close').remove();
+		}*/
+
 		if (bpc.scrollDirection === 'up') {
 			TweenMax.to(back, 0.5, {css: {top: '100%'}, ease: Quart.easeOut, delay: 0.4, onComplete: function() { $('.czym-jest-dokuczanie').hide(0); }});
 			TweenMax.to(h1, 0.5, {css: {top: 120}, ease: Quart.easeOut, delay: 0.2});
@@ -314,7 +343,7 @@ jQuery(document).ready(function($) {
 		try {
 			lypn_trackPageView('co-mozesz-zrobic');
 		} catch(e) {
-			console.log(e);
+			e = null;
 		}
 		$('.co-mozesz-zrobic').css('display', 'table');//show(0);
 		var back = $('.co-mozesz-zrobic').find('.background'),
@@ -371,7 +400,7 @@ jQuery(document).ready(function($) {
 		try {
 			lypn_trackPageView('zobacz-filmy');
 		} catch(e) {
-			console.log(e);
+			e = null;
 		}
 		$('.zobacz-filmy').css('display', 'table');//show(0);
 		var back = $('.zobacz-filmy').find('.background'),
@@ -439,13 +468,13 @@ jQuery(document).ready(function($) {
 		try {
 			lypn_trackPageView('poznaj-malgosie');
 		} catch(e) {
-			console.log(e);
+			e = null;
 		}
 		$('.poznaj-malgosie').css('display', 'table');//show(0);
 		var back = $('.poznaj-malgosie').find('.background'),
 			h1 = $('.poznaj-malgosie').find('h1'),
 			h2 = $('.poznaj-malgosie').find('h2'),
-			body = $('.poznaj-malgosie').find('.inline-player');
+			body = $('.poznaj-malgosie').find('.inner');
 		TweenMax.killTweensOf(back);
 		TweenMax.killTweensOf(h1);
 		TweenMax.killTweensOf(h2);
@@ -476,7 +505,7 @@ jQuery(document).ready(function($) {
 		var back = $('.poznaj-malgosie').find('.background'),
 			h1 = $('.poznaj-malgosie').find('h1'),
 			h2 = $('.poznaj-malgosie').find('h2'),
-			body = $('.poznaj-malgosie').find('.inline-player');
+			body = $('.poznaj-malgosie').find('.inner');
 		TweenMax.killTweensOf(back);
 		TweenMax.killTweensOf(h1);
 		TweenMax.killTweensOf(h2);
@@ -507,13 +536,13 @@ jQuery(document).ready(function($) {
 		try {
 			lypn_trackPageView('poznaj-marcina-gortata');
 		} catch(e) {
-			console.log(e);
+			e = null;
 		}
 		$('.poznaj-marcina-gortata').css('display', 'table');//show(0);
 		var back = $('.poznaj-marcina-gortata').find('.background'),
 			h1 = $('.poznaj-marcina-gortata').find('h1'),
 			h2 = $('.poznaj-marcina-gortata').find('h2'),
-			body = $('.poznaj-marcina-gortata').find('.inline-player');
+			body = $('.poznaj-marcina-gortata').find('.videos');
 		TweenMax.killTweensOf(back);
 		TweenMax.killTweensOf(h1);
 		TweenMax.killTweensOf(h2);
@@ -544,7 +573,7 @@ jQuery(document).ready(function($) {
 		var back = $('.poznaj-marcina-gortata').find('.background'),
 			h1 = $('.poznaj-marcina-gortata').find('h1'),
 			h2 = $('.poznaj-marcina-gortata').find('h2'),
-			body = $('.poznaj-marcina-gortata').find('.inline-player');
+			body = $('.poznaj-marcina-gortata').find('.videos');
 		TweenMax.killTweensOf(back);
 		TweenMax.killTweensOf(h1);
 		TweenMax.killTweensOf(h2);
@@ -575,7 +604,7 @@ jQuery(document).ready(function($) {
 		try {
 			lypn_trackPageView('kodeks-kumpla');
 		} catch(e) {
-			console.log(e);
+			e = null;
 		}
 		$('.kodeks-kumpla').css('display', 'table');//show(0);
 		var back = $('.kodeks-kumpla').find('.background'),
@@ -629,15 +658,15 @@ jQuery(document).ready(function($) {
 
 	bpc.page7in = function() {
 		try {
-			lypn_trackPageView('konkurs');
+			lypn_trackPageView('porady');
 		} catch(e) {
-			console.log(e);
+			e = null;
 		}
-		$('.konkurs').css('display', 'table');//show(0);
-		var back = $('.konkurs').find('.background'),
-			/*h1 = $('.konkurs').find('h1'),
-			h2 = $('.konkurs').find('h2'),*/
-			body = $('.konkurs').find('a');
+		$('.porady').css('display', 'table');//show(0);
+		var back = $('.porady').find('.background'),
+			/*h1 = $('.porady').find('h1'),
+			h2 = $('.porady').find('h2'),*/
+			body = $('.porady').find('.inner');
 		TweenMax.killTweensOf(back);
 		/*TweenMax.killTweensOf(h1);
 		TweenMax.killTweensOf(h2);*/
@@ -665,17 +694,17 @@ jQuery(document).ready(function($) {
 	};
 
 	bpc.page7out = function() {
-		var back = $('.konkurs').find('.background'),
-			/*h1 = $('.konkurs').find('h1'),
-			h2 = $('.konkurs').find('h2'),*/
-			body = $('.konkurs').find('a');
+		var back = $('.porady').find('.background'),
+			/*h1 = $('.porady').find('h1'),
+			h2 = $('.porady').find('h2'),*/
+			body = $('.porady').find('.inner');
 		TweenMax.killTweensOf(back);
 		/*TweenMax.killTweensOf(h1);
 		TweenMax.killTweensOf(h2);*/
 		TweenMax.killTweensOf(body);
 
 		if (bpc.scrollDirection === 'up') {
-			TweenMax.to(back, 0.5, {css: {top: '100%'}, ease: Quart.easeOut, delay: 0.2, onComplete: function() { $('.konkurs').hide(0); }});
+			TweenMax.to(back, 0.5, {css: {top: '100%'}, ease: Quart.easeOut, delay: 0.2, onComplete: function() { $('.porady').hide(0); }});
 			/*TweenMax.to(h1, 0.5, {css: {top: 120}, ease: Quart.easeOut, delay: 0.2});
 			TweenMax.to(h2, 0.5, {css: {top: 120}, ease: Quart.easeOut, delay: 0.1});*/
 			TweenMax.to(body, 0.5, {css: {top: 120}, ease: Quart.easeOut, delay: 0});
@@ -684,7 +713,7 @@ jQuery(document).ready(function($) {
 			TweenMax.to(h2, 0.5, {alpha: 0, ease: Quart.easeOut, delay: 0.1});*/
 			TweenMax.to(body, 0.5, {alpha: 0, ease: Quart.easeOut, delay: 0});
 		} else {
-			TweenMax.to(back, 0.5, {css: {bottom: '100%'}, ease: Quart.easeOut, delay: 0.2, onComplete: function() { $('.konkurs').hide(0); }});
+			TweenMax.to(back, 0.5, {css: {bottom: '100%'}, ease: Quart.easeOut, delay: 0.2, onComplete: function() { $('.porady').hide(0); }});
 			/*TweenMax.to(h1, 0.5, {css: {top: -120}, ease: Quart.easeOut, delay: 0});
 			TweenMax.to(h2, 0.5, {css: {top: -120}, ease: Quart.easeOut, delay: 0.1});*/
 			TweenMax.to(body, 0.5, {css: {top: -120}, ease: Quart.easeOut, delay: 0});
@@ -696,10 +725,69 @@ jQuery(document).ready(function($) {
 	};
 
 	bpc.page8in = function() {
+		
+		try {
+			lypn_trackPageView('partnerzy');
+		} catch(e) {
+			e = null;
+		}
+		$('.partnerzy').css('display', 'table');//show(0);
+		var back = $('.partnerzy').find('.background'),
+			h1 = $('.partnerzy').find('h1'),
+			p = $('.partnerzy').find('.body');
+		TweenMax.killTweensOf(back);
+		TweenMax.killTweensOf(h1);
+		TweenMax.killTweensOf(p);
+
+		//$('img[usemap]').rwdImageMaps();
+
+		if (bpc.scrollDirection === 'up') {
+			TweenMax.to(back, 0.5, {css: {top: -100, bottom: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0});
+			TweenMax.to(h1, 0.5, {css: {top: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0.4});
+			TweenMax.to(p, 0.5, {css: {top: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0.2});
+
+			TweenMax.to(h1, 0.5, {alpha: 1, ease: Quart.easeOut, delay: bpc.showDelay + 0.4});
+			TweenMax.to(p, 0.5, {alpha: 1, ease: Quart.easeOut, delay: bpc.showDelay + 0.2});
+		} else if (bpc.scrollDirection === 'down') {
+			TweenMax.to(back, 0.5, {css: {top: -100, bottom: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0.2});
+			TweenMax.to(h1, 0.5, {css: {top: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0});
+			TweenMax.to(p, 0.5, {css: {top: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0.4});
+			
+			TweenMax.to(h1, 0.5, {alpha: 1, ease: Quart.easeOut, delay: bpc.showDelay + 0});
+			TweenMax.to(p, 0.5, {alpha: 1, ease: Quart.easeOut, delay: bpc.showDelay + 0.4});
+		}
+	};
+
+	bpc.page8out = function() {
+		var back = $('.partnerzy').find('.background'),
+			h1 = $('.partnerzy').find('h1'),
+			p = $('.partnerzy').find('.body');
+		TweenMax.killTweensOf(back);
+		TweenMax.killTweensOf(h1);
+		TweenMax.killTweensOf(p);
+
+		if (bpc.scrollDirection === 'up') {
+			TweenMax.to(back, 0.5, {css: {top: '100%'}, ease: Quart.easeOut, delay: 0.4, onComplete: function() { $('.partnerzy').hide(0); }});
+			TweenMax.to(h1, 0.5, {css: {top: 120}, ease: Quart.easeOut, delay: 0.2});
+			TweenMax.to(p, 0.5, {css: {top: 120}, ease: Quart.easeOut, delay: 0});
+
+			TweenMax.to(h1, 0.5, {alpha: 0, ease: Quart.easeOut, delay: 0.2});
+			TweenMax.to(p, 0.5, {alpha: 0, ease: Quart.easeOut, delay: 0});
+		} else {
+			TweenMax.to(back, 0.5, {css: {bottom: '100%'}, ease: Quart.easeOut, delay: 0.4, onComplete: function() { $('.partnerzy').hide(0); }});
+			TweenMax.to(h1, 0.5, {css: {top: -120}, ease: Quart.easeOut, delay: 0});
+			TweenMax.to(p, 0.5, {css: {top: -120}, ease: Quart.easeOut, delay: 0.2});
+
+			TweenMax.to(h1, 0.5, {alpha: 0, ease: Quart.easeOut, delay: 0});
+			TweenMax.to(p, 0.5, {alpha: 0, ease: Quart.easeOut, delay: 0.2});
+		}
+	};
+
+	bpc.page9in = function() {
 		try {
 			lypn_trackPageView('znajdz-pomoc');
 		} catch(e) {
-			console.log(e);
+			e = null;
 		}
 		$('.znajdz-pomoc').css('display', 'table');//show(0);
 		var back = $('.znajdz-pomoc').find('.background'),
@@ -726,7 +814,7 @@ jQuery(document).ready(function($) {
 		}
 	};
 
-	bpc.page8out = function() {
+	bpc.page9out = function() {
 		var back = $('.znajdz-pomoc').find('.background'),
 			h1 = $('.znajdz-pomoc').find('h1'),
 			p = $('.znajdz-pomoc').find('p');
@@ -754,6 +842,10 @@ jQuery(document).ready(function($) {
 	// end animations
 
 	bpc.initNav = function() {
+		$('.sub-nav-item').click(function() {
+			window.open($(this).attr('data-href'));
+		})
+
 		$('.header .main-nav a, .mobile-nav a').click(function() {
 			var index = $(this).index();
 			$('html, body').animate({scrollTop: index*bpc.stageHeight}, 300);
@@ -795,8 +887,9 @@ jQuery(document).ready(function($) {
 			}
 
 			bpc.mute = !bpc.mute;
-			bpc.inlineVideo1.muted(bpc.mute);
+			//bpc.inlineVideo1.muted(bpc.mute);
 			bpc.inlineVideo2.muted(bpc.mute);
+			bpc.inlineVideo4.muted(bpc.mute);
 		});
 	};
 
@@ -814,7 +907,7 @@ jQuery(document).ready(function($) {
 			try {
 				lypn_trackPageView('zobacz-filmy/'+$(this).attr('data-track'));
 			} catch(e) {
-				console.log(e);
+				e = null;
 			}
 			$('.video-player').html('<video id="video-player" class="video-js vjs-default-skin" controls preload="auto" autoplay width="100%" height="100%" poster="" data-setup="{}"><source src="'+src+'.mp4" type="video/mp4"><source src="'+src+'.webm" type="video/webm"></video><div class="close"><i class="fa fa-times"></i></div>');
 			var player = videojs("video-player", {}, function(){
@@ -835,18 +928,18 @@ jQuery(document).ready(function($) {
 	bpc.initCelebVids = function() {
 		$('.arrows.right').click(function() {
 			$(this).hide();
-			if (!bpc.inlineVideo1.paused()) bpc.inlineVideo1.pause();
+			//if (!bpc.inlineVideo1.paused()) bpc.inlineVideo1.pause();
 			if (!bpc.inlineVideo2.paused()) bpc.inlineVideo2.pause();
-			if (!bpc.inlineVideo3.paused()) bpc.inlineVideo3.pause();
+			//if (!bpc.inlineVideo3.paused()) bpc.inlineVideo3.pause();
 			if (!bpc.inlineVideo4.paused()) bpc.inlineVideo4.pause();
 			$(this).parent().find('.left').show(0);
 			TweenMax.to($(this).parent().parent().find('.double-video'), 0.6, {css: {marginLeft: '-100%'}, ease: Quart.easeOut});
 		});
 		$('.arrows.left').click(function() {
 			$(this).hide();
-			if (!bpc.inlineVideo1.paused()) bpc.inlineVideo1.pause();
+			//if (!bpc.inlineVideo1.paused()) bpc.inlineVideo1.pause();
 			if (!bpc.inlineVideo2.paused()) bpc.inlineVideo2.pause();
-			if (!bpc.inlineVideo3.paused()) bpc.inlineVideo3.pause();
+			//if (!bpc.inlineVideo3.paused()) bpc.inlineVideo3.pause();
 			if (!bpc.inlineVideo4.paused()) bpc.inlineVideo4.pause();
 			$(this).parent().find('.right').show(0);
 			TweenMax.to($(this).parent().parent().find('.double-video'), 0.6, {css: {marginLeft: 0}, ease: Quart.easeOut});
