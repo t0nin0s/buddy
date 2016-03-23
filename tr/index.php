@@ -8,7 +8,7 @@
 
 	if (!isset($_server)) $_server = $_SERVER['HTTP_HOST'];
 
-	$_version = '1.0.2';
+	$_version = '1.0.3';
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -117,6 +117,7 @@
 							</div>
 							<a class="button">Devamı</a>
 						</div>
+						<p style="font-size: 14px; color: #fff; padding-top: 20px; clear: left;">Okulunuzda Cartoon Network’ün Zorba Olma Kanka Ol projesiyle ilgili bir çalışma yapmak istiyorsanız <a href="mailto:info@zorbaolmakankaol.com" style="color:#ffed00">info@zorbaolmakankaol.com</a> adresine size ulaşabileceğimiz iletişim bilgileri ile mail gönderebilirsiniz.</p>
 					</div>
 				</div>
 			</div>
