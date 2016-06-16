@@ -45,11 +45,12 @@
 			<nav class="main-nav">
 				<a href="#/" class="intro"></a>
 				<a href="#/cos-e-il-bullismo">Cos'è Il<br/>Bullismo?</a>
-				<a href="#/cosa-posso-fare">COSA POSSO<br/>FARE?</a>
+				<a href="#/cosa-posso-fare" class="three">COSA<br/>POSSO<br/>FARE?</a>
 				<a href="#/guarda-i-video">GUARDA I<br/>VIDEO</a>
 				<a href="#/il-codice-dellamicizia">IL CODICE<br/>DELL'AMICIZIA</a>
-				<a href="#/partner">Partner</a>
+				<a href="#/partner" class="one">Partner</a>
 				<a href="#/chiedi-aiuto">CHIEDI<br/>AIUTO</a>
+				<a href="#/kit-per-le-scuole">KIT PER<br/>LE SCUOLE</a>
 			</nav>
 		</div>
 
@@ -194,6 +195,24 @@
 					<p><img src="img/contact-azzurro.png" alt="1.96.96" /></p>
 				</div>
 			</div>
+
+			<div class="page kit-per-le-scuole">
+				<div class="background" data-preload="img/blue-95.png" data-type="background"></div>
+				<div class="inner">
+					<h1>KIT PER LE SCUOLE</h1>
+					<p>Cartoon Network e Telefono Azzurro hanno deciso di sviluppare un kit per informare i ragazzi sul bullismo, per incoraggiarli a far sentire la loro voce, per sensibilizzare i genitori e per supportare gli insegnanti a parlare di bullismo nelle scuole.</p>
+					<p>Il kit comprende:</p>
+					<p>
+						<ul>
+							<li>un poster Stop bullismo: parla;</li>
+							<li>un leaflet per genitori sviluppato dagli esperti di Telefono Azzurro che contiene tutte le informazioni per riconoscere, prevenire, contrastare il bullismo e chiedere aiuto in caso di necessità;</li>
+							<li>un leaflet per i docenti con consigli e risorse utili per affrontare il tema con gli alunni.</li>
+						</ul>
+					</p>
+					<p>I materiali del kit possono essere condivisi tra gli insegnanti all’interno della scuola o in famiglia.</p>
+					<a href="kit_stop_bullismo.zip" class="button">CLICCA QUI PER SCARICARE IL KIT</a>
+				</div>
+			</div>
 		</div>
 
 		<div class="mobile-nav">
@@ -203,7 +222,8 @@
 			--><a href="#/guarda-i-video">GUARDA I VIDEO</a><!--
 			--><a href="#/il-codice-dellamicizia">IL CODICE DELL'AMICIZIA</a><!--
 			--><a href="#/partner">Partner</a><!--
-			--><a href="#/chiedi-aiuto">CHIEDI AIUTO</a>
+			--><a href="#/chiedi-aiuto">CHIEDI AIUTO</a><!--
+			--><a href="#/kit-per-le-scuole">KIT PER LE SCUOLE</a>
 			<div class="close"><i class="fa fa-times"></i></div>
 		</div>
 

@@ -221,6 +221,7 @@ jQuery(document).ready(function($) {
 			if (bpc.page === 4) bpc.page6out();
 			if (bpc.page === 5) bpc.page7out();
 			if (bpc.page === 6) bpc.page8out();
+			if (bpc.page === 7) bpc.page9out();
 
 			// in animations
 			if (pg === 0) $('.pages .intro').show(0);
@@ -232,6 +233,7 @@ jQuery(document).ready(function($) {
 			if (pg === 4) bpc.page6in();
 			if (pg === 5) bpc.page7in();
 			if (pg === 6) bpc.page8in();
+			if (pg === 7) bpc.page9in();
 			
 			/*$('.pages .page').hide(0);
 			$('.pages .page').eq(pg).show(0);*/
@@ -719,6 +721,62 @@ jQuery(document).ready(function($) {
 			TweenMax.to(p, 0.5, {alpha: 0, ease: Quart.easeOut, delay: 0});
 		} else {
 			TweenMax.to(back, 0.5, {css: {bottom: '100%'}, ease: Quart.easeOut, delay: 0.4, onComplete: function() { $('.chiedi-aiuto').hide(0); }});
+			TweenMax.to(h1, 0.5, {css: {top: -120}, ease: Quart.easeOut, delay: 0});
+			TweenMax.to(p, 0.5, {css: {top: -120}, ease: Quart.easeOut, delay: 0.2});
+
+			TweenMax.to(h1, 0.5, {alpha: 0, ease: Quart.easeOut, delay: 0});
+			TweenMax.to(p, 0.5, {alpha: 0, ease: Quart.easeOut, delay: 0.2});
+		}
+	};
+
+	bpc.page9in = function() {
+		try {
+			lypn_trackPageView('kit-per-le-scuole');
+		} catch (err) {
+			console.log(err);
+		}
+		$('.kit-per-le-scuole').css('display', 'table');//.show(0);
+		var back = $('.kit-per-le-scuole').find('.background'),
+			h1 = $('.kit-per-le-scuole').find('h1'),
+			p = $('.kit-per-le-scuole').find('p, ul, .button');
+		TweenMax.killTweensOf(back);
+		TweenMax.killTweensOf(h1);
+		TweenMax.killTweensOf(p);
+
+		if (bpc.scrollDirection === 'up') {
+			TweenMax.to(back, 0.5, {css: {top: -100, bottom: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0});
+			TweenMax.to(h1, 0.5, {css: {top: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0.4});
+			TweenMax.to(p, 0.5, {css: {top: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0.2});
+
+			TweenMax.to(h1, 0.5, {alpha: 1, ease: Quart.easeOut, delay: bpc.showDelay + 0.4});
+			TweenMax.to(p, 0.5, {alpha: 1, ease: Quart.easeOut, delay: bpc.showDelay + 0.2});
+		} else if (bpc.scrollDirection === 'down') {
+			TweenMax.to(back, 0.5, {css: {top: -100, bottom: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0.2});
+			TweenMax.to(h1, 0.5, {css: {top: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0});
+			TweenMax.to(p, 0.5, {css: {top: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0.4});
+			
+			TweenMax.to(h1, 0.5, {alpha: 1, ease: Quart.easeOut, delay: bpc.showDelay + 0});
+			TweenMax.to(p, 0.5, {alpha: 1, ease: Quart.easeOut, delay: bpc.showDelay + 0.4});
+		}
+	};
+
+	bpc.page9out = function() {
+		var back = $('.kit-per-le-scuole').find('.background'),
+			h1 = $('.kit-per-le-scuole').find('h1'),
+			p = $('.kit-per-le-scuole').find('p, ul, .button');
+		TweenMax.killTweensOf(back);
+		TweenMax.killTweensOf(h1);
+		TweenMax.killTweensOf(p);
+
+		if (bpc.scrollDirection === 'up') {
+			TweenMax.to(back, 0.5, {css: {top: '100%'}, ease: Quart.easeOut, delay: 0.4, onComplete: function() { $('.kit-per-le-scuole').hide(0); }});
+			TweenMax.to(h1, 0.5, {css: {top: 120}, ease: Quart.easeOut, delay: 0.2});
+			TweenMax.to(p, 0.5, {css: {top: 120}, ease: Quart.easeOut, delay: 0});
+
+			TweenMax.to(h1, 0.5, {alpha: 0, ease: Quart.easeOut, delay: 0.2});
+			TweenMax.to(p, 0.5, {alpha: 0, ease: Quart.easeOut, delay: 0});
+		} else {
+			TweenMax.to(back, 0.5, {css: {bottom: '100%'}, ease: Quart.easeOut, delay: 0.4, onComplete: function() { $('.kit-per-le-scuole').hide(0); }});
 			TweenMax.to(h1, 0.5, {css: {top: -120}, ease: Quart.easeOut, delay: 0});
 			TweenMax.to(p, 0.5, {css: {top: -120}, ease: Quart.easeOut, delay: 0.2});
 
