@@ -83,7 +83,7 @@
 			<div class="page le-harcelement-cest-quoi">
 				<div class="background" data-preload="img/page-background.png" data-type="background"></div>
 				<div class="inner">
-					<h1>Le harcèlement, c'est quoi ?</h1>
+					<h1>Le harcèlement,<br/>c'est quoi ?</h1>
 					<p>Le harcèlement se définit comme une violence répétée qui peut être verbale, physique ou psychologique. N'importe qui peut être harcelé, à n'importe quel âge et n'importe où. Cela peut arriver à l'école, dans la cour de récréation, à la maison ou même sur Internet. Le harcèlement peut prendre plusieurs formes, par exemple, si quelqu'un te bouscule, te frappe, te taquine en permanence, te prends tes affaires, te donne des surnoms ou se moque de toi parce que tu es différent.</p>
 					<p>Si tu te fais harceler, ce n'est pas de ta faute.</p>
 				</div>
@@ -98,7 +98,7 @@
 							<div class="icon"><img src="img/blank.gif" data-type="src" data-preload="img/what-icon-1.png" alt="" /></div>
 							<h2>Parles-en autour de toi</h2>
 							<div class="copy">
-								<p>Le harcèlement, c'est quelque chose que personne ne devrait supporter en silence. Si tu en es victime, parles-en autour de toi immédiatement à un ami, un professeur, ou un adulte en qui tu as confiance. Tu n'es pas seul. Il est très importan d'en parler à quelqu'un si tu es harcelé ou si tu es témoin.</p>
+								<p>Le harcèlement, c'est quelque chose que personne ne devrait supporter en silence. Si tu en es victime, parles-en immédiatement autour de toi, à un ami, un professeur, ou un adulte en qui tu as confiance. Tu n'es pas seul. Il est très important d'en parler à quelqu'un si tu es harcelé ou si tu es témoin.</p>
 							</div>
 							<a class="button">En savoir plus</a>
 						</div>
@@ -234,7 +234,7 @@
 					<h1>Le code des copains Cartoon Network</h1>
 					<div class="body">
 						<h4>01</h4>
-						<h3>Pour commencer, deviens ton meilleur copain - Traite les autres de la façon dont tu souhaiterai être traité.</h3>
+						<h3>Pour commencer, deviens ton meilleur copain - Traite les autres de la façon dont tu souhaiterais être traité.</h3>
 						<h4>02</h4>
 						<h3>Sois gentil et aimable - Ne juge pas les autres, tout le monde a besoin d'un ami.</h3>
 						<h4>03</h4>
@@ -289,8 +289,9 @@
 			</div>
 			<span class="open">Mentions légales</span>
 			<span class="copy">En utilisant ce site, tu acceptes les Conditions d'utilisation. TM &amp; &copy; 2016 Cartoon Network. Une société Time Warner. Tous droits réservés. <a href="http://CartoonNetwork.fr" target="_blank">CartoonNetwork.fr</a> fait partie du Turner Sports and Entertainment Digital Network.</span>
-			<a href="http://www.nonauharcelement.education.gouv.fr/" target="_blank" class="childline"><img src="img/blank.gif" data-type="src" data-preload="img/footer-harcelement.png" alt="" /></a>
-			<a href="http://www.nonauharcelement.education.gouv.fr/" target="_blank" class="childline-sml"><img src="img/blank.gif" data-type="src" data-preload="img/footer-harcelement-sml.png" alt="" /></a>
+			<?php /*<a href="http://www.nonauharcelement.education.gouv.fr/" target="_blank" class="childline"><img src="img/blank.gif" data-type="src" data-preload="img/footer-harcelement.png" alt="" /></a>
+			<a href="http://www.nonauharcelement.education.gouv.fr/" target="_blank" class="childline-sml"><img src="img/blank.gif" data-type="src" data-preload="img/footer-harcelement-sml.png" alt="" /></a>*/ ?>
+			<a href="http://www.nonauharcelement.education.gouv.fr/" target="_blank" class="nonauharcelement"><img src="img/blank.gif" data-type="src" data-preload="img/footer-harcelement-long.png" alt="" /></a>
 		</div>
 
 		<div class="video-player">

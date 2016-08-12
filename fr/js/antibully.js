@@ -173,6 +173,7 @@ jQuery(document).ready(function($) {
 			$('.header').css({top: -82 + (82*ipct)});
 		}
 		$('.scroll').css({bottom: 5 - (81*ipct)});
+		
 		$('.footer .childline').css({right: 40 - (332 * ipct)});
 		if (!bpc.ismobile) $('.footer .childline-sml').css({right: -151 + (191 * ipct)});
 
@@ -248,6 +249,12 @@ jQuery(document).ready(function($) {
 
 			window.location.hash = $('.header .main-nav a.active').attr('href');
 			bpc.page = pg;
+		}
+
+		if (pg === 0) {
+			$('.nonauharcelement').removeClass('sml');
+		} else {
+			$('.nonauharcelement').addClass('sml');
 		}
 	};
 
