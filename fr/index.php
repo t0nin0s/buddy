@@ -64,13 +64,12 @@
 		<div class="backgrounds">
 			<div class="background">
 <?php
-	//$videos = array('bully', 'bullied', 'observer');
-	$videos = array('beabuddy_season2');
+	$videos = array('BULLIED_FR', 'BULLY_FR', 'OBSERVER_FR');
 	$vid = $videos[array_rand($videos)];
 ?>
 				<video loop id="background-video">
-					<source src="http://ht.cdn.turner.com/tbseurope/big/Adops/<?php echo $vid; ?>.webm" type="video/webm">
-					<source src="http://ht.cdn.turner.com/tbseurope/big/Adops/<?php echo $vid; ?>.mp4" type="video/mp4">
+					<source src="http://ht.cdn.turner.com/tbseurope/big/CN_FR/videos/buddy/<?php echo $vid; ?>.webm" type="video/webm">
+					<source src="http://ht.cdn.turner.com/tbseurope/big/CN_FR/videos/buddy/<?php echo $vid; ?>.mp4" type="video/mp4">
 				</video>
 			</div>
 		</div>
@@ -134,21 +133,21 @@
 								</div>
 							</div>
 						</a> -->
-						<a data-track="je-suis-victime" data-src="http://ht.cdn.turner.com/tbseurope/big/CN_UK/videos/anti-bullying/bullied">
+						<a data-track="je-suis-victime" data-src="http://ht.cdn.turner.com/tbseurope/big/CN_FR/videos/buddy/BULLIED_FR.webm">
 							<div class="thumb">
 								<div class="table">
 									<div class="cell">Je suis Victime</div>
 								</div>
 							</div>
 						</a>
-						<a data-track="jharcele" data-src="http://ht.cdn.turner.com/tbseurope/big/CN_UK/videos/anti-bullying/bully">
+						<a data-track="jharcele" data-src="http://ht.cdn.turner.com/tbseurope/big/CN_FR/videos/buddy/OBSERVER_FR.webm">
 							<div class="thumb">
 								<div class="table">
 									<div class="cell">J'harcèle</div>
 								</div>
 							</div>
 						</a>
-						<a data-track="je-suis-temoin" data-src="http://ht.cdn.turner.com/tbseurope/big/CN_UK/videos/anti-bullying/observer">
+						<a data-track="je-suis-temoin" data-src="http://ht.cdn.turner.com/tbseurope/big/CN_FR/videos/buddy/BULLY_FR.webm">
 							<div class="thumb">
 								<div class="table">
 									<div class="cell">Je suis Témoin</div>
