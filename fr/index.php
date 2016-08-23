@@ -133,21 +133,21 @@
 								</div>
 							</div>
 						</a> -->
-						<a data-track="je-suis-victime" data-src="http://ht.cdn.turner.com/tbseurope/big/CN_FR/videos/buddy/BULLIED_FR.webm">
+						<a data-track="je-suis-victime" data-src="http://ht.cdn.turner.com/tbseurope/big/CN_FR/videos/buddy/BULLIED_FR">
 							<div class="thumb">
 								<div class="table">
 									<div class="cell">Je suis Victime</div>
 								</div>
 							</div>
 						</a>
-						<a data-track="jharcele" data-src="http://ht.cdn.turner.com/tbseurope/big/CN_FR/videos/buddy/OBSERVER_FR.webm">
+						<a data-track="jharcele" data-src="http://ht.cdn.turner.com/tbseurope/big/CN_FR/videos/buddy/OBSERVER_FR">
 							<div class="thumb">
 								<div class="table">
 									<div class="cell">J'harcèle</div>
 								</div>
 							</div>
 						</a>
-						<a data-track="je-suis-temoin" data-src="http://ht.cdn.turner.com/tbseurope/big/CN_FR/videos/buddy/BULLY_FR.webm">
+						<a data-track="je-suis-temoin" data-src="http://ht.cdn.turner.com/tbseurope/big/CN_FR/videos/buddy/BULLY_FR">
 							<div class="thumb">
 								<div class="table">
 									<div class="cell">Je suis Témoin</div>
