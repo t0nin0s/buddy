@@ -64,7 +64,8 @@
 		<div class="backgrounds">
 			<div class="background">
 <?php
-	$videos = array('BULLIED_FR', 'BULLY_FR', 'OBSERVER_FR');
+	//$videos = array('BULLIED_FR', 'BULLY_FR', 'OBSERVER_FR');
+	$videos = array('OBSERVER_FR');
 	$vid = $videos[array_rand($videos)];
 ?>
 				<video loop id="background-video">
@@ -140,14 +141,14 @@
 								</div>
 							</div>
 						</a>
-						<a data-track="jharcele" data-src="http://ht.cdn.turner.com/tbseurope/big/CN_FR/videos/buddy/OBSERVER_FR">
+						<a data-track="jharcele" data-src="http://ht.cdn.turner.com/tbseurope/big/CN_FR/videos/buddy/BULLY_FR">
 							<div class="thumb">
 								<div class="table">
 									<div class="cell">J'harcèle</div>
 								</div>
 							</div>
 						</a>
-						<a data-track="je-suis-temoin" data-src="http://ht.cdn.turner.com/tbseurope/big/CN_FR/videos/buddy/BULLY_FR">
+						<a data-track="je-suis-temoin" data-src="http://ht.cdn.turner.com/tbseurope/big/CN_FR/videos/buddy/OBSERVER_FR">
 							<div class="thumb">
 								<div class="table">
 									<div class="cell">Je suis Témoin</div>
