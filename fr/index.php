@@ -65,7 +65,7 @@
 			<div class="background">
 <?php
 	//$videos = array('BULLIED_FR', 'BULLY_FR', 'OBSERVER_FR');
-	$videos = array('OBSERVER_FR');
+	$videos = array('BULLIED_FR');
 	$vid = $videos[array_rand($videos)];
 ?>
 				<video loop id="background-video">
