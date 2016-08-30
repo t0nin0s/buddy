@@ -8,7 +8,7 @@
 
 	if (!isset($_server)) $_server = $_SERVER['HTTP_HOST'];
 
-	$_version = '1.0.10';
+	$_version = '1.0.11';
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -65,12 +65,12 @@
 		<div class="backgrounds">
 			<div class="background">
 <?php
-	$videos = array('Bully_BUL 16x9', 'Bullied_BUL 16x9', 'Observer_BUL 16x9');
+	$videos = array('bullied_bg', 'bully_bg', 'observer_bg');
 	$vid = $videos[array_rand($videos)];
 ?>
 				<video loop poster="" id="background-video">
-					<source src="http://ht.cdn.turner.com/tbseurope/big/CN_BG/videos/buddy/<?php echo $vid; ?>.webmhd.webm" type="video/webm">
-					<source src="http://ht.cdn.turner.com/tbseurope/big/CN_BG/videos/buddy/<?php echo $vid; ?>.mp4.mp4" type="video/mp4">
+					<source src="http://ht.cdn.turner.com/tbseurope/big/CN_BG/videos/buddy/<?php echo $vid; ?>.webm" type="video/webm">
+					<source src="http://ht.cdn.turner.com/tbseurope/big/CN_BG/videos/buddy/<?php echo $vid; ?>.mp4" type="video/mp4">
 				</video>
 			</div>
 		</div>
@@ -128,28 +128,28 @@
 				<div class="inner">
 					<h1>ГЛЕДАЙ КЛИПЧЕТА</h1>
 					<div class="videos">
-						<a data-track="watch-bullied" data-src="http://ht.cdn.turner.com/tbseurope/big/CN_BG/videos/buddy/Bullied_BUL 16x9">
+						<a data-track="watch-bullied" data-src="http://ht.cdn.turner.com/tbseurope/big/CN_BG/videos/buddy/bullied_bg">
 							<div class="thumb">
 								<div class="table">
 									<div class="cell">ОБЕКТЪТ НА ХУЛИГАНСТВО</div>
 								</div>
 							</div>
 						</a><!--
-						--><a data-track="watch-bully" data-src="http://ht.cdn.turner.com/tbseurope/big/CN_BG/videos/buddy/Bully_BUL 16x9">
+						--><a data-track="watch-bully" data-src="http://ht.cdn.turner.com/tbseurope/big/CN_BG/videos/buddy/bully_bg">
 							<div class="thumb">
 								<div class="table">
 									<div class="cell">ХУЛИГАНЪТ</div>
 								</div>
 							</div>
 						</a><!--
-						--><a data-track="watch-observer" data-src="http://ht.cdn.turner.com/tbseurope/big/CN_BG/videos/buddy/Observer_BUL 16x9">
+						--><a data-track="watch-observer" data-src="http://ht.cdn.turner.com/tbseurope/big/CN_BG/videos/buddy/observer_bg">
 							<div class="thumb">
 								<div class="table">
 									<div class="cell">ПАСИВНИЯТ НАБЛЮДАТЕЛ</div>
 								</div>
 							</div>
 						</a><!--
-						--><a data-track="watch-buddy-training" data-src="http://ht.cdn.turner.com/tbseurope/big/CN_BG/videos/buddy/Training Promo_BUL 16x9">
+						--><a data-track="watch-buddy-training" data-src="http://ht.cdn.turner.com/tbseurope/big/CN_BG/videos/buddy/full_bg">
 							<div class="thumb">
 								<div class="table">
 									<div class="cell">ТРЕНИРОВКА "БЪДИ ПРИЯТЕЛ"</div>
@@ -256,7 +256,7 @@
 					<h1>НАУЧИ ОЩЕ И ПОТЪРСИ ПОМОЩ</h1>
 					<p>Можеш да се обадиш на Националната телефонна линия за деца <span class="pink">116 111</span>, която е безплатна и денонощна. Номерът <span class="pink">116 111</span> се избира без код от цялата страна.</p>
 					<p>Можеш да се обадиш на номер <span class="pink">02 983 52 05</span>, за да се срещнеш с психолог/психотерапевт.</p>
-					<p>Ако ситуацията, в която се намираш ти или твой близък, е спешна и изисква да бъдеш настанен някъде, където да се погрижат за теб, е важно да знаеш, че Фондация „Асоциация Анимус” разполага с Кризисно звено. За повече информация избери номер: <span class="pink">02 983 52 05</span>.</p>
+					<p>Ако ситуацията, в която се намираш ти или твой близък, е спешна и изисква да бъдеш настанен някъде, където да се погрижат за теб, е важно да знаеш, че Фондация „Асоциация Анимус” разполага с Кризисен център. За повече информация избери номер: <span class="pink">02 983 52 05</span>.</p>
 				</div>
 			</div>
 		</div>
@@ -280,7 +280,7 @@
 				<div class=""><a href="http://www.cartoonnetwork.bg/terms-of-use" target="_blank">Правила и условия</a> <a href="http://www.cartoonnetwork.bg/privacy-policy" target="_blank">Декларация за поверителност</a> <a href="http://www.cartoonnetwork.bg/cookies-policy" target="_blank">Политика по отношение на бисквитките</a></div>
 			</div>
 			<span class="open">ЗАКОНОВИ ПОЛОЖЕНИЯ</span>
-			<span class="copy">С използването на този уебсайт вие приемате и се съгласявате с Условията за използване. TM &amp; &copy; 2015 Cartoon Network. Една компания на Time Warner Company. Всички права запазени. CartoonNetwork.bg е част от Turner Sports and Entertainment Digital Network.</span>
+			<span class="copy">С използването на този уебсайт вие приемате и се съгласявате с Условията за използване. TM &amp; &copy; <?php echo date('Y'); ?> Cartoon Network. Една компания на Time Warner Company. Всички права запазени. CartoonNetwork.bg е част от Turner Sports and Entertainment Digital Network.</span>
 			<a href="http://www.116111.bg" target="_blank" class="childline"><img src="img/blank.gif" data-type="src" data-preload="img/footer-116111-sq.png" alt="" /></a>
 			<a href="http://www.116111.bg" target="_blank" class="childline-sml"><img src="img/blank.gif" data-type="src" data-preload="img/footer-116111-sq-sml.png" alt="" /></a>
 		</div>
