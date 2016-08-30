@@ -8,7 +8,7 @@
 
 	if (!isset($_server)) $_server = $_SERVER['HTTP_HOST'];
 
-	$_version = '1.0.13';
+	$_version = '1.1.0';
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -47,10 +47,10 @@
 				<a href="#/wat-is-pesten">WAT IS<br/>PESTEN?</a>
 				<a href="#/wat-kan-ik-doen">WAT KAN<br/>IK DOEN?</a>
 				<a href="#/bekijk-videos">BEKIJK<br/>VIDEO'S</a>
-				<a href="#/ambassadeurs">AMBASSADEURS</a>
-				<a href="#/ontmoet-arie-en-tine">ONTMOET ARIE<br/>EN TINE</a>
+				<?php //<a href="#/ambassadeurs" class="one">AMBASSADEURS</a> ?>
+				<a href="#/ontmoet-clara-en-nieky">Ontmoet Nieky<br/>en Clara</a>
 				<a href="#/maatjes-code">MAATJES<br/>CODE</a>
-				<a href="#/partners">Partners</a>
+				<a href="#/partners" class="one">Partners</a>
 				<a href="#/vraag-om-hulp">VRAAG<br/>OM HULP</a>
 			</nav>
 		</div>
@@ -65,7 +65,7 @@
 		<div class="backgrounds">
 			<div class="background">
 <?php
-	$videos = array('pester', 'mikpunt', 'toeschouwer');
+	$videos = array('bullied_nl', 'bully_nl', 'full_nl');//, 'observer_nl');
 	$vid = $videos[array_rand($videos)];
 ?>
 				<video loop poster="http://ht.cdn.turner.com/tbseurope/big/CN_NL/videos/buddy/<?php echo $vid; ?>.jpg" id="background-video">
@@ -127,21 +127,21 @@
 				<div class="inner">
 					<h1>BEKIJK VIDEO'S</h1>
 					<div class="videos">
-						<a data-track="watch-bullied" data-src="http://ht.cdn.turner.com/tbseurope/big/CN_NL/videos/buddy/mikpunt">
+						<a data-track="watch-bullied" data-src="http://ht.cdn.turner.com/tbseurope/big/CN_NL/videos/buddy/bullied_nl">
 							<div class="thumb">
 								<div class="table">
 									<div class="cell">Bekijk het Mikpunt</div>
 								</div>
 							</div>
 						</a>
-						<a data-track="watch-bully" data-src="http://ht.cdn.turner.com/tbseurope/big/CN_NL/videos/buddy/pester">
+						<a data-track="watch-bully" data-src="http://ht.cdn.turner.com/tbseurope/big/CN_NL/videos/buddy/bully_nl">
 							<div class="thumb">
 								<div class="table">
 									<div class="cell">Bekijk de Pester</div>
 								</div>
 							</div>
 						</a>
-						<a data-track="watch-observer" data-src="http://ht.cdn.turner.com/tbseurope/big/CN_NL/videos/buddy/toeschouwer">
+						<a data-track="watch-observer" data-src="http://ht.cdn.turner.com/tbseurope/big/CN_NL/videos/buddy/observer_nl">
 							<div class="thumb">
 								<div class="table">
 									<div class="cell">Bekijk de Toeschouwer</div>
@@ -155,11 +155,18 @@
 								</div>
 							</div>
 						</a>
+						<a data-track="watch-bekijk-vriendschap" data-src="http://ht.cdn.turner.com/tbseurope/big/CN_NL/videos/buddy/full_nl">
+							<div class="thumb">
+								<div class="table">
+									<div class="cell">Bekijk vriendschap</div>
+								</div>
+							</div>
+						</a>
 					</div>
 				</div>
 			</div>
 
-			<div class="page ambassadeurs">
+			<?php /*<div class="page ambassadeurs">
 				<div class="background" data-preload="img/page-background-2.png" data-type="background"></div>
 				<div class="inner">
 					<h1>AMBASSADEURS</h1>
@@ -171,68 +178,29 @@
 							</video>
 						</div>
 					</div>
-					<?php /*<ul class="double-video">
-						<li>
-							<div class="wide-responsive">
-								<div class="inline-player">
-									<video id="inline-player-1" class="video-js vjs-default-skin" controls preload="auto" width="auto" height="auto" poster="" data-setup="{}">
-										<source src="http://ht.cdn.turner.com/tbseurope/big/CN_UK/videos/anti-bullying/celebrity.mp4" type="video/mp4">
-										<source src="http://ht.cdn.turner.com/tbseurope/big/CN_UK/videos/anti-bullying/celebrity.webm" type="video/webm">
-									</video>
-								</div>
-							</div>
-						</li><!--
-						--><li>
-							<div class="wide-responsive">
-								<div class="inline-player">
-									<video id="inline-player-3" class="video-js vjs-default-skin" controls preload="auto" width="auto" height="auto" poster="" data-setup="{}">
-										<source src="http://ht.cdn.turner.com/tbseurope/big/CN_UK/videos/anti-bullying/tinie_qa.mp4" type="video/mp4">
-										<source src="http://ht.cdn.turner.com/tbseurope/big/CN_UK/videos/anti-bullying/tinie_qa.webm" type="video/webm">
-									</video>
-								</div>
-							</div>
-						</li>
-					</ul>
-					<div class="arrows right"><i class="fa fa-angle-right"></i></div>
-					<div class="arrows left"><i class="fa fa-angle-left"></i></div>*/ ?>
 				</div>
-			</div>
+			</div>*/?>
 
-			<div class="page ontmoet-arie-en-tine">
-				<div class="background" data-preload="img/arie.jpg" data-type="background" data-alt="img/tine.jpg"></div>
+			<div class="page ontmoet-clara-en-nieky">
+				<div class="background" data-preload="img/nieky.jpg" data-type="background" data-alt="img/clara.jpg"></div>
 				<div class="inner">
-					<h1>ONTMOET ARIE<br/>EN TINE</h1>
+					<h1>Ontmoet Nieky <br/>en Clara</h1>
 					<!--<h2>Childline Counsellor</h2>-->
 					<ul class="double-video">
 						<li>
 							<div class="text-block">
-								<h2>Tine Embrechts</h2>
-								<p>Tine Embrechts is een Vlaamse televisie- en theateractrice. Je kent haar wellicht van haar leuke rollen in programma’s als Quiz Me Quick, Click - ID en Het Peulengaleis en natuurlijk van haar geslaagde imitaties in Tegen De Sterren Op! Ze speelde ook al in enkele films mee, zoals Labyrinthus, Despicable Me 2 en Brasserie Romantiek. Bovendien mocht Tine in 2013 op het gala van de Vlaamse Televisiesterren de award voor Beste Actrice in ontvangst nemen, een hele eer!</p>
+								<h2>Nieky Holzken</h2>
+								<p>De 32-jarige Nieky ‘The Natural’ Holzken is viervoudig Glory wereldkampioen kickboksen in het weltergewicht (-77 kilo). Nieky staat bekend om zijn soepele combinatie van kicks, stoten en kniebewegingen en finisht vaak met een linkse stoot op het hoofd of lichaam. Nu hij op het gebied van kickboksen alles heeft behaald wat er te halen valt, richt hij zich nu op zijn droom om wereldkampioen boksen te worden. Zijn familie en kinderen zijn het belangrijkste in zijn leven en een grote steun in zijn carrière.</p>
 							</div>
-
-							<?php /*<div class="wide-responsive">
-								<div class="inline-player">
-									<video id="inline-player-2" class="video-js vjs-default-skin" controls preload="auto" width="auto" height="auto" poster="" data-setup="{}">
-										<source src="http://ht.cdn.turner.com/tbseurope/big/CN_UK/videos/anti-bullying/anna.mp4" type="video/mp4">
-										<source src="http://ht.cdn.turner.com/tbseurope/big/CN_UK/videos/anti-bullying/anna.webm" type="video/webm">
-									</video>
-								</div>
-							</div>*/ ?>
 						</li><!--
 						--><li>
-							<div class="text-block">
-								<h2>Arie Koomen</h2>
-								<p>Arie Koomen (1968) is een stand-up comedian en grafisch vormgever. Samen met Silvester Zwaneveld vormde hij het komische duo Arie & Silvester dat zich richtte op improvisatie. Verder was hij te zien in de TV-show De Lama’s en comedy programma’s zoals Tequila en Doe Maar Normaal. Hij was ook het gezicht van een veelbesproken reclamespot voor een grote electronicaketen. Tegenwoordig treedt hij op samen met Edo Brunner.</p>
+							<div class="text-block smaller">
+								<h2 class="blue">Clara Cleymans</h2>
+								<p class="blue">Clara Cleymans is een Belgische actrice, voornamelijk actief op televisie. Bij het grote publiek is ze bekend van de serie 'Quiz me Quick', 'Thuis', de satirereeks 'Tegen de sterren op' en de misdaadserie 'De Ridder', waarin ze de titelrol vertolkt. Ook heeft ze in enkele films gespeeld zoals 'Groenten uit Balen' en de Waalse arthousefilm 'Kill me please'.</p>
+								<p class="blue">Op 25 februari 2011 werd ze door de Vlaamse Televisie Academie bekroond met de Rijzende Ster Award tijdens de Vlaamse Televisie Sterren.</p>
+								<p class="blue">Naast haar acteeropdrachten hield ze zich bezig met haar studies wijsbegeerte en piano. Ook staat ze soms in theatervoorstellingen, zowel als actrice als zangeres.</p>
+								<span class="copy">&copy; Kim De Graeve voor Symfonieorkest Vlaanderen</span>
 							</div>
-
-							<?php /*<div class="wide-responsive">
-								<div class="inline-player">
-									<video id="inline-player-4" class="video-js vjs-default-skin" controls preload="auto" width="auto" height="auto" poster="" data-setup="{}">
-										<source src="http://ht.cdn.turner.com/tbseurope/big/CN_UK/videos/anti-bullying/anna_qa.mp4" type="video/mp4">
-										<source src="http://ht.cdn.turner.com/tbseurope/big/CN_UK/videos/anti-bullying/anna_qa.webm" type="video/webm">
-									</video>
-								</div>
-							</div>*/ ?>
 						</li>
 					</ul>
 					<div class="arrows right"><i class="fa fa-angle-right"></i></div>
@@ -268,8 +236,8 @@
 				<div class="inner">
 					<h1>Partners</h1>
 					<div class="body">
-						<a href="http://www.kindertelefoon.nl/" target="_blank"><img src="img/blank.gif" data-type="src" data-preload="img/logo-dekindertelefoon.png" alt="kindertelefoon" /></a>
-						<a href="http://www.awel.be/" target="_blank"><img src="img/blank.gif" data-type="src" data-preload="img/logo-awel.png" alt="Awel" /></a>
+						<a href="http://www.pestweb.nl/" target="_blank"><img src="img/blank.gif" data-type="src" data-preload="img/logo-pestweb.png" alt="kindertelefoon" /></a>
+						<a href="http://www.awel.be/" target="_blank"><img src="img/blank.gif" data-type="src" data-preload="img/logo-awel-new.png" alt="Awel" /></a>
 					</div>
 				</div>
 			</div>
@@ -278,7 +246,7 @@
 				<div class="background" data-preload="img/page-background.png" data-type="background"></div>
 				<div class="inner">
 					<h1>KOM MEER TE<br/>WETEN EN ZOEK HULP</h1>
-					<p>Voor meer informatie over pesten of als je direct hulp, steun of advies nodig hebt, kijk in Nederland op de website van De Kindertelefoon, <a href="http://www.dekindertelefoon.nl" target="_blank">www.dekindertelefoon.nl</a>, of bel naar <span class="pink">0800 0432</span> om met iemand te praten die er voor je is, om naar je te luisteren en je te helpen. In Vlaanderen kan je terecht bij Awel op <a href="http://www.awel.be" target="_blank">www.awel.be</a> of door te bellen naar <span class="pink">102</span>.</p>
+					<p>Voor meer informatie over pesten of als je direct hulp, steun of advies nodig hebt, kijk in Nederland op <a href="http://www.pestweb.nl/" target="_blank">www.Pestweb.nl</a>  om met iemand te chatten, mailen of bellen die er voor je is, om naar je te luisteren en je te helpen. In Vlaanderen kan je terecht bij Awel op <a href="http://www.Awel.be" target="_blank">www.Awel.be</a> of door te bellen naar <span class="pink">102</span>.</p>
 				</div>
 			</div>
 		</div>
@@ -288,8 +256,8 @@
 			--><a href="#/wat-is-pesten">WAT IS PESTEN?</a><!--
 			--><a href="#/wat-kan-ik-doen">WAT KAN IK DOEN?</a><!--
 			--><a href="#/bekijk-videos">BEKIJK VIDEO'S</a><!--
-			--><a href="#/ambassadeurs">AMBASSADEURS</a><!--
-			--><a href="#/ontmoet-arie-en-tine">ONTMOET ARIE EN TINE</a><!--
+			<?php //--><a href="#/ambassadeurs">AMBASSADEURS</a><!-- ?>
+			--><a href="#/ontmoet-clara-en-nieky">Ontmoet Nieky en Clara</a><!--
 			--><a href="#/maatjes-code">MAATJES CODE</a><!--
 			--><a href="#/partners">Partners</a><!--
 			--><a href="#/vraag-om-hulp">VRAAG OM HULP</a>
@@ -306,17 +274,17 @@
 			<?php /*<a href="http://www.kindertelefoon.nl/" target="_blank" class="childline"><img src="img/blank.gif" data-type="src" data-preload="img/footer-dekindertelefoon.png" alt="" /></a>
 			<a href="http://www.kindertelefoon.nl/" target="_blank" class="childline-sml"><img src="img/blank.gif" data-type="src" data-preload="img/footer-dekindertelefoon-sml.png" alt="" /></a>*/ ?>
 			<div class="logos">
-				<img src="img/blank.gif" data-type="src" data-preload="img/footer.png" alt="" usemap="#bigmap" />
+				<img src="img/blank.gif" data-type="src" data-preload="img/footer-new.png" alt="" usemap="#bigmap" />
 				<map name="bigmap">
-					<area shape="rect" coords="0,0,173,120" href="http://www.kindertelefoon.nl/" target="_blank" alt="kindertelefoon">
-					<area shape="rect" coords="192,0,312,120" href="http://www.awel.be/" target="_blank" alt="awel">
+					<area shape="rect" coords="0,0,128,120" href="http://www.pestweb.nl/" target="_blank" alt="kindertelefoon">
+					<area shape="rect" coords="128,0,312,120" href="http://www.awel.be/" target="_blank" alt="awel">
 				</map>
 			</div>
 			<div class="logos-sml">
-				<img src="img/blank.gif" data-type="src" data-preload="img/footer-sml.png" alt="" usemap="#smallmap" />
+				<img src="img/blank.gif" data-type="src" data-preload="img/footer-new-sml.png" alt="" usemap="#smallmap" />
 				<map name="smallmap">
-					<area shape="rect" coords="0,0,116,80" href="http://www.kindertelefoon.nl/" target="_blank" alt="kindertelefoon">
-					<area shape="rect" coords="135,0,215,80" href="http://www.awel.be/" target="_blank" alt="awel">
+					<area shape="rect" coords="0,0,85,80" href="http://www.pestweb.nl/" target="_blank" alt="kindertelefoon">
+					<area shape="rect" coords="85,0,215,80" href="http://www.awel.be/" target="_blank" alt="awel">
 				</map>
 			</div>
 		</div>
