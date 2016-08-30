@@ -167,7 +167,7 @@
 			</div>
 
 			<div class="page la-video-golden-moustache">
-				<div class="background" data-preload="img/tom-daley.jpg" data-type="background"></div>
+				<div class="background" data-preload="img/ambassadors.jpg" data-type="background"></div>
 				<div class="inner">
 					<h1>La vidéo Golden Moustache</h1>
 					<?php /*<h2>CN Buddy Network Ambassadors</h2>
@@ -196,14 +196,14 @@
 					<div class="arrows right"><i class="fa fa-angle-right"></i></div>
 					<div class="arrows left"><i class="fa fa-angle-left"></i></div>*/ ?>
 					<div class="videos">
-						<a data-track="watch-tom-daley-psa" data-src="http://ht.cdn.turner.com/tbseurope/big/Adops/psa-tom-daley" style="background-image:url(img/ambassador-1.jpg)">
+						<a data-track="watch-harcelement" data-src="http://ht.cdn.turner.com/tbseurope/big/CN_FR/videos/buddy/harcelement" style="background-image:url(img/ambassador-preview.jpg)">
 							<div class="thumb">
-								<div class="table">
-									<div class="cell">Tom Daley Interview</div>
-								</div>
+								<?php /*<div class="table">
+									<div class="cell">Stop Harcelement</div>
+								</div>*/ ?>
 							</div>
 						</a>
-						<a data-track="watch-tom-daley-qa" data-src="http://ht.cdn.turner.com/tbseurope/big/Adops/qa-tom-daley" style="background-image:url(img/ambassador-2.jpg)">
+						<?php /*<a data-track="watch-tom-daley-qa" data-src="http://ht.cdn.turner.com/tbseurope/big/Adops/qa-tom-daley" style="background-image:url(img/ambassador-2.jpg)">
 							<div class="thumb">
 								<div class="table">
 									<div class="cell">Advice From Tom Daley</div>
@@ -223,7 +223,7 @@
 									<div class="cell">Advice from Tinie Tempah</div>
 								</div>
 							</div>
-						</a>
+						</a>*/ ?>
 					</div>
 				</div>
 			</div>
