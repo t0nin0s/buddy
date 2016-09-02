@@ -216,22 +216,24 @@ jQuery(document).ready(function($) {
 			if (bpc.page === 1) bpc.page1out();
 			if (bpc.page === 2) bpc.page2out();
 			if (bpc.page === 3) bpc.page3out();
-			if (bpc.page === 4) bpc.page4out();
+			if (bpc.page === 4) bpc.page9out();//bpc.page4out();
 			if (bpc.page === 5) bpc.page5out();
 			if (bpc.page === 6) bpc.page6out();
 			if (bpc.page === 7) bpc.page7out();
 			if (bpc.page === 8) bpc.page8out();
+			if (bpc.page === 9) bpc.page9out();
 
 			// in animations
 			if (pg === 0) $('.pages .intro').show(0);
 			if (pg === 1) bpc.page1in();
 			if (pg === 2) bpc.page2in();
 			if (pg === 3) bpc.page3in();
-			if (pg === 4) bpc.page4in();
+			if (pg === 4) bpc.page9in();//bpc.page4in();
 			if (pg === 5) bpc.page5in();
 			if (pg === 6) bpc.page6in();
 			if (pg === 7) bpc.page7in();
 			if (pg === 8) bpc.page8in();
+			if (pg === 9) bpc.page9in();
 			
 			/*$('.pages .page').hide(0);
 			$('.pages .page').eq(pg).show(0);*/
@@ -727,6 +729,50 @@ jQuery(document).ready(function($) {
 		}
 	};
 
+	bpc.page9in = function() {
+		try {
+			lypn_trackPageView('contest');
+		} catch(err) {
+			console.log(err);
+		}
+		$('.contest').css('display', 'table');//show(0);
+		var back = $('.contest').find('.background'),
+			p = $('.contest').find('.button');
+		TweenMax.killTweensOf(back);
+		TweenMax.killTweensOf(p);
+
+		if (bpc.scrollDirection === 'up') {
+			TweenMax.to(back, 0.5, {css: {top: -100, bottom: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0});
+			TweenMax.to(p, 0.5, {css: {marginTop: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0.2});
+
+			TweenMax.to(p, 0.5, {alpha: 1, ease: Quart.easeOut, delay: bpc.showDelay + 0.2});
+		} else if (bpc.scrollDirection === 'down') {
+			TweenMax.to(back, 0.5, {css: {top: -100, bottom: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0.2});
+			TweenMax.to(p, 0.5, {css: {marginTop: 0}, ease: Quart.easeOut, delay: bpc.showDelay + 0.4});
+			
+			TweenMax.to(p, 0.5, {alpha: 1, ease: Quart.easeOut, delay: bpc.showDelay + 0.4});
+		}
+	};
+
+	bpc.page9out = function() {
+		var back = $('.contest').find('.background'),
+			p = $('.contest').find('.button');
+		TweenMax.killTweensOf(back);
+		TweenMax.killTweensOf(p);
+
+		if (bpc.scrollDirection === 'up') {
+			TweenMax.to(back, 0.5, {css: {top: '100%'}, ease: Quart.easeOut, delay: 0.4, onComplete: function() { $('.contest').hide(0); }});
+			TweenMax.to(p, 0.5, {css: {marginTop: 120}, ease: Quart.easeOut, delay: 0});
+
+			TweenMax.to(p, 0.5, {alpha: 0, ease: Quart.easeOut, delay: 0});
+		} else {
+			TweenMax.to(back, 0.5, {css: {bottom: '100%'}, ease: Quart.easeOut, delay: 0.4, onComplete: function() { $('.contest').hide(0); }});
+			TweenMax.to(p, 0.5, {css: {marginTop: -120}, ease: Quart.easeOut, delay: 0.2});
+
+			TweenMax.to(p, 0.5, {alpha: 0, ease: Quart.easeOut, delay: 0.2});
+		}
+	};
+
 	// end animations
 
 	bpc.initNav = function() {
@@ -792,7 +838,15 @@ jQuery(document).ready(function($) {
 			} catch(err) {
 				console.log(err);
 			}
-			$('.video-player').html('<video id="video-player" class="video-js vjs-default-skin" controls preload="auto" autoplay width="100%" height="100%" poster="" data-setup="{}"><source src="'+src+'.mp4.mp4" type="video/mp4"><source src="'+src+'.webmhd.webm" type="video/webm"></video><div class="close"><i class="fa fa-times"></i></div>');
+			var mp4 = src+'.mp4';
+			var webm = src+'.webm';
+			if (src === 'http://ht.cdn.turner.com/tbseurope/big/CN_RU/videos/buddy/Observer_RUS 16x9') {
+				mp4 = mp4+'.mp4';
+				webm = webm + 'hd.webm';
+			} else if (src !== 'http://ht.cdn.turner.com/tbseurope/big/CN_RU/videos/buddy/friendship_ru') {
+				mp4 = src+'-2.mp4';
+			}
+			$('.video-player').html('<video id="video-player" class="video-js vjs-default-skin" controls preload="auto" autoplay width="100%" height="100%" poster="" data-setup="{}"><source src="'+mp4+'" type="video/mp4"><source src="'+webm+'" type="video/webm"></video><div class="close"><i class="fa fa-times"></i></div>');
 			var player = videojs("video-player", {}, function(){
 				// Player (this) is initialized and ready.
 			});

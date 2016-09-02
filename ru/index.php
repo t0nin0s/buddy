@@ -8,7 +8,7 @@
 
 	if (!isset($_server)) $_server = $_SERVER['HTTP_HOST'];
 
-	$_version = '1.0.7';
+	$_version = '1.0.9';
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -47,7 +47,8 @@
 				<a href="#/what-is-bullying">Что такое<br/>буллинг?</a>
 				<a href="#/what-can-i-do">ЧТО ЖЕ<br/>ДЕЛАТЬ?</a>
 				<a href="#/watch-videos">СМОТРЕТЬ<br/>ВИДЕО</a>
-				<a href="#/meet-celeb">Галина<br/>Солдатова</a>
+				<!-- <a href="#/meet-celeb">Дружба<br/>на 5+</a> -->
+				<a href="#/contest" class="one">КОНКУРС</a>
 				<a href="#/about-friendship" class="one">О дружбе!</a>
 				<a href="#/buddy-code">КОДЕКС<br/>ЧЕСТИ</a>
 				<a href="#/partners" class="one">ПАРТНЕРЫ</a>
@@ -65,12 +66,17 @@
 		<div class="backgrounds">
 			<div class="background">
 <?php
-	$videos = array('Bully_RUS 16x9', 'Bullied_RUS 16x9', 'Observer_RUS 16x9');
+	$videos = array('bullied_ru', 'bully_ru', 'friendship_ru');
 	$vid = $videos[array_rand($videos)];
+	$mp4 = $vid.'.mp4';
+	if ($video != 'friendship_ru') {
+		$mp4 = $vid.'-2.mp4';
+	}
+	$webm = $vid.'.webm';
 ?>
 				<video loop poster="" id="background-video">
-					<source src="http://ht.cdn.turner.com/tbseurope/big/CN_RU/videos/buddy/<?php echo $vid; ?>.webmhd.webm" type="video/webm">
-					<source src="http://ht.cdn.turner.com/tbseurope/big/CN_RU/videos/buddy/<?php echo $vid; ?>.mp4.mp4" type="video/mp4">
+					<source src="http://ht.cdn.turner.com/tbseurope/big/CN_RU/videos/buddy/<?php echo $webm; ?>" type="video/webm">
+					<source src="http://ht.cdn.turner.com/tbseurope/big/CN_RU/videos/buddy/<?php echo $mp4; ?>" type="video/mp4">
 				</video>
 			</div>
 		</div>
@@ -83,11 +89,11 @@
 			<div class="page what-is-bullying">
 				<div class="background" data-preload="img/page-background.png" data-type="background"></div>
 				<div class="inner">
-					<h1>Что такое буллинг?</h1>
+					<h1>ЧТО ТАКОЕ БУЛЛИНГ*?</h1>
 					<?php /*<p>Человек проявляет агрессию, когда грубо обращается с другим человеком или специально причиняет ему вред. Стать жертвой агрессии может кто угодно и в любом возрасте. Такое случается в школе, на детской площадке, дома и даже в Интернете. Если человек тебя толкает, бьет, дразнит, обзывает, отбирает вещи, намеренно игнорирует или смеется над тем, что ты не похож на остальных, он ведет себя агрессивно.</p>
 					<p>Агрессия — это неправильно. Если кто-то проявляет ее по отношению к тебе, в этом нет твоей вины.</p>*/ ?>
-					<p>Если кто-то намеренно и постоянно обижает тебя: причиняет вред тебе или твоим вещам, бьёт, толкает, дразнит, оскорбляет или смеётся над тобой – это буллинг или травля! Травля может происходить где угодно: в школе, на детской площадке, дома и даже в Интернете. Жертвой буллинга может стать каждый независимо от возраста и пола. Если кто-то травит тебя, в этом нет твоей вины.</p>
-					<p>Как правило, обидчик выбирает в качестве жертвы того, кто не в состоянии сам постоять за себя! Буллинг – это плохо!</p>
+					<p>Если твои одноклассники или знакомые обижают тебя, говорят неприятные вещи, задирают, ставят подножки, смеются над тобой, пугают или угрожают - это называется буллингом или травлей. Если они говорят неправду и заставляют тебя плакать - это буллинг. Если кто-то вынуждает тебя делать то, чего ты не хочешь, - это буллинг. Любые слова и поступки по отношению к тебе или другому человеку, которые тебя пугают или заставляют чувствовать себя плохо, - буллинг. Жертвой буллинга может стать каждый независимо от возраста и пола. Если кто-то травит тебя, в этом нет твоей вины. Как правило, обидчик выбирает в качестве жертвы того, кто не в состоянии сам постоять за себя! Буллинг - это плохо!</p>
+					<p>*Буллинг (англ. bullying) - травля, агрессивное преследование, при котором жертва не может защитить себя от нападок.</p>
 				</div>
 			</div>
 
@@ -131,14 +137,14 @@
 				<div class="inner">
 					<h1>СМОТРЕТЬ ВИДЕО</h1>
 					<div class="videos">
-						<a data-track="watch-bullied" data-src="http://ht.cdn.turner.com/tbseurope/big/CN_RU/videos/buddy/Bullied_RUS 16x9">
+						<a data-track="watch-bullied" data-src="http://ht.cdn.turner.com/tbseurope/big/CN_RU/videos/buddy/bullied_ru">
 							<div class="thumb">
 								<div class="table">
 									<div class="cell">Жертва</div>
 								</div>
 							</div>
 						</a>
-						<a data-track="watch-bully" data-src="http://ht.cdn.turner.com/tbseurope/big/CN_RU/videos/buddy/Bully_RUS 16x9">
+						<a data-track="watch-bully" data-src="http://ht.cdn.turner.com/tbseurope/big/CN_RU/videos/buddy/bully_ru">
 							<div class="thumb">
 								<div class="table">
 									<div class="cell">Обидчик</div>
@@ -152,7 +158,7 @@
 								</div>
 							</div>
 						</a>
-						<a data-track="watch-buddy-training" data-src="http://ht.cdn.turner.com/tbseurope/big/CN_RU/videos/buddy/Training Promo_RUS 16x9">
+						<a data-track="watch-buddy-training" data-src="http://ht.cdn.turner.com/tbseurope/big/CN_RU/videos/buddy/friendship_ru">
 							<div class="thumb">
 								<div class="table">
 									<div class="cell">Будь сильнее – будь другом!</div>
@@ -162,12 +168,17 @@
 					</div>
 				</div>
 			</div>
-			<div class="page meet-celeb">
+			<?php /*<div class="page meet-celeb">
 				<div class="background" data-preload="img/celebrity.jpg" data-type="background"></div>
 				<div class="inner">
-					<h1>Галина Солдатова</h1>
-					<p style="max-width:600px">Профессор кафедры психологии личности факультета психологии МГУ имени М.В. Ломоносова, доктор психологических наук, член-корреспондент Российской Академии образования, лауреат Премии Правительства Российской Федерации в области образования (2010).</p>
+					<h1>Дружба на 5+</h1>
+					<?php //<p style="max-width:600px">Профессор кафедры психологии личности факультета психологии МГУ имени М.В. Ломоносова, доктор психологических наук, член-корреспондент Российской Академии образования, лауреат Премии Правительства Российской Федерации в области образования (2010).</p> ?>
+					<p><a href="http://cn-druzhba.ru/" target="_blank">http://cn-druzhba.ru/</a></p>
 				</div>
+			</div>*/?>
+			<div class="page contest">
+				<div class="background" data-preload="img/page-contest.jpg" data-type="background"></div>
+				<a class="button" href=" http://cn-druzhba.ru/" target="_blank">КОНКУРС: ДРУЖБА НА 5+</a>
 			</div>
 
 			<div class="page about-friendship">
@@ -230,7 +241,11 @@
 					<h1>ПАРТНЕРЫ</h1>
 					<div class="body">
 						<p>Фонд Развития Интернет более пяти лет занимается проблемой буллинга в России. Фонд организовал всероссийскую Линию помощи «Дети Онлайн», на которую могут обратиться все, кто пострадал от травли в школе, на улице или в Интернете. Операторы линии всегда помогут разобраться в проблеме и подскажут пути её решения.</p>
-						<a href="http://detionline.com/" target="_blank"><img src="img/blank.gif" data-type="src" data-preload="img/logo-partner.png" alt="detionline" /></a>
+						<!-- <a href="http://detionline.com/" target="_blank"><img src="img/blank.gif" data-type="src" data-preload="img/logo-partner.png" alt="detionline" /></a> -->
+						<a href="http://www.fid.su/" target="_blank"><img src="img/blank.gif" data-type="src" data-preload="img/logo-foundation.png" alt="Foundation for Internet Development" /></a>
+						<a href="http://detionline.com/" target="_blank"><img src="img/blank.gif" data-type="src" data-preload="img/logo-deti.png" alt="detionline" /></a>
+						<a href="http://dnevnik.ru/" target="_blank"><img src="img/blank.gif" data-type="src" data-preload="img/logo-dnevnik.png" alt="Dnevnik.ru" /></a>
+						<a href="http://radiokidsfm.ru/" target="_blank"><img src="img/blank.gif" data-type="src" data-preload="img/logo-radio.png" alt="Radio KidsFM" /></a>
 					</div>
 				</div>
 			</div>
@@ -249,7 +264,8 @@
 			--><a href="#/what-is-bullying">Что такое буллинг?</a><!--
 			--><a href="#/what-can-i-do">ЧТО ЖЕ ДЕЛАТЬ?</a><!--
 			--><a href="#/watch-videos">СМОТРЕТЬ ВИДЕО</a><!--
-			--><a href="#/meet-celeb">Галина Солдатова</a><!--
+			<a href="#/meet-celeb">Дружба на 5+</a>
+			--><a href="#/contest">КОНКУРС: ДРУЖБА НА 5+</a>
 			--><a href="#/about-friendship">О дружбе!</a><!--
 			--><a href="#/buddy-code">КОДЕКС ЧЕСТИ</a><!--
 			--><a href="#/partners">ПАРТНЕРЫ</a><!--
@@ -264,8 +280,17 @@
 			</div>
 			<span class="open">ЮРИДИЧЕСКАЯ ИНФОРМАЦИЯ</span>
 			<span class="copy">Использование данного сайта означает согласие с Условиями использования. TM и &copy; 2015 Cartoon Network. A Time Warner Company. Все права защищены. <a href="http://www.cartoonnetwork.ru" target="_blank">CartoonNetwork.ru</a> является частью Turner Sports and Entertainment Digital Network.</span>
-			<a href="http://detionline.com/" target="_blank" class="childline"><img src="img/blank.gif" data-type="src" data-preload="img/footer-logo.png" alt="" /></a>
-			<a href="http://detionline.com/" target="_blank" class="childline-sml"><img src="img/blank.gif" data-type="src" data-preload="img/footer-logo-sml.png" alt="" /></a>
+			<!--<a href="http://detionline.com/" target="_blank" class="childline"><img src="img/blank.gif" data-type="src" data-preload="img/footer-logos.png" alt="" /></a>
+			<a href="http://detionline.com/" target="_blank" class="childline-sml"><img src="img/blank.gif" data-type="src" data-preload="img/footer-logos-sml.png" alt="" /></a>-->
+			<div class="logos">
+				<img src="img/blank.gif" data-type="src" data-preload="img/footer-logos.png" alt="" usemap="#bigmap" />
+				<map name="bigmap">
+					<area shape="rect" coords="0,0,128,70" href="http://www.fid.su/" target="_blank" alt="Foundation for Internet Development">
+					<area shape="rect" coords="128,0,257,70" href="http://detionline.com" target="_blank" alt="Deti Online ">
+					<area shape="rect" coords="257,0,425,70" href="https://dnevnik.ru/" target="_blank" alt="Dnevnik.ru">
+					<area shape="rect" coords="425,0,502,70" href="http://radiokidsfm.ru/ " target="_blank" alt="Radio KidsFM">
+				</map>
+			</div>
 		</div>
 
 		<div class="video-player">
