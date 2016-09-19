@@ -255,8 +255,9 @@
 				<div class="background" data-preload="img/white-90.png" data-type="background"></div>
 				<div class="inner">
 					<h1>Partenaire</h1>
-					<div class="body">
-						<a href="http://www.nonauharcelement.education.gouv.fr/" target="_blank"><img src="img/blank.gif" data-type="src" data-preload="img/non-au-harcelement.jpg" alt="non au harcelement" /></a>
+					<div class="body" style="max-width:none;">
+						<a href="http://www.education.gouv.fr/" target="_blank"><img src="img/blank.gif" data-type="src" data-preload="img/MENESRlogo_horizontal.jpg" alt="non au harcelement" style="max-height:130px" /></a>
+						<a href="http://www.nonauharcelement.education.gouv.fr/" target="_blank"><img src="img/blank.gif" data-type="src" data-preload="img/non-au-harcelement.jpg" alt="non au harcelement" style="max-height:130px" /></a>
 					</div>
 				</div>
 			</div>
