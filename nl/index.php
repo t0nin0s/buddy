@@ -8,7 +8,7 @@
 
 	if (!isset($_server)) $_server = $_SERVER['HTTP_HOST'];
 
-	$_version = '1.1.0';
+	$_version = '1.2.1';
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -47,7 +47,7 @@
 				<a href="#/wat-is-pesten">WAT IS<br/>PESTEN?</a>
 				<a href="#/wat-kan-ik-doen">WAT KAN<br/>IK DOEN?</a>
 				<a href="#/bekijk-videos">BEKIJK<br/>VIDEO'S</a>
-				<?php //<a href="#/ambassadeurs" class="one">AMBASSADEURS</a> ?>
+				<a href="#/ambassadeurs" class="one">AMBASSADEURS</a>
 				<a href="#/ontmoet-clara-en-nieky">Ontmoet Nieky<br/>en Clara</a>
 				<a href="#/maatjes-code">MAATJES<br/>CODE</a>
 				<a href="#/partners" class="one">Partners</a>
@@ -166,20 +166,36 @@
 				</div>
 			</div>
 
-			<?php /*<div class="page ambassadeurs">
+			<div class="page ambassadeurs">
 				<div class="background" data-preload="img/page-background-2.png" data-type="background"></div>
 				<div class="inner">
 					<h1>AMBASSADEURS</h1>
-					<div class="wide-responsive">
-						<div class="inline-player">
-							<video id="inline-player-1" class="video-js vjs-default-skin" controls preload="auto" width="auto" height="auto" data-setup="{}">
-								<source src="http://ht.cdn.turner.com/tbseurope/big/CN_NL/videos/buddy/20150202_cn_tvc_anti-bullying.mp4.mp4" type="video/mp4">
-								<source src="ht.cdn.turner.com/tbseurope/big/CN_NL/videos/buddy/20150202_cn_tvc_anti-bullying.webmhd.webm" type="video/webm">
-							</video>
-						</div>
-					</div>
+					<ul class="double-video">
+						<li>
+							<div class="wide-responsive">
+								<div class="inline-player">
+									<video id="inline-player-2" class="video-js vjs-default-skin" controls preload="auto" width="auto" height="auto" data-setup="{}">
+										<source src="http://ht.cdn.turner.com/tbseurope/big/CN_NL/videos/buddy/nieky.mp4" type="video/mp4">
+										<source src="http://ht.cdn.turner.com/tbseurope/big/CN_NL/videos/buddy/nieky.webm" type="video/webm">
+									</video>
+								</div>
+							</div>
+						</li><!--
+						--><li>
+							<div class="wide-responsive">
+								<div class="inline-player">
+									<video id="inline-player-1" class="video-js vjs-default-skin" controls preload="auto" width="auto" height="auto" data-setup="{}">
+										<source src="http://ht.cdn.turner.com/tbseurope/big/CN_NL/videos/buddy/clara.mp4" type="video/mp4">
+										<source src="http://ht.cdn.turner.com/tbseurope/big/CN_NL/videos/buddy/clara.webm" type="video/webm">
+									</video>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<div class="arrows right"><i class="fa fa-angle-right"></i></div>
+					<div class="arrows left"><i class="fa fa-angle-left"></i></div>
 				</div>
-			</div>*/?>
+			</div>
 
 			<div class="page ontmoet-clara-en-nieky">
 				<div class="background" data-preload="img/nieky.jpg" data-type="background" data-alt="img/clara.jpg"></div>
@@ -256,7 +272,7 @@
 			--><a href="#/wat-is-pesten">WAT IS PESTEN?</a><!--
 			--><a href="#/wat-kan-ik-doen">WAT KAN IK DOEN?</a><!--
 			--><a href="#/bekijk-videos">BEKIJK VIDEO'S</a><!--
-			<?php //--><a href="#/ambassadeurs">AMBASSADEURS</a><!-- ?>
+			--><a href="#/ambassadeurs">AMBASSADEURS</a><!--
 			--><a href="#/ontmoet-clara-en-nieky">Ontmoet Nieky en Clara</a><!--
 			--><a href="#/maatjes-code">MAATJES CODE</a><!--
 			--><a href="#/partners">Partners</a><!--

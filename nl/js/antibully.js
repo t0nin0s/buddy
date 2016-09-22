@@ -124,8 +124,8 @@ jQuery(document).ready(function($) {
 			});
 		}
 
-		//bpc.inlineVideo1 = videojs('inline-player-1');
-		//bpc.inlineVideo2 = videojs('inline-player-2');
+		bpc.inlineVideo1 = videojs('inline-player-1');
+		bpc.inlineVideo2 = videojs('inline-player-2');
 		//bpc.inlineVideo3 = videojs('inline-player-3');
 		//bpc.inlineVideo4 = videojs('inline-player-4');
 
@@ -221,28 +221,28 @@ jQuery(document).ready(function($) {
 			if (bpc.page === 1) bpc.page1out();
 			if (bpc.page === 2) bpc.page2out();
 			if (bpc.page === 3) bpc.page3out();
-			//if (bpc.page === 4) bpc.page4out();
-			if (bpc.page === 4) bpc.page5out();
-			if (bpc.page === 5) bpc.page6out();
-			if (bpc.page === 6) bpc.page7out();
-			if (bpc.page === 7) bpc.page8out();
+			if (bpc.page === 4) bpc.page4out();
+			if (bpc.page === 5) bpc.page5out();
+			if (bpc.page === 6) bpc.page6out();
+			if (bpc.page === 7) bpc.page7out();
+			if (bpc.page === 8) bpc.page8out();
 
 			// in animations
 			if (pg === 0) $('.pages .intro').show(0);
 			if (pg === 1) bpc.page1in();
 			if (pg === 2) bpc.page2in();
 			if (pg === 3) bpc.page3in();
-			//if (pg === 4) bpc.page4in();
-			if (pg === 4) bpc.page5in();
-			if (pg === 5) bpc.page6in();
-			if (pg === 6) bpc.page7in();
-			if (pg === 7) bpc.page8in();
+			if (pg === 4) bpc.page4in();
+			if (pg === 5) bpc.page5in();
+			if (pg === 6) bpc.page6in();
+			if (pg === 7) bpc.page7in();
+			if (pg === 8) bpc.page8in();
 			
 			/*$('.pages .page').hide(0);
 			$('.pages .page').eq(pg).show(0);*/
 
-			//if (!bpc.inlineVideo1.paused()) bpc.inlineVideo1.pause();
-			//if (!bpc.inlineVideo2.paused()) bpc.inlineVideo2.pause();
+			if (!bpc.inlineVideo1.paused()) bpc.inlineVideo1.pause();
+			if (!bpc.inlineVideo2.paused()) bpc.inlineVideo2.pause();
 			//if (!bpc.inlineVideo3.paused()) bpc.inlineVideo3.pause();
 			//if (!bpc.inlineVideo4.paused()) bpc.inlineVideo4.pause();
 
@@ -779,8 +779,8 @@ jQuery(document).ready(function($) {
 			}
 
 			bpc.mute = !bpc.mute;
-			//bpc.inlineVideo1.muted(bpc.mute);
-			//bpc.inlineVideo2.muted(bpc.mute);
+			bpc.inlineVideo1.muted(bpc.mute);
+			bpc.inlineVideo2.muted(bpc.mute);
 		});
 	};
 
@@ -819,8 +819,8 @@ jQuery(document).ready(function($) {
 	bpc.initCelebVids = function() {
 		$('.arrows.right').click(function() {
 			$(this).hide();
-			//if (!bpc.inlineVideo1.paused()) bpc.inlineVideo1.pause();
-			//if (!bpc.inlineVideo2.paused()) bpc.inlineVideo2.pause();
+			if (!bpc.inlineVideo1.paused()) bpc.inlineVideo1.pause();
+			if (!bpc.inlineVideo2.paused()) bpc.inlineVideo2.pause();
 			//if (!bpc.inlineVideo3.paused()) bpc.inlineVideo3.pause();
 			//if (!bpc.inlineVideo4.paused()) bpc.inlineVideo4.pause();
 			$(this).parent().find('.left').show(0);
@@ -832,8 +832,8 @@ jQuery(document).ready(function($) {
 		});
 		$('.arrows.left').click(function() {
 			$(this).hide();
-			//if (!bpc.inlineVideo1.paused()) bpc.inlineVideo1.pause();
-			//if (!bpc.inlineVideo2.paused()) bpc.inlineVideo2.pause();
+			if (!bpc.inlineVideo1.paused()) bpc.inlineVideo1.pause();
+			if (!bpc.inlineVideo2.paused()) bpc.inlineVideo2.pause();
 			//if (!bpc.inlineVideo3.paused()) bpc.inlineVideo3.pause();
 			//if (!bpc.inlineVideo4.paused()) bpc.inlineVideo4.pause();
 			$(this).parent().find('.right').show(0);
