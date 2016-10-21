@@ -1,4 +1,4 @@
-<?php 
+<?php
 	ob_start('ob_gzhandler');
 	header('X-UA-Compatible: IE=edge,chrome=1');
 	error_reporting(E_ALL);
@@ -168,8 +168,8 @@
 							<div class="wide-responsive">
 								<div class="inline-player">
 									<video id="inline-player-1" class="video-js vjs-default-skin" controls preload="auto" width="auto" height="auto" poster="" data-setup="{}">
-										<source src="http://ht.cdn.turner.com/tbseurope/big/CN_BG/videos/buddy/CN%20-%20VENZI%201024x568.mp4.mp4" type="video/mp4">
-										<source src="http://ht.cdn.turner.com/tbseurope/big/CN_BG/videos/buddy/CN%20-%20VENZI%201024x568.webmhd.webm" type="video/webm">
+										<source src="http://ht.cdn.turner.com/tbseurope/big/CN_BG/videos/buddy/bg_ambassadors.mp4.mp4" type="video/mp4">
+										<source src="http://ht.cdn.turner.com/tbseurope/big/CN_BG/videos/buddy/bg_ambassadors.webm" type="video/webm">
 									</video>
 								</div>
 							</div>
