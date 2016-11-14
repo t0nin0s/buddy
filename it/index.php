@@ -1,4 +1,4 @@
-<?php
+<?php 
 	ob_start('ob_gzhandler');
 	header('X-UA-Compatible: IE=edge,chrome=1');
 	error_reporting(E_ALL);
