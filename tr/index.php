@@ -8,7 +8,7 @@
 
 	if (!isset($_server)) $_server = $_SERVER['HTTP_HOST'];
 
-	$_version = '1.0.3';
+	$_version = '1.0.5';
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -170,12 +170,22 @@
 				<div class="background" data-preload="img/page-background.png" data-type="background"></div>
 				<div class="inner">
 					<h1>GÖNÜLLÜ DESTEKÇİLER</h1>
-					<h2>3 ADAM’IN ÖNERİLERİ</h2>
-					<ul class="single-video">
+					<?php /*<ul class="double-video">
 						<li>
+							<h2>YOUTUBER’LARIN ÖNERİLERİ</h2>
 							<div class="wide-responsive">
 								<div class="inline-player">
 									<video id="inline-player-1" class="video-js vjs-default-skin" controls preload="auto" width="auto" height="auto" poster="" data-setup="{}">
+										<source src="http://ht.cdn.turner.com/tbseurope/big/Adops/zoko_small.mp4" type="video/mp4">
+									</video>
+								</div>
+							</div>
+						</li><!--
+						--><li>
+							<h2>3 ADAM’IN ÖNERİLERİ</h2>
+							<div class="wide-responsive">
+								<div class="inline-player">
+									<video id="inline-player-3" class="video-js vjs-default-skin" controls preload="auto" width="auto" height="auto" poster="" data-setup="{}">
 										<source src="http://ht.cdn.turner.com/tbseurope/big/Adops/zk.mp4.mp4" type="video/mp4">
 										<source src="http://ht.cdn.turner.com/tbseurope/big/Adops/zk.webmsd.webm" type="video/webm">
 									</video>
@@ -183,6 +193,25 @@
 							</div>
 						</li>
 					</ul>
+					<div class="arrows right"><i class="fa fa-angle-right"></i></div>
+					<div class="arrows left"><i class="fa fa-angle-left"></i></div>
+				</div>*/ ?>
+					<div class="videos">
+						<a data-track="watch-tom-daley-qa" data-src="http://ht.cdn.turner.com/tbseurope/big/Adops/zoko_small" data-ext="mp4" style="background-image:url(img/celeb-1.jpg)">
+							<div class="thumb">
+								<div class="table">
+									<div class="cell">YOUTUBER’LARIN ÖNERİLERİ</div>
+								</div>
+							</div>
+						</a>
+						<a data-track="watch-tom-daley-psa" data-src="http://ht.cdn.turner.com/tbseurope/big/Adops/zk.mp4" data-ext="mp4" style="background-image:url(img/celeb-2.jpg)">
+							<div class="thumb">
+								<div class="table">
+									<div class="cell">3 ADAM’IN ÖNERİLERİ</div>
+								</div>
+							</div>
+						</a>
+					</div>
 				</div>
 			</div>
 			

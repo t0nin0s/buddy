@@ -523,6 +523,7 @@ a {
 			/*.video-js {padding-top: 56.25%}
 			.vjs-fullscreen {padding-top: 0px}*/
 		}
+
 	}
 
 	.gonullu-destekciler {
@@ -530,6 +531,68 @@ a {
 			//background: url(../img/celebrity.jpg);
 			background-size: cover;
 			background-position: 20% top;
+		}
+
+		.videos {
+			font-size: 0px;
+			text-align: center;
+			margin-top: 20px;
+			.opacity(0);
+			top: 100px;
+
+			a {
+				display: inline-block;
+				width: 100%;
+				max-width: 320px;
+				position: relative;
+				cursor: pointer;
+				background-size: cover;
+				background-position: center center;
+				margin: 4px;
+
+				.thumb {
+					position: absolute;
+					left: 0px;
+					top: 0px;
+					right: 0px;
+					bottom: 0px;
+					//background: #000;
+					.transition(border, @aniOut);
+
+					.table {
+						width: 100%;
+						height: 100%;
+						display: table;
+					}
+
+					.cell {
+						width: 100%;
+						height: 100%;
+						display: table-cell;
+						vertical-align: middle;
+						text-align: center;
+						color: @yellow;
+						font-size: 12px;
+						text-transform: uppercase;
+						//font-family: 'GothamBold', Helvetica, Arial, sans-serif;
+						padding-left: 5px;
+						padding-right: 5px;
+						font-weight: bold;
+					}
+				}
+
+				&:hover {
+					.thumb {
+						border: 8px solid @yellow;
+						.transition(border, @aniIn);
+					}
+				}
+			}
+			a:before{
+				content: "";
+				display: block;
+				padding-top: percentage(9 / 16);
+			}
 		}
 	}
 
