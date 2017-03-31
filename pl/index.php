@@ -8,7 +8,7 @@
 
 	if (!isset($_server)) $_server = $_SERVER['HTTP_HOST'];
 
-	$_version = '1.1.7';
+	$_version = '1.2.1';
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -48,7 +48,8 @@
 				<a href="#/co-mozesz-zrobic">CO MOŻESZ<br/>ZROBIĆ?</a>
 				<a href="#/zobacz-filmy">ZOBACZ<br/>FILMY</a>
 				<a class="three" href="#/poznaj-marcina-gortata">Poznaj<br/>Naszych<br/>Ambasadorów</a>
-				<a href="#/poznaj-malgosie">POZNAJ<br/>MAŁGOSIĘ</a>
+				<!-- <a href="#/poznaj-malgosie">POZNAJ<br/>MAŁGOSIĘ</a> -->
+				<a class="one" href="#/dla-szkol">DLA SZKÓŁ</a>
 				<a href="#/kodeks-kumpla">KODEKS<br/>KUMPLA</a>
 				<a class="one" href="#/porady">PORADY</a>
 				<a class="one" href="#/partnerzy">PARTNERZY</a>
@@ -129,15 +130,37 @@
 			<div class="page zobacz-filmy">
 				<div class="background" data-preload="img/page-background-3.png" data-type="background"></div>
 				<div class="inner">
-					<h1>ZOBACZ FILMY<br/>O TYM, JAK:</h1>
+					<h1>ZOBACZ FILMY</h1>
 					<div class="videos">
+						<a data-track="watch-bullied" data-src="http://ht.cdn.turner.com/tbseurope/big/CN_PL/videos/buddy/najlepszy-przyjaciel">
+							<div class="thumb">
+								<div class="table">
+									<div class="cell">Najlepszy Przyjaciel</div>
+								</div>
+							</div>
+						</a><!--
+						--><a data-track="watch-bullied" data-src="http://ht.cdn.turner.com/tbseurope/big/CN_PL/videos/buddy/wielka-przyjazn">
+							<div class="thumb">
+								<div class="table">
+									<div class="cell">Wielka Przyjaźń</div>
+								</div>
+							</div>
+						</a><!--
+						--><a data-track="watch-bullied" data-src="http://ht.cdn.turner.com/tbseurope/big/CN_PL/videos/buddy/nowy-kolega-w-klasie">
+							<div class="thumb">
+								<div class="table">
+									<div class="cell">Nowy kolega w klasie</div>
+								</div>
+							</div>
+						</a>
+						<br/>
 						<a data-track="watch-bullied" data-src="http://ht.cdn.turner.com/tbseurope/big/CN_PL/videos/buddy/bullied">
 							<div class="thumb">
 								<div class="table">
 									<div class="cell">KOMUŚ DOKUCZAJĄ</div>
 								</div>
 							</div>
-						</a><!--
+						</a><!-- 
 						--><a data-track="watch-bully" data-src="http://ht.cdn.turner.com/tbseurope/big/CN_PL/videos/buddy/bully">
 							<div class="thumb">
 								<div class="table">
@@ -164,11 +187,11 @@
 			</div>
 
 			<div class="page poznaj-marcina-gortata">
-				<div class="background" data-preload="img/ambassadors.jpg" data-type="background"></div>
+				<div class="background" data-preload="img/kuba.jpg" data-type="background"></div>
 				<div class="inner">
 					<h1>Poznaj Naszych Ambasadorów</h1>
 					<div class="videos">
-						<a data-track="watch-spot-promocyjny" data-src="http://ht.cdn.turner.com/tbseurope/big/Adops/42417_CN_Anti-Bullying_POL_Promo_v3" style="background-image:url(img/ambassador-1.jpg)">
+						<!-- <a data-track="watch-spot-promocyjny" data-src="http://ht.cdn.turner.com/tbseurope/big/Adops/42417_CN_Anti-Bullying_POL_Promo_v3" style="background-image:url(img/ambassador-1.jpg)">
 							<div class="thumb">
 								<div class="table">
 									<div class="cell">Spot promocyjny</div>
@@ -188,6 +211,20 @@
 									<div class="cell">Making-of</div>
 								</div>
 							</div>
+						</a> -->
+						<a data-track="watch-spot-promocyjny" data-src="http://ht.cdn.turner.com/tbseurope/big/CN_PL/videos/buddy/dokuczaj-2017" style="background-image:url(img/ambassador-5.jpg)">
+							<div class="thumb">
+								<div class="table">
+									<div class="cell">“Bądź kumplem, nie dokuczaj!” 2017</div>
+								</div>
+							</div>
+						</a><br/>
+						<a data-track="watch-spot-promocyjny" data-src="http://ht.cdn.turner.com/tbseurope/big/Adops/42417_CN_Anti-Bullying_POL_Promo_v3" style="background-image:url(img/ambassador-1.jpg)">
+							<div class="thumb">
+								<div class="table">
+									<div class="cell">“Bądź kumplem, nie dokuczaj!” 2016</div>
+								</div>
+							</div>
 						</a>
 						<a data-track="watch-promo-marcin-gortat" data-src="http://ht.cdn.turner.com/tbseurope/big/CN_PL/videos/buddy/APEL" style="background-image:url(img/ambassador-4.jpg)">
 							<div class="thumb">
@@ -200,7 +237,7 @@
 				</div>
 			</div>
 
-			<div class="page poznaj-malgosie">
+			<?php /*<div class="page poznaj-malgosie">
 				<div class="background" data-preload="img/malgosie.jpg" data-type="background"></div>
 				<div class="inner">
 					<h1>POZNAJ MAŁGOSIĘ</h1>
@@ -230,6 +267,32 @@
 					<div class="arrows right"><i class="fa fa-angle-right"></i></div>
 					<div class="arrows left"><i class="fa fa-angle-left"></i></div>
 				</div>
+			</div>*/ ?>
+			<div class="page dla-szkol">
+				<div class="background" data-preload="img/page-background.png" data-type="background"></div>
+				<div class="inner">
+					<h4>KONKURS DLA SZKÓŁ</h4>
+					<a href="downloads/zasady_konkursu.png" target="_blank" class="yellow" data-scroller="porady"><div class="button">ZASADY I NAGRODY</div></a>
+					<a href="downloads/regulamin.pdf" target="_blank" class="yellow" data-scroller="porady"><div class="button">REGULAMIN</div></a>
+					
+					<div class="block">
+						<h4>MATERIAŁY DLA NAUCZYCIELI</h4>
+						<p>
+							<strong>PORADNIK: JAK REAGOWAĆ NA DOKUCZANIE W KLASIE</strong> <a href="downloads/poradnik-jak-reagowac-na-dokuczanie-w-klasie.pdf" target="_blank" class="pink">POBIERZ</a>
+						</p>
+						<p>
+							<strong>ZBIÓR ZABAW PROMUJĄCYCH KUMPELSKIE ZACHOWANIA</strong> <a href="downloads/zbior-zabaw.pdf" target="_blank" class="pink">POBIERZ</a>
+						</p>
+						<p>
+							<strong>SCENARIUSZE LEKCJI</strong><br/>
+							Scenariusz dla klas I-III: <a href="downloads/scenariusz_lekcji_klasy_I-III.pdf" target="_blank" class="pink">POBIERZ</a><br/>
+							Scenariusz dla klas IV-VI: <a href="downloads/scenariusz_lekcji_klasy_IV-VI.pdf" target="_blank" class="pink">POBIERZ</a>
+						</p>
+					</div>
+
+					<h4>ZDOBĄDŹ CERTYFIKAT „KLUBU KUMPLI”</h4>
+					<p class="white">Jeżeli Wasza klasa bierze udział w akcji „Bądź kumplem, nie dokuczaj”, przyślijcie nam zdjęcie lub fotorelację na adres <a href="mailto:kontakt@cartoonnetwork.pl" style="display: inline; margin: 0px;">kontakt@cartoonnetwork.pl</a>, a otrzymacie certyfikat <span class="yellow">„Klubu Kumpli”</span>, który będziecie mogli zamieścić na stronie swojej szkoły. Na maile czekamy do 30 kwietnia 2017 r.</p>
+				</div>
 			</div>
 
 			<div class="page kodeks-kumpla">
@@ -251,6 +314,8 @@
 						<h3>Bądź wsparciem, gdy ktoś ma zły dzień</h3>
 						<h4>07</h4>
 						<h3>Baw się dobrze ze swoimi kumplami i pozwól innym bawić się dobrze z Tobą!</h3>
+						<br/>
+						<a href="downloads/kodeks_kumpla.pdf" target="_blank" class="button">POBIERZ</a>
 					</div>
 				</div>
 			</div>
@@ -276,7 +341,7 @@
 						<div class="button">kliknij tutaj</div>
 					</a>
 					
-					<div class="block">
+					<!--<div class="block">
 						<img src="img/blank.gif" data-preload="img/for-teachers.png" data-type="src" alt="Dla nauczycieli" />
 						<h4>PORADY DLA NAUCZYCIELI</h4>
 						<p>
@@ -287,7 +352,7 @@
 							Scenariusz dla klas I-III: <a href="pdf/Scenariusz_dla_klas_I-III.pdf" target="_blank" class="pink">POBIERZ</a><br/>
 							Scenariusz dla klas IV-VI: <a href="pdf/Scenariusz_dla_klas_IV-VI.pdf" target="_blank" class="pink">POBIERZ</a>
 						</p>
-					</div>
+					</div>-->
 				</div>
 			</div>
 
@@ -301,17 +366,18 @@
 							<a href="http://brpd.gov.pl/" target="_blank"><img src="img/logo-rzecznikprawdziecka.png" alt="" /></a>
 						</div>
 						<div class="logo-set">
-							<h3>Partnerzy</h3>
-							<a href="http://fdn.pl/" target="_blank"><img src="img/logo-fundacja.png" alt="" /></a>
-							<a href="http://www.ibe.edu.pl/pl/" target="_blank"><img src="img/logo-ibe.png" alt="" /></a>
+							<h3>Partner</h3>
+							<a href="http://fdds.pl/" target="_blank"><img src="img/logo-dajemy.png" alt="" /></a>
+							<!-- <a href="http://fdn.pl/" target="_blank"><img src="img/logo-fundacja.png" alt="" /></a>
+							<a href="http://www.ibe.edu.pl/pl/" target="_blank"><img src="img/logo-ibe.png" alt="" /></a> -->
 						</div>
 						<div class="logo-set-full">
 							<h3>Patroni medialni</h3>
 							<a href="http://dzieci.pl/" target="_blank"><img src="img/logo-wp.png" alt="" /></a>
-							<a href="http://parenting.pl/" target="_blank"><img src="img/logo-parenting.png" alt="" /></a>
-							<a href="http://czasdzieci.pl/" target="_blank"><img src="img/logo-czas.png" alt="" /></a>
+							<a href="http://parenting.pl/" target="_blank"><img src="img/logo-parenting2.png" alt="" /></a>
+							<!-- <a href="http://czasdzieci.pl/" target="_blank"><img src="img/logo-czas.png" alt="" /></a> -->
 							<a href="http://edunews.pl/" target="_blank"><img src="img/logo-edu.png" alt="" /></a>
-							<a href="http://ohme.pl/" target="_blank"><img src="img/logo-ohme.png" alt="" /></a>
+							<!-- <a href="http://ohme.pl/" target="_blank"><img src="img/logo-ohme.png" alt="" /></a> -->
 						</div>
 					</div>
 				</div>
@@ -336,7 +402,8 @@
 			--><a href="#/co-mozesz-zrobic">CO MOŻESZ ZROBIĆ?</a><!--
 			--><a href="#/zobacz-filmy">ZOBACZ FILMY</a><!--
 			--><a href="#/poznaj-marcina-gortata">Poznaj Naszych Ambasadorów</a><!--
-			--><a href="#/poznaj-malgosie">POZNAJ MAŁGOSIĘ</a><!--
+			<a href="#/poznaj-malgosie">POZNAJ MAŁGOSIĘ</a><!--
+			--><a href="#/dla-szkol">DLA SZKÓŁ</a><!--
 			--><a href="#/kodeks-kumpla">KODEKS KUMPLA</a><!--
 			--><a href="#/porady">PORADY</a><!--
 			--><a href="#/partnerzy">PARTNERZY</a><!--
@@ -351,8 +418,8 @@
 			</div>
 			<span class="open">KWESTIE PRAWNE</span>
 			<span class="copy">Jeśli korzystasz z niniejszej strony, akceptujesz postanowienia Regulaminu. Znak towarowy i &copy; 2015 Cartoon Network. A Time Warner Company. Wszelkie prawa zastrzeżone. CartoonNetwork.pl jest częścią sieci cyfrowej Turner Sports and Entertainment Digital Network.</span>
-			<a href="#/partnerzy" class="childline"><img src="img/blank.gif" data-type="src" data-preload="img/footer-logos.gif?v=2" alt="" /></a>
-			<a href="#/partnerzy" class="childline-sml"><img src="img/blank.gif" data-type="src" data-preload="img/footer-logos-sml.gif?v=2" alt="" /></a>
+			<a href="#/partnerzy" class="childline"><img src="img/blank.gif" data-type="src" data-preload="img/footer-logos2.gif?v=2" alt="" /></a>
+			<a href="#/partnerzy" class="childline-sml"><img src="img/blank.gif" data-type="src" data-preload="img/footer-logos-sml2.gif?v=2" alt="" /></a>
 		</div>
 
 		<div class="video-player">

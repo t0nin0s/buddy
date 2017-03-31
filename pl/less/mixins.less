@@ -1,0 +1,141 @@
+@aniIn:		0.3s;
+@aniOut:	0.35s;
+
+@blue:		#009fe3;
+@yellow:	#ffed00;
+@pink:		#e6007e;
+
+@twitter: 	#60b5f0;
+@facebook: 	#5974ac;
+
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+/*@font-face {
+	font-family: 'GothamBook';
+	src: url('../fonts/gotham-book.eot');
+	src: url('../fonts/gotham-book.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/gotham-book.woff') format('woff'),
+		 url('../fonts/gotham-book.ttf') format('truetype'),
+		 url('../fonts/gotham-book.svg#iefix') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GothamBold';
+	src: url('../fonts/gotham-bold.eot');
+	src: url('../fonts/gotham-bold.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/gotham-bold.woff') format('woff'),
+		 url('../fonts/gotham-bold.ttf') format('truetype'),
+		 url('../fonts/gotham-bold.svg#iefix') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GothamBlack';
+	src: url('../fonts/gotham-black.eot');
+	src: url('../fonts/gotham-black.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/gotham-black.woff') format('woff'),
+		 url('../fonts/gotham-black.ttf') format('truetype'),
+		 url('../fonts/gotham-black.svg#iefix') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}*/
+
+* { 
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing:    border-box; 
+	box-sizing:         border-box; 
+}
+
+.nolist {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+.transition(@what: all, @time: 0.2s, @transition: cubic-bezier(0.215, 0.610, 0.355, 1.000)) {
+	-webkit-transition:	@what @time @transition;
+	-moz-transition:	@what @time @transition;
+	-ms-transition:		@what @time @transition;
+	-o-transition:		@what @time @transition;
+	transition:			@what @time @transition;
+}
+
+.rounded(@radius: 4px) {
+	behavior: url(css/border-radius.htc);
+	-webkit-border-radius:	@radius;
+    -moz-border-radius:		@radius;
+	border-radius:			@radius;
+}
+
+.border-radius(@topright: 0, @bottomright: 0, @bottomleft: 0, @topleft: 0) {
+	-webkit-border-top-right-radius:	@topright;
+	-webkit-border-bottom-right-radius:	@bottomright;
+	-webkit-border-bottom-left-radius:	@bottomleft;
+	-webkit-border-top-left-radius:		@topleft;
+	-moz-border-radius-topright:		@topright;
+	-moz-border-radius-bottomright:		@bottomright;
+	-moz-border-radius-bottomleft:		@bottomleft;
+	-moz-border-radius-topleft:			@topleft;
+	border-top-right-radius:			@topright;
+	border-bottom-right-radius:			@bottomright;
+	border-bottom-left-radius:			@bottomleft;
+	border-top-left-radius:				@topleft;
+	-webkit-background-clip:			padding-box;
+	-moz-background-clip:				padding;  
+	background-clip:					padding-box; 
+}
+
+.rotate(@deg) {
+	-webkit-transform: rotate(@deg);
+	-moz-transform: rotate(@deg);
+	-ms-transform: rotate(@deg);
+	-o-transform: rotate(@deg);
+	transform: rotate(@deg);
+}
+
+.css-gradient(@from: #dfdfdf, @to: #f8f8f8) {
+	background-color: @to;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(@from), to(@to));
+	background-image: -webkit-linear-gradient(top, @from, @to);
+	background-image: -moz-linear-gradient(top, @from, @to);
+	background-image: -o-linear-gradient(top, @from, @to);
+	background-image: linear-gradient(to bottom, @from, @to);
+}
+
+.boxShadow(@x: 0, @y: 0, @radius: 4px, @spread: 0, @color: rgba(0,0,0,0.5)) {
+	-webkit-box-shadow:	@x @y @radius @spread @color;
+	-moz-box-shadow:	@x @y @radius @spread @color;
+	box-shadow:			@x @y @radius @spread @color; 
+}
+
+.boxShadow(@x: none) when (iskeyword(@x)) {
+	-webkit-box-shadow: @x;
+	   -moz-box-shadow: @x;
+			box-shadow: @x; 
+}
+
+.innerShadow(@x: 0, @y: 0, @radius: 4px, @spread: 0, @color: rgba(0,0,0,0.5)) {
+	-webkit-box-shadow:	inset @x @y @radius @spread @color;
+	-moz-box-shadow:	inset @x @y @radius @spread @color;
+	box-shadow:			inset @x @y @radius @spread @color; 
+}
+
+.innerShadow(@x: none) when (iskeyword(@x)) {
+	-webkit-box-shadow: @x;
+	   -moz-box-shadow: @x;
+			box-shadow: @x; 
+}
+
+
+.opacity(@opacity: 0.5) {
+	-moz-opacity: @opacity;
+	-khtml-opacity: @opacity;
+	-webkit-opacity: @opacity;
+	opacity: @opacity;
+	@opperc: @opacity * 100;
+	-ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(opacity=@{opperc})";
+	filter: ~"alpha(opacity=@{opperc})";
+}

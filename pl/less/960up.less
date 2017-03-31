@@ -1,0 +1,53 @@
+.logo {
+	width: 495px;
+	height: 143px;
+	left: 40px;
+	top: 50%;
+	margin-top: -70px;
+}
+.mobile-nav-btn {
+	display: none;
+}
+.header {
+	height: 80px;
+	background: @blue;
+	top: 0px;
+	.boxShadow(1px, 1px, 1px, 0, rgba(0,0,0,0.5));
+	.header-logo {
+		width: 222px;
+		height: 64px;
+		background-size: 222px 64px;
+		margin: 8px 0px 0px 20px;
+	}
+}
+.audio-control {
+	top: 15px;
+	right: 15px;
+	width: 50px;
+	height: 50px;
+	display: block;
+
+	i {
+		line-height: 50px;
+		color: @blue;
+		font-size: 30px;
+	}
+}
+.header {
+	.main-nav {
+		display: block;
+		a {
+			padding: 26px 6px 0;
+			font-size: 10px;
+			line-height: 16px;
+
+			&.three {
+				padding-top: 16px;
+			}
+
+			&.one {
+				padding-top: 33px;
+			}
+		}
+	}
+}
