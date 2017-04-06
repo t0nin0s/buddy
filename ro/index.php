@@ -8,7 +8,7 @@
 
 	if (!isset($_server)) $_server = $_SERVER['HTTP_HOST'];
 
-	$_version = '1.0.5';
+	$_version = '1.0.6';
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -47,7 +47,7 @@
 				<a href="#/ce-este-hartuirea">CE ESTE<br/>HĂRŢUIREA?</a>
 				<a href="#/ce-pot-face">CE POT<br/>FACE?</a>
 				<a href="#/urmareste-videoclipuri">URMĂREŞTE<br/>VIDEOCLIPURI</a>
-				<a href="#/inna" class="one">INNA</a>
+				<a href="#/inna" class="one">AMBASADOR</a>
 				<a href="#/telefonul-copilului">TELEFONUL<br/>COPILULUI</a>
 				<a href="#/codul-prieteniei">CODUL<br/>PRIETENIEI</a>
 				<a href="#/parteneri" class="one">PARTENERI</a>
@@ -66,11 +66,11 @@
 			<div class="background">
 <?php
 	$videos = array('Bully_ROM%2016x9', 'Bullied_ROM 16x9', 'Observer_ROM 16x9');
-	$vid = $videos[array_rand($videos)];
+	//$vid = $videos[array_rand($videos)];
 ?>
 				<video loop id="background-video">
-					<source src="http://ht.cdn.turner.com/tbseurope/big/CN_RO/videos/buddy/<?php echo $vid; ?>.webmhd.webm" type="video/webm">
-					<source src="http://ht.cdn.turner.com/tbseurope/big/CN_RO/videos/buddy/<?php echo $vid; ?>.mp4.mp4" type="video/mp4">
+					<source src="http://ht.cdn.turner.com/tbseurope/big/CN_RO/videos/buddy/great-friendship.webm" type="video/webm">
+					<source src="http://ht.cdn.turner.com/tbseurope/big/CN_RO/videos/buddy/great-friendship.mp4" type="video/mp4">
 				</video>
 			</div>
 		</div>
@@ -128,6 +128,30 @@
 				<div class="inner">
 					<h1>URMĂREŞTE VIDEOCLIPURI</h1>
 					<div class="videos">
+						<!-- new videos -->
+						<a data-track="watch-great-friendship" data-src="http://ht.cdn.turner.com/tbseurope/big/CN_RO/videos/buddy/great-friendship">
+							<div class="thumb">
+								<div class="table">
+									<div class="cell">O prietenie adevărată</div>
+								</div>
+							</div>
+						</a>
+						<a data-track="watch-best-friend" data-src="http://ht.cdn.turner.com/tbseurope/big/CN_RO/videos/buddy/best-friend">
+							<div class="thumb">
+								<div class="table">
+									<div class="cell">Cei mai buni prieteni</div>
+								</div>
+							</div>
+						</a>
+						<a data-track="watch-new-kid" data-src="http://ht.cdn.turner.com/tbseurope/big/CN_RO/videos/buddy/new-kid">
+							<div class="thumb">
+								<div class="table">
+									<div class="cell">Un nou copil</div>
+								</div>
+							</div>
+						</a>
+						<!-- -->
+
 						<a data-track="watch-bullied" data-src="http://ht.cdn.turner.com/tbseurope/big/CN_RO/videos/buddy/Bullied_ROM 16x9">
 							<div class="thumb">
 								<div class="table">
@@ -168,14 +192,14 @@
 			</div>
 
 			<div class="page inna">
-				<div class="background" data-preload="img/inna-left.jpg?c=1" data-type="background" style="background-position: left bottom"></div>
+				<div class="background" data-preload="img/ambasador.jpg?c=1" data-type="background" style="background-position: center bottom"></div>
 				<div class="inner">
 					<?php /*<h1 class="blue">FĂ CUNOȘTINȚĂ<br/>CU INNA</h1>*/ ?>
 					<div class="wide-responsive">
 						<div class="inline-player">
-							<video id="inline-player-1" class="video-js vjs-default-skin" controls preload="auto" width="auto" height="auto" poster="img/inna-poster.jpg" data-setup="{}">
-								<source src="http://ht.cdn.turner.com/tbseurope/big/Adops/CN%20Inna%20CC%20footage%20final.mp4" type="video/mp4">
-								<source src="http://ht.cdn.turner.com/tbseurope/big/Adops/CN%20Inna%20CC%20footage%20final.webm" type="video/webm">
+							<video id="inline-player-1" class="video-js vjs-default-skin" controls preload="auto" width="auto" height="auto" poster="img/marica-poster.jpg" data-setup="{}">
+								<source src="http://ht.cdn.turner.com/tbseurope/big/CN_RO/videos/buddy/marica.mp4" type="video/mp4">
+								<source src="http://ht.cdn.turner.com/tbseurope/big/CN_RO/videos/buddy/marica.webm" type="video/webm">
 							</video>
 						</div>
 					</div>
@@ -254,7 +278,7 @@
 			--><a href="#/ce-este-hartuirea">CE ESTE HĂRŢUIREA?</a><!--
 			--><a href="#/ce-pot-face">CE POT FACE?</a><!--
 			--><a href="#/urmareste-videoclipuri">URMĂREŞTE VIDEOCLIPURI</a><!--
-			--><a href="#/inna">INNA</a><!--
+			--><a href="#/inna">Ambasador</a><!--
 			--><a href="#/telefonul-copilului">TELEFONUL COPILULUI</a><!--
 			--><a href="#/codul-prieteniei">CODUL PRIETENIEI</a><!--
 			--><a href="#/parteneri">PARTENERI</a><!--
