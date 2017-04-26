@@ -7,7 +7,7 @@
 		"uuidString": "8B7E742F-E2C7-4E2C-A971-67B9B6C0D807"
 		}
 	],
-"creatorBuild": "25704",
+"creatorBuild": "25813",
 "files": {
 	"\/css": {
 		"ft": 65536,
@@ -15,50 +15,10 @@
 		"oAP": "\/build\/css",
 		"oF": 0
 		},
-	"\/downloads\/kodeks_kumpla.pdf": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/downloads\/kodeks_kumpla.pdf",
-		"oF": 0
-		},
-	"\/downloads\/poradnik-jak-reagowac-na-dokuczanie-w-klasie.pdf": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/downloads\/poradnik-jak-reagowac-na-dokuczanie-w-klasie.pdf",
-		"oF": 0
-		},
-	"\/downloads\/regulamin.pdf": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/downloads\/regulamin.pdf",
-		"oF": 0
-		},
-	"\/downloads\/Scenariusz_lekcji_klasy_I-III.pdf": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/downloads\/Scenariusz_lekcji_klasy_I-III.pdf",
-		"oF": 0
-		},
-	"\/downloads\/Scenariusz_lekcji_klasy_IV-VI.pdf": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/downloads\/Scenariusz_lekcji_klasy_IV-VI.pdf",
-		"oF": 0
-		},
-	"\/downloads\/zasady_konkursu.png": {
-		"ft": 32768,
-		"iS": 43228,
-		"l": 1,
-		"oA": 0,
-		"oAP": "\/downloads\/zasady_konkursu.png",
-		"oF": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/downloads\/zbior-zabaw.pdf": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/downloads\/zbior-zabaw.pdf",
+	"\/downloads": {
+		"ft": 65536,
+		"oA": 1,
+		"oAP": "\/build\/downloads",
 		"oF": 0
 		},
 	"\/img": {
@@ -1395,6 +1355,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"no-prototype-builtins": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-redeclare": {
 			"active": 1,
 			"optionString": "{'builtinGlobals': false}"
@@ -2219,14 +2183,6 @@
 		"orderOutput": 0,
 		"outputStyle": 1
 		},
-	"languageDefaultsJSX": {
-		"autoOutputAction": 0,
-		"autoOutputPathFilenamePattern": "*.js",
-		"autoOutputPathRelativePath": "",
-		"autoOutputPathReplace1": "jsx",
-		"autoOutputPathReplace2": "js",
-		"autoOutputPathStyle": 0
-		},
 	"languageDefaultsKIT": {
 		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*.html",
@@ -2289,7 +2245,7 @@
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
-		"enableLossy": 1,
+		"optimizerType": 1,
 		"quality": 100
 		},
 	"languageDefaultsPUG": {
@@ -2376,7 +2332,7 @@
 	"languageDefaultsUserDefined": [
 		],
 	"previewPathAddition": "",
-	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules, \/css, \/img, \/video-js",
+	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules, \/css, \/img, \/video-js, \/downloads",
 	"sourceFolderName": "source",
 	"uglifyDefinesString": "",
 	"uglifyFlags2": {

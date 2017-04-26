@@ -272,7 +272,7 @@
 				<div class="background" data-preload="img/page-background.png" data-type="background"></div>
 				<div class="inner">
 					<h4>KONKURS DLA SZKÓŁ</h4>
-					<a href="downloads/zasady_konkursu.png" target="_blank" class="yellow" data-scroller="porady"><div class="button">ZASADY I NAGRODY</div></a>
+					<a href="downloads/zasady_i_nagrady.png" target="_blank" class="yellow" data-scroller="porady"><div class="button">ZASADY I NAGRODY</div></a>
 					<a href="downloads/regulamin.pdf" target="_blank" class="yellow" data-scroller="porady"><div class="button">REGULAMIN</div></a>
 					
 					<div class="block">
@@ -291,7 +291,7 @@
 					</div>
 
 					<h4>ZDOBĄDŹ CERTYFIKAT „KLUBU KUMPLI”</h4>
-					<p class="white">Jeżeli Wasza klasa bierze udział w akcji „Bądź kumplem, nie dokuczaj”, przyślijcie nam zdjęcie lub fotorelację na adres <a href="mailto:kontakt@cartoonnetwork.pl" style="display: inline; margin: 0px;">kontakt@cartoonnetwork.pl</a>, a otrzymacie certyfikat <span class="yellow">„Klubu Kumpli”</span>, który będziecie mogli zamieścić na stronie swojej szkoły. Na maile czekamy do 30 kwietnia 2017 r.</p>
+					<p class="white">Jeżeli Wasza klasa bierze udział w akcji „Bądź kumplem, nie dokuczaj”, przyślijcie nam zdjęcie lub fotorelację na adres <a href="mailto:kontakt@cartoonnetwork.pl" style="display: inline; margin: 0px;">kontakt@cartoonnetwork.pl</a>, a otrzymacie certyfikat <span class="yellow">„Klubu Kumpli”</span>, który będziecie mogli zamieścić na stronie swojej szkoły. Na maile czekamy do 22 maja 2017 r.</p>
 				</div>
 			</div>
 
